@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══════════════════════════════════════════
+       SEO META
+  ═══════════════════════════════════════════ -->
+  <title>AutoGen Review 2026 — Best Multi-Agent AI Framework</title>
+  <meta name="description" content="AutoGen review 2026: Microsoft's multi-agent conversation framework for developers. Real use cases, pricing, vs CrewAI & LangChain — full expert breakdown." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AutoGen Review 2026 — Best Multi-Agent AI Framework | Agentstant Galaxy" />
+  <meta property="og:description" content="The definitive AutoGen review for 2026. Conversational agents, code execution, competitor comparison and expert verdict from Agentstant Galaxy." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Agentstant Galaxy" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "name": "AutoGen Review 2026",
+    "reviewBody": "Comprehensive expert review of Microsoft AutoGen multi-agent conversation framework for 2026.",
+    "author": { "@type": "Organization", "name": "Agentstant Galaxy" },
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": "AutoGen",
+      "applicationCategory": "AI Agent Framework",
+      "creator": { "@type": "Organization", "name": "Microsoft Research" }
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #020204;
+      --bg2:          #07070f;
+      --surface:      rgba(255,255,255,0.02);
+      --accent:       #6366f1;
+      --accent-glow:  rgba(99,102,241,0.35);
+      --accent-soft:  rgba(99,102,241,0.10);
+      --accent-mid:   rgba(99,102,241,0.20);
+      --teal:         #2dd4bf;
+      --teal-soft:    rgba(45,212,191,0.08);
+      --text:         #e8e8f0;
+      --text-soft:    #b0b0c8;
+      --muted:        #6b6b80;
+      --border:       rgba(255,255,255,0.05);
+      --border-hover: rgba(99,102,241,0.40);
+      --radius:       16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── starfield ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        radial-gradient(1px 1px at 8%  20%, rgba(255,255,255,0.55) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 65%, rgba(255,255,255,0.30) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 58% 12%, rgba(255,255,255,0.60) 0%, transparent 100%),
+        radial-gradient(1px 1px at 72% 48%, rgba(255,255,255,0.35) 0%, transparent 100%),
+        radial-gradient(1px 1px at 88% 78%, rgba(255,255,255,0.25) 0%, transparent 100%),
+        radial-gradient(1px 1px at 42% 85%, rgba(255,255,255,0.20) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 15% 50%, rgba(255,255,255,0.40) 0%, transparent 100%),
+        radial-gradient(1px 1px at 93% 30%, rgba(255,255,255,0.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 66% 70%, rgba(45,212,191,0.25) 0%, transparent 100%);
+    }
+
+    /* ── nebula dual glow — teal accent for AutoGen's Microsoft identity ── */
+    body::after {
+      content: '';
+      position: fixed; top: -20vh; left: 50%; transform: translateX(-50%);
+      width: 80vw; height: 60vh; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse at 35% 50%, rgba(99,102,241,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 50%, rgba(45,212,191,0.04) 0%, transparent 60%);
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 52px;
+      background: rgba(2,2,4,0.80);
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text);
+      font-size: 0.95rem; font-weight: 700;
+    }
+
+    .nav-logo .orb {
+      width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+      background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5);
+      box-shadow: 0 0 14px rgba(99,102,241,0.7);
+    }
+
+    .nav-back {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--muted);
+      text-decoration: none; transition: color 0.25s;
+    }
+    .nav-back:hover { color: #818cf8; }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative; z-index: 1;
+      padding: 160px 52px 80px;
+      max-width: 1100px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 64px;
+      align-items: center;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hero-breadcrumb {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--teal);
+      margin-bottom: 24px;
+    }
+    .hero-breadcrumb span { color: var(--muted); }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.08;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #ccfbf1 0%, #2dd4bf 35%, #6366f1 80%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--text-soft);
+      max-width: 520px;
+      line-height: 1.75;
+      margin-bottom: 36px;
+    }
+
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(45,212,191,0.07);
+      border: 1px solid rgba(45,212,191,0.2);
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-size: 0.72rem; font-weight: 600;
+      color: #5eead4; letter-spacing: 0.06em;
+    }
+
+    .tag.indigo {
+      background: var(--accent-soft);
+      border-color: rgba(99,102,241,0.2);
+      color: #a5b4fc;
+    }
+
+    /* ── Score card ── */
+    .score-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 36px 32px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      position: relative; overflow: hidden;
+    }
+
+    .score-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(45,212,191,0.07), transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Microsoft badge */
+    .ms-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(45,212,191,0.07);
+      border: 1px solid rgba(45,212,191,0.18);
+      border-radius: 100px; padding: 4px 12px;
+      font-size: 0.64rem; font-weight: 700; letter-spacing: 0.1em;
+      color: #5eead4; text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .score-ring {
+      width: 110px; height: 110px; border-radius: 50%;
+      background: conic-gradient(#2dd4bf 0% 88%, rgba(255,255,255,0.05) 88% 100%);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; position: relative;
+    }
+
+    .score-ring::after {
+      content: ''; position: absolute; inset: 8px;
+      background: #06080f; border-radius: 50%;
+    }
+
+    .score-number {
+      position: relative; z-index: 1;
+      font-size: 1.8rem; font-weight: 800;
+      background: linear-gradient(135deg, #ccfbf1, #2dd4bf);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .score-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 24px;
+    }
+
+    .score-rows { display: flex; flex-direction: column; gap: 12px; }
+
+    .score-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+
+    .score-row-label { font-size: 0.75rem; color: var(--muted); font-weight: 500; text-align: left; flex: 1; }
+
+    .score-bar-track {
+      flex: 2; height: 4px; border-radius: 4px;
+      background: rgba(255,255,255,0.06); overflow: hidden;
+    }
+
+    .score-bar-fill {
+      height: 100%; border-radius: 4px;
+      background: linear-gradient(90deg, #0d9488, #2dd4bf);
+    }
+
+    .score-val { font-size: 0.72rem; font-weight: 700; color: #2dd4bf; width: 28px; text-align: right; }
+
+    /* ─── PAGE BODY ─── */
+    .page-body {
+      position: relative; z-index: 1;
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 52px 120px;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .side-col { position: sticky; top: 100px; }
+
+    /* ─── CONTENT SECTIONS ─── */
+    .content-section { margin-bottom: 64px; animation: fadeUp 0.6s ease both; }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: 14px;
+    }
+
+    .content-section h2 {
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 800; letter-spacing: -0.025em;
+      line-height: 1.2; margin-bottom: 20px;
+    }
+
+    .content-section p {
+      color: var(--text-soft);
+      margin-bottom: 18px;
+      font-size: 0.97rem;
+      line-height: 1.8;
+    }
+
+    .content-section p strong { color: var(--text); font-weight: 600; }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 48px 0;
+    }
+
+    /* ─── VERDICT BOX ─── */
+    .verdict-box {
+      background: rgba(45,212,191,0.04);
+      border: 1px solid rgba(45,212,191,0.15);
+      border-left: 3px solid var(--teal);
+      border-radius: var(--radius);
+      padding: 32px 30px;
+      margin-bottom: 32px;
+      position: relative; overflow: hidden;
+    }
+
+    .verdict-box::before {
+      content: '✦ EXPERT VERDICT';
+      position: absolute; top: 18px; right: 20px;
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.14em; color: rgba(45,212,191,0.3);
+    }
+
+    .verdict-box p {
+      font-size: 1.05rem; color: var(--text);
+      font-style: italic; font-weight: 400;
+      line-height: 1.75; margin: 0;
+    }
+
+    /* ─── CONVERSATION FLOW DIAGRAM ─── */
+    .conv-diagram {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      margin: 28px 0;
+      font-size: 0.8rem;
+    }
+
+    .conv-diagram-label {
+      font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 18px;
+    }
+
+    .conv-flow {
+      display: flex; align-items: center;
+      gap: 0; flex-wrap: wrap;
+    }
+
+    .conv-node {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 6px; text-align: center;
+    }
+
+    .conv-node-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+      border: 1px solid;
+    }
+
+    .node-user   { background: rgba(99,102,241,0.1);  border-color: rgba(99,102,241,0.3); }
+    .node-agent  { background: rgba(45,212,191,0.08); border-color: rgba(45,212,191,0.3); }
+    .node-exec   { background: rgba(251,191,36,0.08); border-color: rgba(251,191,36,0.25); }
+    .node-result { background: rgba(52,211,153,0.08); border-color: rgba(52,211,153,0.25); }
+
+    .conv-node-name { font-size: 0.65rem; color: var(--muted); font-weight: 600; white-space: nowrap; }
+
+    .conv-arrow {
+      flex: 1; min-width: 24px; height: 1px;
+      background: linear-gradient(90deg, rgba(45,212,191,0.3), rgba(45,212,191,0.6), rgba(45,212,191,0.3));
+      margin: 0 4px; position: relative; top: -10px;
+    }
+
+    /* ─── USE CASES ─── */
+    .use-cases {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 16px; margin-top: 24px;
+    }
+
+    .use-case-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .use-case-card:hover { border-color: rgba(45,212,191,0.3); transform: translateY(-3px); }
+
+    .use-case-icon { font-size: 1.4rem; margin-bottom: 10px; }
+    .use-case-title { font-size: 0.85rem; font-weight: 700; margin-bottom: 8px; }
+    .use-case-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+
+    /* ─── FEATURE LIST ─── */
+    .feature-list {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 16px;
+      margin-top: 16px;
+    }
+
+    .feature-list li {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 14px; align-items: start;
+    }
+
+    .feature-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--teal-soft);
+      border: 1px solid rgba(45,212,191,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+
+    .feature-text strong {
+      display: block; font-size: 0.88rem; font-weight: 700;
+      margin-bottom: 4px; color: var(--text);
+    }
+
+    .feature-text span { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+    /* ─── AGENT PATTERN CARDS ─── */
+    .pattern-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 14px; margin-top: 20px;
+    }
+
+    .pattern-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px 16px;
+      text-align: center;
+      transition: border-color 0.3s, background 0.3s;
+    }
+
+    .pattern-card:hover {
+      border-color: rgba(45,212,191,0.25);
+      background: rgba(45,212,191,0.03);
+    }
+
+    .pattern-icon { font-size: 1.5rem; margin-bottom: 10px; }
+    .pattern-name { font-size: 0.78rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .pattern-desc { font-size: 0.7rem; color: var(--muted); line-height: 1.5; }
+
+    /* ─── COMPARISON TABLE ─── */
+    .compare-table {
+      width: 100%; border-collapse: collapse;
+      margin-top: 20px; font-size: 0.83rem;
+    }
+
+    .compare-table thead tr { border-bottom: 1px solid var(--border); }
+
+    .compare-table th {
+      text-align: left; padding: 14px 16px;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .compare-table th:first-child { color: var(--text); }
+    .compare-table th.highlight-col { color: var(--teal); }
+
+    .compare-table tbody tr {
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+      transition: background 0.2s;
+    }
+
+    .compare-table tbody tr:hover { background: rgba(45,212,191,0.03); }
+    .compare-table tbody tr.highlight-row { background: rgba(45,212,191,0.04); }
+
+    .compare-table td { padding: 14px 16px; color: var(--text-soft); vertical-align: middle; }
+    .compare-table td:first-child { font-weight: 600; color: var(--text); }
+
+    .pill-yes {
+      display: inline-block;
+      background: rgba(52,211,153,0.1); color: #34d399;
+      border: 1px solid rgba(52,211,153,0.25);
+      border-radius: 100px; padding: 2px 10px;
+      font-size: 0.68rem; font-weight: 700;
+    }
+
+    .pill-partial {
+      display: inline-block;
+      background: rgba(251,191,36,0.1); color: #fbbf24;
+      border: 1px solid rgba(251,191,36,0.2);
+      border-radius: 100px; padding: 2px 10px;
+      font-size: 0.68rem; font-weight: 700;
+    }
+
+    .pill-no {
+      display: inline-block;
+      background: rgba(248,113,113,0.08); color: #f87171;
+      border: 1px solid rgba(248,113,113,0.2);
+      border-radius: 100px; padding: 2px 10px;
+      font-size: 0.68rem; font-weight: 700;
+    }
+
+    .pill-teal {
+      display: inline-block;
+      background: rgba(45,212,191,0.1); color: #2dd4bf;
+      border: 1px solid rgba(45,212,191,0.25);
+      border-radius: 100px; padding: 2px 10px;
+      font-size: 0.68rem; font-weight: 700;
+    }
+
+    /* ─── PRICING ─── */
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 16px; margin-top: 20px;
+    }
+
+    .pricing-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px 22px;
+      text-align: center;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+
+    .pricing-card.featured {
+      border-color: rgba(45,212,191,0.3);
+      background: rgba(45,212,191,0.04);
+      box-shadow: 0 0 30px rgba(45,212,191,0.08);
+    }
+
+    .pricing-card:hover {
+      border-color: rgba(45,212,191,0.25);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.35);
+    }
+
+    .pricing-tier {
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 10px;
+    }
+
+    .pricing-card.featured .pricing-tier { color: var(--teal); }
+
+    .pricing-price {
+      font-size: 1.7rem; font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #ccfbf1, #2dd4bf);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; margin-bottom: 4px;
+    }
+
+    .pricing-cycle { font-size: 0.72rem; color: var(--muted); margin-bottom: 16px; }
+
+    .pricing-features { list-style: none; text-align: left; }
+    .pricing-features li {
+      font-size: 0.76rem; color: var(--text-soft);
+      padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+      display: flex; align-items: center; gap: 7px;
+    }
+    .pricing-features li::before { content: '✦'; color: var(--teal); font-size: 0.5rem; }
+
+    /* ─── SIDEBAR ─── */
+    .sidebar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px 24px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar-card h3 {
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 16px;
+    }
+
+    .quick-facts { display: flex; flex-direction: column; gap: 12px; }
+
+    .quick-fact {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.78rem;
+      border-bottom: 1px solid var(--border); padding-bottom: 10px;
+    }
+
+    .quick-fact:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .qf-label { color: var(--muted); font-weight: 500; }
+    .qf-value { color: var(--text); font-weight: 600; }
+
+    .qf-badge {
+      display: inline-block;
+      background: rgba(52,211,153,0.1); color: #34d399;
+      border: 1px solid rgba(52,211,153,0.2);
+      border-radius: 100px; padding: 2px 10px;
+      font-size: 0.65rem; font-weight: 700;
+    }
+
+    .qf-badge-ms {
+      display: inline-block;
+      background: rgba(45,212,191,0.1); color: #2dd4bf;
+      border: 1px solid rgba(45,212,191,0.2);
+      border-radius: 100px; padding: 2px 10px;
+      font-size: 0.65rem; font-weight: 700;
+    }
+
+    .cta-block {
+      background: linear-gradient(135deg, rgba(45,212,191,0.10), rgba(99,102,241,0.06));
+      border: 1px solid rgba(45,212,191,0.25);
+      border-radius: var(--radius);
+      padding: 26px 24px; text-align: center; margin-bottom: 20px;
+    }
+
+    .cta-block p {
+      font-size: 0.82rem; color: var(--text-soft);
+      margin-bottom: 16px; line-height: 1.6;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      background: linear-gradient(135deg, #0d9488, #2dd4bf);
+      color: #020204; font-weight: 800;
+      font-size: 0.82rem; letter-spacing: 0.02em;
+      padding: 12px 24px; border-radius: 100px;
+      text-decoration: none;
+      box-shadow: 0 0 24px rgba(45,212,191,0.3);
+      transition: transform 0.25s, box-shadow 0.25s;
+      width: 100%;
+    }
+
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(45,212,191,0.5);
+    }
+
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+
+    .toc-list a {
+      font-size: 0.78rem; color: var(--muted);
+      text-decoration: none; display: flex; align-items: center; gap: 8px;
+      transition: color 0.2s;
+    }
+
+    .toc-list a::before { content: '—'; color: rgba(45,212,191,0.4); }
+    .toc-list a:hover { color: #2dd4bf; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      position: relative; z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 48px 52px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+
+    .footer-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text);
+      font-size: 0.9rem; font-weight: 700;
+    }
+
+    .footer-logo .orb {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5);
+      box-shadow: 0 0 10px rgba(99,102,241,0.5);
+    }
+
+    .footer-copy { font-size: 0.75rem; color: var(--muted); }
+    .footer-copy span { color: rgba(45,212,191,0.5); }
+
+    /* ─── ANIMATION ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .content-section:nth-child(1) { animation-delay: 0.05s; }
+    .content-section:nth-child(2) { animation-delay: 0.10s; }
+    .content-section:nth-child(3) { animation-delay: 0.15s; }
+    .content-section:nth-child(4) { animation-delay: 0.20s; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 960px) {
+      nav { padding: 16px 24px; }
+      .hero { grid-template-columns: 1fr; padding: 130px 24px 60px; gap: 40px; }
+      .page-body { grid-template-columns: 1fr; padding: 0 24px 80px; }
+      .side-col { position: static; }
+      .use-cases, .pattern-grid { grid-template-columns: 1fr 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .conv-flow { justify-content: center; }
+      footer { padding: 36px 24px; }
+    }
+
+    @media (max-width: 520px) {
+      .use-cases, .pattern-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <div class="orb"></div>
+      Agentstant Galaxy
+    </a>
+    <a href="/" class="nav-back">← Back to Galaxy</a>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <header class="hero">
+    <div class="hero-left">
+      <div class="hero-breadcrumb">
+        Agentstant Galaxy <span>/</span> AI Agents <span>/</span> AutoGen
+      </div>
+
+      <h1>
+        <em>AutoGen</em> — Where AI<br/>
+        Agents Hold the<br/>
+        Conversation
+      </h1>
+
+      <p class="hero-sub">
+        Microsoft Research's breakthrough framework turns AI models into conversational collaborators. AutoGen agents don't just execute — they debate, critique, delegate, and self-correct until the job is genuinely done right.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">💬 Conversational AI</span>
+        <span class="tag">🏢 Microsoft</span>
+        <span class="tag indigo">⚡ Code Execution</span>
+        <span class="tag indigo">🔓 Open Source</span>
+        <span class="tag">🧪 Research-Grade</span>
+      </div>
+    </div>
+
+    <div class="score-card">
+      <div class="ms-badge">🏢 Microsoft Research</div>
+      <div class="score-ring">
+        <span class="score-number">8.8</span>
+      </div>
+      <div class="score-label">Galaxy Score / 10</div>
+
+      <div class="score-rows">
+        <div class="score-row">
+          <span class="score-row-label">Flexibility</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:97%"></div></div>
+          <span class="score-val">9.7</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Code Execution</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:95%"></div></div>
+          <span class="score-val">9.5</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Ease of Use</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:72%"></div></div>
+          <span class="score-val">7.2</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Research Depth</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:98%"></div></div>
+          <span class="score-val">9.8</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Community</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div>
+          <span class="score-val">8.5</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════ BODY ═══════════ -->
+  <div class="page-body">
+
+    <main class="main-col">
+
+      <!-- ── EXPERT VERDICT ── -->
+      <article class="content-section" id="verdict">
+        <span class="section-eyebrow">✦ Expert Verdict</span>
+        <h2>What Is AutoGen — And Why Is It the Architect's Choice in 2026?</h2>
+
+        <div class="verdict-box">
+          <p>"AutoGen doesn't hand you a framework — it hands you a philosophy. The idea that AI agents should argue with each other, verify each other's work, and iterate until they reach a correct answer is the most honest model of how real intelligence operates. In 2026, that philosophy is winning."</p>
+        </div>
+
+        <p>
+          <strong>AutoGen</strong> is an open-source, Python-based multi-agent framework born from Microsoft Research with a radically different core idea: agents aren't just tools that execute tasks sequentially — they are <em>conversational entities</em> that communicate, disagree, revise, and converge on solutions through structured dialogue. Where other frameworks treat agent collaboration as a pipeline, AutoGen treats it as a conversation — and that distinction is architecturally profound.
+        </p>
+
+        <p>
+          At its foundation, AutoGen introduces two primary agent types: the <strong>AssistantAgent</strong>, powered by a large language model and capable of writing code, reasoning through problems, and generating structured outputs; and the <strong>UserProxyAgent</strong>, which can execute code, interface with humans, and serve as a bridge between AI reasoning and real-world action. These two archetypes combine in dozens of configurations — two-agent dialogs, group chats with a manager, nested hierarchies, and fully automated pipelines requiring zero human input.
+        </p>
+
+        <p>
+          In 2026, AutoGen has matured significantly from its early 2024 debut. The release of <strong>AutoGen 0.4</strong> introduced an entirely redesigned architecture based on an asynchronous, event-driven messaging system — replacing the previous synchronous conversation loop. This shift made AutoGen dramatically more scalable and production-ready, enabling long-running agents, distributed execution, and real-time responsiveness that the original design could not support. The introduction of <strong>AutoGen Studio</strong> added a no-code visual interface for building and debugging agent workflows, lowering the barrier to entry without sacrificing the framework's deep flexibility.
+        </p>
+
+        <p>
+          What gives AutoGen an edge that no other framework fully replicates is its <strong>built-in code execution feedback loop</strong>. When an AssistantAgent writes Python code, the UserProxyAgent executes it in a sandboxed Docker environment, captures the output (including errors), and feeds results back to the AssistantAgent — which then revises, debugs, and retries. This self-correcting loop can run dozens of iterations until the code produces the expected output, transforming AutoGen into a genuine autonomous programmer, not just a code generator.
+        </p>
+
+        <p>
+          <strong>For enterprise teams</strong>, AutoGen's integration with the Microsoft ecosystem is a decisive advantage. Native compatibility with Azure OpenAI, Azure AI Foundry, and Microsoft Copilot Studio makes it a natural fit for organizations already running Azure infrastructure. The framework also supports Semantic Kernel integration, allowing teams to bridge AutoGen's multi-agent orchestration with Semantic Kernel's plugin and memory management capabilities — a combination that represents arguably the most capable enterprise AI stack available in 2026.
+        </p>
+
+        <div class="conv-diagram">
+          <div class="conv-diagram-label">↳ How AutoGen's Conversation Loop Works</div>
+          <div class="conv-flow">
+            <div class="conv-node">
+              <div class="conv-node-icon node-user">👤</div>
+              <div class="conv-node-name">User / Task</div>
+            </div>
+            <div class="conv-arrow"></div>
+            <div class="conv-node">
+              <div class="conv-node-icon node-agent">🤖</div>
+              <div class="conv-node-name">Assistant Agent<br/>(LLM)</div>
+            </div>
+            <div class="conv-arrow"></div>
+            <div class="conv-node">
+              <div class="conv-node-icon node-exec">⚙️</div>
+              <div class="conv-node-name">UserProxy Agent<br/>(Code Exec)</div>
+            </div>
+            <div class="conv-arrow"></div>
+            <div class="conv-node">
+              <div class="conv-node-icon node-agent">🤖</div>
+              <div class="conv-node-name">Critique &<br/>Revise</div>
+            </div>
+            <div class="conv-arrow"></div>
+            <div class="conv-node">
+              <div class="conv-node-icon node-result">✅</div>
+              <div class="conv-node-name">Verified<br/>Output</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Real-World Use Cases</h2>
+        <p>AutoGen's conversational architecture unlocks use cases that sequential frameworks simply cannot handle. Here's where it excels in practice:</p>
+
+        <div class="use-cases">
+          <div class="use-case-card">
+            <div class="use-case-icon">💻</div>
+            <div class="use-case-title">Autonomous Software Engineers</div>
+            <div class="use-case-desc">Give AutoGen a GitHub issue and watch a Planner, Coder, and Critic agent collaborate: the Planner breaks down the task, the Coder writes the fix, and the Critic reviews correctness before the UserProxy runs tests — no human needed until the PR is ready.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">📈</div>
+            <div class="use-case-title">Financial Data Analysis</div>
+            <div class="use-case-desc">Deploy a Quant Agent and a Data Engineer Agent to pull live market data via API, write and execute pandas analysis code, generate charts, and produce a formatted investment brief — all in a single conversational chain with automatic error correction.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">🎬</div>
+            <div class="use-case-title">YouTube Research Pipelines</div>
+            <div class="use-case-desc">Content creators use AutoGen group chats where a Research Agent finds viral angles, a Script Agent drafts the narrative, and a Critic Agent reviews for engagement and SEO — producing broadcast-ready outlines with built-in quality verification.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">🔬</div>
+            <div class="use-case-title">Scientific & Academic Research</div>
+            <div class="use-case-desc">Research teams run AutoGen agents that retrieve papers, extract key findings, cross-reference citations, execute statistical code, and synthesize conclusions — compressing weeks of literature review into hours of automated analysis.</div>
+          </div>
+        </div>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ── AGENT PATTERNS ── -->
+      <article class="content-section" id="patterns">
+        <span class="section-eyebrow">✦ Architectural Patterns</span>
+        <h2>Six Conversation Patterns That Power AutoGen</h2>
+        <p>AutoGen's flexibility comes from its configurable conversation topologies. Each pattern is suited to a different class of problem:</p>
+
+        <div class="pattern-grid">
+          <div class="pattern-card">
+            <div class="pattern-icon">↔️</div>
+            <div class="pattern-name">Two-Agent Chat</div>
+            <div class="pattern-desc">Classic assistant + proxy dialog. Ideal for code generation and self-debugging loops.</div>
+          </div>
+          <div class="pattern-card">
+            <div class="pattern-icon">👥</div>
+            <div class="pattern-name">Group Chat</div>
+            <div class="pattern-desc">Multiple agents in a shared channel, moderated by a GroupChat Manager that controls speaker selection.</div>
+          </div>
+          <div class="pattern-card">
+            <div class="pattern-icon">🔀</div>
+            <div class="pattern-name">Nested Chat</div>
+            <div class="pattern-desc">One agent spawns an entire sub-conversation internally, then returns a summarized result to the parent.</div>
+          </div>
+          <div class="pattern-card">
+            <div class="pattern-icon">🔁</div>
+            <div class="pattern-name">Sequential Flow</div>
+            <div class="pattern-desc">Chained conversations where each agent's output becomes the next agent's input — pipeline-style processing.</div>
+          </div>
+          <div class="pattern-card">
+            <div class="pattern-icon">🌐</div>
+            <div class="pattern-name">Swarm</div>
+            <div class="pattern-desc">Dynamic handoff system where agents transfer control to the most capable peer based on the current subtask.</div>
+          </div>
+          <div class="pattern-card">
+            <div class="pattern-icon">⚡</div>
+            <div class="pattern-name">Event-Driven (v0.4)</div>
+            <div class="pattern-desc">Async, message-passing architecture. Agents react to events rather than polling — built for real-time systems.</div>
+          </div>
+        </div>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ── TECHNICAL CAPABILITIES ── -->
+      <article class="content-section" id="features">
+        <span class="section-eyebrow">✦ Technical Capabilities</span>
+        <h2>Five Core Capabilities That Define AutoGen in 2026</h2>
+
+        <ul class="feature-list">
+          <li>
+            <div class="feature-icon">💬</div>
+            <div class="feature-text">
+              <strong>Conversational Multi-Agent Framework</strong>
+              <span>AutoGen's entire architecture is built on structured, configurable conversations between agents. Unlike pipeline-based systems, agents can initiate, respond to, and redirect conversations dynamically — enabling emergent problem-solving behavior where the solution path isn't known in advance. The GroupChatManager intelligently routes turns based on context, avoiding the round-robin limitations of naive multi-agent systems.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">⚙️</div>
+            <div class="feature-text">
+              <strong>Sandboxed Code Execution with Feedback Loop</strong>
+              <span>AutoGen's UserProxyAgent executes code in Docker-isolated environments, captures stdout/stderr, and feeds results back to the AssistantAgent. This creates a genuine test-debug-revise loop that operates autonomously. Supports Python, shell scripts, and via extensions, JavaScript and R — making it the most capable autonomous coding agent framework available open-source.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🧩</div>
+            <div class="feature-text">
+              <strong>Human-in-the-Loop Configuration</strong>
+              <span>AutoGen uniquely supports a spectrum from fully autonomous (zero human input) to fully interactive (human approval required at every step), with fine-grained control over when and how human feedback is solicited. This makes it appropriate for high-stakes production workflows where certain decisions require human sign-off, without breaking the automation flow for routine tasks.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🔌</div>
+            <div class="feature-text">
+              <strong>Model-Agnostic with Azure-First Integration</strong>
+              <span>AutoGen is compatible with any OpenAI-compatible API endpoint — including Anthropic Claude, Google Gemini, Mistral, Groq, Ollama, and local models via LM Studio. For Microsoft Azure customers, first-class integration with Azure OpenAI Service, Azure AI Foundry, and Microsoft Copilot Studio makes AutoGen the natural backbone for enterprise AI agents on Azure infrastructure.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🖥️</div>
+            <div class="feature-text">
+              <strong>AutoGen Studio — Visual Agent Builder</strong>
+              <span>Introduced as a no-code companion to the core framework, AutoGen Studio provides a browser-based UI for composing agent teams, configuring conversation flows, testing interactions, and visualizing agent communication in real time. It dramatically lowers the barrier to entry for non-developers while remaining a powerful debugging tool for expert engineers iterating on complex multi-agent architectures.</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ── COMPARISON ── -->
+      <article class="content-section" id="comparison">
+        <span class="section-eyebrow">✦ Competitor Comparison</span>
+        <h2>AutoGen vs. CrewAI vs. LangGraph — 2026 Breakdown</h2>
+        <p>All three frameworks are production-capable in 2026 — but they serve different developer personas and use cases. Here's an honest assessment:</p>
+
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th class="highlight-col">AutoGen</th>
+              <th>CrewAI</th>
+              <th>LangGraph</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td>Core Paradigm</td>
+              <td><span class="pill-teal">Conversational</span></td>
+              <td><span class="pill-yes">Role-Based</span></td>
+              <td><span class="pill-partial">Graph-Based</span></td>
+            </tr>
+            <tr>
+              <td>Built-in Code Execution</td>
+              <td><span class="pill-teal">Native + Docker</span></td>
+              <td><span class="pill-partial">Via Tool</span></td>
+              <td><span class="pill-partial">Via Tool</span></td>
+            </tr>
+            <tr class="highlight-row">
+              <td>Human-in-the-Loop</td>
+              <td><span class="pill-teal">Fine-Grained</span></td>
+              <td><span class="pill-partial">Limited</span></td>
+              <td><span class="pill-yes">Interrupt Nodes</span></td>
+            </tr>
+            <tr>
+              <td>Ease of Onboarding</td>
+              <td><span class="pill-partial">Moderate</span></td>
+              <td><span class="pill-yes">High</span></td>
+              <td><span class="pill-no">Steep</span></td>
+            </tr>
+            <tr class="highlight-row">
+              <td>Visual UI Builder</td>
+              <td><span class="pill-teal">AutoGen Studio</span></td>
+              <td><span class="pill-yes">CrewAI Cloud</span></td>
+              <td><span class="pill-partial">LangSmith</span></td>
+            </tr>
+            <tr>
+              <td>Azure / MS Integration</td>
+              <td><span class="pill-teal">Native</span></td>
+              <td><span class="pill-partial">Via API</span></td>
+              <td><span class="pill-partial">Via API</span></td>
+            </tr>
+            <tr class="highlight-row">
+              <td>Research Backing</td>
+              <td><span class="pill-teal">Microsoft Research</span></td>
+              <td><span class="pill-partial">Startup</span></td>
+              <td><span class="pill-yes">LangChain Inc.</span></td>
+            </tr>
+            <tr>
+              <td>Open Source</td>
+              <td><span class="pill-yes">MIT</span></td>
+              <td><span class="pill-yes">MIT</span></td>
+              <td><span class="pill-yes">MIT</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top:18px; font-size:0.82rem;">
+          <strong>Bottom line:</strong> Choose AutoGen when your workload is code-heavy, requires iterative self-correction, or demands fine-grained human oversight. Choose CrewAI for faster time-to-deployment with role-based workflows that need less configuration. Choose LangGraph when you need maximum control over complex, stateful, conditional execution graphs and are comfortable with a steeper learning curve.
+        </p>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ── PRICING ── -->
+      <article class="content-section" id="pricing">
+        <span class="section-eyebrow">✦ Pricing & Integration</span>
+        <h2>What Does AutoGen Cost in 2026?</h2>
+        <p>AutoGen is fully open-source under the MIT license — the framework itself is free. Your cost comes from the LLM API calls your agents make and any hosting infrastructure you provision. Microsoft offers managed options for enterprise customers.</p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-tier">Open Source</div>
+            <div class="pricing-price">Free</div>
+            <div class="pricing-cycle">Self-hosted · MIT License</div>
+            <ul class="pricing-features">
+              <li>Full framework access</li>
+              <li>All conversation patterns</li>
+              <li>AutoGen Studio included</li>
+              <li>BYO model provider</li>
+              <li>Community Discord support</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="pricing-tier">⭐ Azure AI Foundry</div>
+            <div class="pricing-price">Pay-as-go</div>
+            <div class="pricing-cycle">Per token / compute used</div>
+            <ul class="pricing-features">
+              <li>Managed AutoGen runtime</li>
+              <li>Azure OpenAI integration</li>
+              <li>Monitoring & tracing</li>
+              <li>Scalable compute clusters</li>
+              <li>Enterprise SLA options</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-tier">Enterprise</div>
+            <div class="pricing-price">Custom</div>
+            <div class="pricing-cycle">Microsoft agreement</div>
+            <ul class="pricing-features">
+              <li>Private VNet deployment</li>
+              <li>Compliance & audit logs</li>
+              <li>Copilot Studio integration</li>
+              <li>Dedicated MS support</li>
+              <li>Priority model access</li>
+            </ul>
+          </div>
+        </div>
+
+        <p style="margin-top:24px;">
+          <strong>Integration ecosystem:</strong> AutoGen integrates natively with OpenAI, Azure OpenAI, Anthropic Claude, Google Gemini, Mistral, Groq, and any Ollama-hosted local model. For tooling, it supports web browsing via Playwright, file system access, REST API calls, database queries, and custom Python functions registered as callable tools. The framework ships first-class Docker support for sandboxed code execution, and the new <strong>AG2 community fork</strong> (spun out in 2025) continues to maintain an independent ecosystem with additional integrations including LlamaIndex, Qdrant, and Composio's 1,000+ SaaS connector library.
+        </p>
+      </article>
+
+    </main>
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="side-col">
+
+      <div class="cta-block">
+        <p>Start building conversational AI agents with AutoGen — the framework trusted by Microsoft Research and thousands of enterprise teams.</p>
+        <a href="https://microsoft.github.io/autogen/" class="btn-cta" target="_blank" rel="noopener">
+          Explore AutoGen →
+        </a>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Quick Facts</h3>
+        <div class="quick-facts">
+          <div class="quick-fact">
+            <span class="qf-label">Creator</span>
+            <span class="qf-badge-ms">Microsoft</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">First Released</span>
+            <span class="qf-value">2023</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Current Version</span>
+            <span class="qf-value">0.4.x</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">GitHub Stars</span>
+            <span class="qf-value">38k+</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">License</span>
+            <span class="qf-value">MIT</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Language</span>
+            <span class="qf-value">Python</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Status</span>
+            <span class="qf-badge">Active</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>On This Page</h3>
+        <ul class="toc-list">
+          <li><a href="#verdict">Expert Verdict</a></li>
+          <li><a href="#verdict">Real-World Use Cases</a></li>
+          <li><a href="#patterns">Conversation Patterns</a></li>
+          <li><a href="#features">Technical Capabilities</a></li>
+          <li><a href="#comparison">vs. CrewAI & LangGraph</a></li>
+          <li><a href="#pricing">Pricing & Integrations</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Best For</h3>
+        <div class="quick-facts">
+          <div class="quick-fact"><span class="qf-label">💻 Developers</span><span class="pill-teal">Excellent</span></div>
+          <div class="quick-fact"><span class="qf-label">🔬 Researchers</span><span class="pill-teal">Excellent</span></div>
+          <div class="quick-fact"><span class="qf-label">🏢 Enterprise</span><span class="pill-yes">Very Good</span></div>
+          <div class="quick-fact"><span class="qf-label">🎬 Creators</span><span class="pill-partial">Moderate</span></div>
+          <div class="quick-fact"><span class="qf-label">🔰 Beginners</span><span class="pill-partial">Moderate</span></div>
+        </div>
+      </div>
+
+    </aside>
+
+  </div><!-- /page-body -->
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="/" class="footer-logo">
+      <div class="orb"></div>
+      Agentstant Galaxy
+    </a>
+    <p class="footer-copy">© 2026 Agentstant — <span>Mapping the Intelligence Galaxy</span></p>
+  </footer>
+
+</body>
+</html>

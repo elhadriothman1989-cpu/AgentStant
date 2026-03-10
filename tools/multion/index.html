@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MultiOn Review 2026 — AI Agent That Acts on the Web</title>
+  <meta name="description" content="MultiOn review 2026: the AI agent that browses, clicks & completes real web tasks for you. Use cases, vs HyperWrite & Induced AI, pricing — full expert breakdown." />
+
+  <meta property="og:title" content="MultiOn Review 2026 — AI Agent That Acts on the Web | Agentstant Galaxy" />
+  <meta property="og:description" content="The definitive MultiOn review for 2026. Real web actions, personal AI assistant, competitor comparison and expert verdict from Agentstant Galaxy." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Agentstant Galaxy" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "name": "MultiOn Review 2026",
+    "reviewBody": "Comprehensive expert review of MultiOn web-action AI agent for 2026.",
+    "author": { "@type": "Organization", "name": "Agentstant Galaxy" },
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": "MultiOn",
+      "applicationCategory": "Web Action AI Agent"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #020204;
+      --surface:      rgba(255,255,255,0.02);
+      --accent:       #6366f1;
+      --accent-soft:  rgba(99,102,241,0.10);
+      /* MultiOn identity — electric violet/purple for "acting on the web" */
+      --violet:       #8b5cf6;
+      --violet-soft:  rgba(139,92,246,0.08);
+      --violet-glow:  rgba(139,92,246,0.30);
+      --violet-mid:   rgba(139,92,246,0.20);
+      --purple:       #a855f7;
+      --purple-soft:  rgba(168,85,247,0.07);
+      --text:         #e8e8f0;
+      --text-soft:    #b0b0c8;
+      --muted:        #6b6b80;
+      --border:       rgba(255,255,255,0.05);
+      --border-hover: rgba(139,92,246,0.38);
+      --radius:       16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* starfield */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        radial-gradient(1px 1px at 7%  13%, rgba(255,255,255,0.52) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 68%, rgba(255,255,255,0.26) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 52% 8%,  rgba(255,255,255,0.56) 0%, transparent 100%),
+        radial-gradient(1px 1px at 74% 43%, rgba(255,255,255,0.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 91% 77%, rgba(255,255,255,0.20) 0%, transparent 100%),
+        radial-gradient(1px 1px at 42% 88%, rgba(139,92,246,0.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 15% 52%, rgba(255,255,255,0.38) 0%, transparent 100%),
+        radial-gradient(1px 1px at 64% 26%, rgba(168,85,247,0.22) 0%, transparent 100%),
+        radial-gradient(1px 1px at 83% 15%, rgba(255,255,255,0.34) 0%, transparent 100%),
+        radial-gradient(1px 1px at 22% 78%, rgba(139,92,246,0.18) 0%, transparent 100%),
+        radial-gradient(1px 1px at 57% 60%, rgba(255,255,255,0.18) 0%, transparent 100%);
+    }
+
+    /* violet nebula — "acting on the web" action identity */
+    body::after {
+      content: '';
+      position: fixed; top: -18vh; left: 50%; transform: translateX(-50%);
+      width: 86vw; height: 64vh; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse at 40% 50%, rgba(139,92,246,0.08) 0%, transparent 58%),
+        radial-gradient(ellipse at 65% 50%, rgba(99,102,241,0.06) 0%, transparent 55%);
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 52px;
+      background: rgba(2,2,4,0.82);
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text);
+      font-size: 0.95rem; font-weight: 700;
+    }
+    .nav-logo .orb {
+      width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+      background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5);
+      box-shadow: 0 0 14px rgba(99,102,241,0.7);
+    }
+    .nav-back {
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--muted);
+      text-decoration: none; transition: color 0.25s;
+    }
+    .nav-back:hover { color: var(--violet); }
+
+    /* HERO */
+    .hero {
+      position: relative; z-index: 1;
+      padding: 160px 52px 80px;
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 340px;
+      gap: 64px; align-items: center;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hero-breadcrumb {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--violet); margin-bottom: 20px;
+    }
+    .hero-breadcrumb span { color: var(--muted); }
+
+    .identity-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--violet-soft); border: 1px solid var(--violet-mid);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #c4b5fd; margin-bottom: 20px;
+    }
+
+    .cursor-icon {
+      display: inline-block;
+      animation: cursorBlink 1.2s step-end infinite;
+    }
+    @keyframes cursorBlink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      font-weight: 800; letter-spacing: -0.035em;
+      line-height: 1.08; margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #ede9fe 0%, #8b5cf6 45%, #5b21b6 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem; color: var(--text-soft);
+      max-width: 520px; line-height: 1.75; margin-bottom: 36px;
+    }
+
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--violet-soft); border: 1px solid var(--violet-mid);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.72rem; font-weight: 600; color: #c4b5fd; letter-spacing: 0.06em;
+    }
+    .tag.indigo {
+      background: var(--accent-soft); border-color: rgba(99,102,241,0.2); color: #a5b4fc;
+    }
+    .tag.purple {
+      background: var(--purple-soft); border-color: rgba(168,85,247,0.2); color: #d8b4fe;
+    }
+
+    /* Score card */
+    .score-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 24px; padding: 36px 32px;
+      text-align: center; backdrop-filter: blur(12px);
+      position: relative; overflow: hidden;
+    }
+    .score-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(139,92,246,0.09), transparent 60%);
+      pointer-events: none;
+    }
+    .type-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--violet-soft); border: 1px solid var(--violet-mid);
+      border-radius: 100px; padding: 4px 12px;
+      font-size: 0.64rem; font-weight: 700;
+      letter-spacing: 0.1em; color: #c4b5fd;
+      text-transform: uppercase; margin-bottom: 18px;
+    }
+
+    .score-ring {
+      width: 110px; height: 110px; border-radius: 50%;
+      background: conic-gradient(#8b5cf6 0% 88%, rgba(255,255,255,0.05) 88% 100%);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; position: relative;
+    }
+    .score-ring::after {
+      content: ''; position: absolute; inset: 8px;
+      background: #06060e; border-radius: 50%;
+    }
+    .score-number {
+      position: relative; z-index: 1;
+      font-size: 1.8rem; font-weight: 800;
+      background: linear-gradient(135deg, #ede9fe, #8b5cf6);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .score-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 24px;
+    }
+    .score-rows { display: flex; flex-direction: column; gap: 12px; }
+    .score-row  { display: flex; align-items: center; gap: 12px; }
+    .score-row-label { font-size: 0.75rem; color: var(--muted); font-weight: 500; flex: 1; text-align: left; }
+    .score-bar-track { flex: 2; height: 4px; border-radius: 4px; background: rgba(255,255,255,0.06); overflow: hidden; }
+    .score-bar-fill  { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #5b21b6, #8b5cf6); }
+    .score-val { font-size: 0.72rem; font-weight: 700; color: var(--violet); width: 28px; text-align: right; }
+
+    /* PAGE BODY */
+    .page-body {
+      position: relative; z-index: 1;
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 52px 120px;
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 64px; align-items: start;
+    }
+    .side-col { position: sticky; top: 100px; }
+
+    /* CONTENT */
+    .content-section { margin-bottom: 64px; animation: fadeUp 0.6s ease both; }
+    .section-eyebrow {
+      display: inline-block; font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--violet); margin-bottom: 14px;
+    }
+    .content-section h2 {
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 800; letter-spacing: -0.025em;
+      line-height: 1.2; margin-bottom: 20px;
+    }
+    .content-section p {
+      color: var(--text-soft); margin-bottom: 18px;
+      font-size: 0.97rem; line-height: 1.8;
+    }
+    .content-section p strong { color: var(--text); font-weight: 600; }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 48px 0;
+    }
+
+    /* VERDICT BOX */
+    .verdict-box {
+      background: var(--violet-soft);
+      border: 1px solid rgba(139,92,246,0.15);
+      border-left: 3px solid var(--violet);
+      border-radius: var(--radius);
+      padding: 32px 30px; margin-bottom: 32px;
+      position: relative; overflow: hidden;
+    }
+    .verdict-box::before {
+      content: '✦ EXPERT VERDICT';
+      position: absolute; top: 18px; right: 20px;
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.14em; color: rgba(139,92,246,0.32);
+    }
+    .verdict-box p {
+      font-size: 1.05rem; color: var(--text);
+      font-style: italic; line-height: 1.75; margin: 0;
+    }
+
+    /* WEB ACTION DEMO STRIP */
+    .action-strip {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 24px 22px; margin: 28px 0;
+      overflow: hidden;
+    }
+    .action-strip-label {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 16px;
+    }
+    .action-items { display: flex; flex-direction: column; gap: 10px; }
+    .action-item {
+      display: flex; align-items: center; gap: 14px;
+      background: rgba(139,92,246,0.04); border: 1px solid rgba(139,92,246,0.10);
+      border-radius: 10px; padding: 12px 16px;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .action-item:hover { border-color: rgba(139,92,246,0.25); background: rgba(139,92,246,0.07); }
+    .action-step {
+      width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
+      background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.6rem; font-weight: 800; color: #c4b5fd;
+    }
+    .action-icon  { font-size: 1rem; flex-shrink: 0; }
+    .action-text  { font-size: 0.8rem; color: var(--text-soft); flex: 1; }
+    .action-text strong { color: var(--text); font-weight: 600; }
+    .action-status {
+      font-size: 0.64rem; font-weight: 700; letter-spacing: 0.06em;
+      color: #34d399; background: rgba(52,211,153,0.08);
+      border: 1px solid rgba(52,211,153,0.20);
+      border-radius: 100px; padding: 2px 8px; flex-shrink: 0;
+    }
+    .action-status.doing { color: #c4b5fd; background: rgba(139,92,246,0.10); border-color: rgba(139,92,246,0.22); }
+
+    /* WHAT MULTION CAN DO GRID */
+    .action-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0;
+    }
+    .action-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 20px 16px; text-align: center;
+      transition: border-color 0.3s, transform 0.3s, background 0.3s;
+    }
+    .action-card:hover {
+      border-color: var(--border-hover);
+      background: rgba(139,92,246,0.05);
+      transform: translateY(-3px);
+    }
+    .ac-icon  { font-size: 1.5rem; margin-bottom: 8px; }
+    .ac-title { font-size: 0.78rem; font-weight: 700; color: var(--text); margin-bottom: 5px; }
+    .ac-desc  { font-size: 0.7rem; color: var(--muted); line-height: 1.5; }
+
+    /* USE CASES */
+    .use-cases { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+    .use-case-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px 20px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .use-case-card:hover { border-color: rgba(139,92,246,0.30); transform: translateY(-3px); }
+    .use-case-icon  { font-size: 1.4rem; margin-bottom: 10px; }
+    .use-case-title { font-size: 0.85rem; font-weight: 700; margin-bottom: 8px; }
+    .use-case-desc  { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+
+    /* FEATURES */
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+    .feature-list li { display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; }
+    .feature-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--violet-soft); border: 1px solid var(--violet-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .feature-text strong { display: block; font-size: 0.88rem; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+    .feature-text span   { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+    /* COMPARE TABLE */
+    .compare-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.83rem; }
+    .compare-table thead tr { border-bottom: 1px solid var(--border); }
+    .compare-table th { text-align: left; padding: 14px 16px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .compare-table th:first-child { color: var(--text); }
+    .compare-table th.hi { color: var(--violet); }
+    .compare-table tbody tr { border-bottom: 1px solid rgba(255,255,255,0.03); transition: background 0.2s; }
+    .compare-table tbody tr:hover { background: rgba(139,92,246,0.03); }
+    .compare-table tbody tr.hl   { background: rgba(139,92,246,0.04); }
+    .compare-table td { padding: 14px 16px; color: var(--text-soft); vertical-align: middle; }
+    .compare-table td:first-child { font-weight: 600; color: var(--text); }
+
+    .pill-yes    { display:inline-block; background:rgba(52,211,153,0.10);  color:#34d399; border:1px solid rgba(52,211,153,0.25); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-partial{ display:inline-block; background:rgba(251,191,36,0.10);  color:#fbbf24; border:1px solid rgba(251,191,36,0.20); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-no     { display:inline-block; background:rgba(248,113,113,0.08); color:#f87171; border:1px solid rgba(248,113,113,0.20);border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-violet { display:inline-block; background:var(--violet-soft);      color:#c4b5fd; border:1px solid var(--violet-mid);     border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+
+    /* PRICING */
+    .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 20px; }
+    .pricing-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px 22px; text-align: center;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .pricing-card.featured {
+      border-color: rgba(139,92,246,0.30);
+      background: var(--violet-soft);
+      box-shadow: 0 0 30px rgba(139,92,246,0.10);
+    }
+    .pricing-card:hover { border-color: rgba(139,92,246,0.28); transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,0,0,0.35); }
+    .pricing-tier { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    .pricing-card.featured .pricing-tier { color: var(--violet); }
+    .pricing-price {
+      font-size: 1.7rem; font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #ede9fe, #8b5cf6);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; margin-bottom: 4px;
+    }
+    .pricing-cycle { font-size: 0.72rem; color: var(--muted); margin-bottom: 16px; }
+    .pricing-features { list-style: none; text-align: left; }
+    .pricing-features li { font-size: 0.76rem; color: var(--text-soft); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; align-items: center; gap: 7px; }
+    .pricing-features li::before { content: '✦'; color: var(--violet); font-size: 0.5rem; }
+
+    /* SIDEBAR */
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 24px; margin-bottom: 20px; }
+    .sidebar-card h3 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+    .quick-facts { display: flex; flex-direction: column; gap: 12px; }
+    .quick-fact { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+    .quick-fact:last-child { border-bottom: none; padding-bottom: 0; }
+    .qf-label { color: var(--muted); font-weight: 500; }
+    .qf-value { color: var(--text); font-weight: 600; }
+    .qf-badge        { display:inline-block; background:rgba(52,211,153,0.10); color:#34d399; border:1px solid rgba(52,211,153,0.20); border-radius:100px; padding:2px 10px; font-size:0.65rem; font-weight:700; }
+    .qf-badge-violet { display:inline-block; background:var(--violet-soft);     color:#c4b5fd; border:1px solid var(--violet-mid);   border-radius:100px; padding:2px 10px; font-size:0.65rem; font-weight:700; }
+
+    .cta-block {
+      background: linear-gradient(135deg, rgba(139,92,246,0.14), rgba(99,102,241,0.07));
+      border: 1px solid rgba(139,92,246,0.28);
+      border-radius: var(--radius); padding: 26px 24px; text-align: center; margin-bottom: 20px;
+    }
+    .cta-block p { font-size: 0.82rem; color: var(--text-soft); margin-bottom: 16px; line-height: 1.6; }
+    .btn-cta {
+      display: inline-block;
+      background: linear-gradient(135deg, #5b21b6, #8b5cf6);
+      color: #fff; font-weight: 800; font-size: 0.82rem;
+      padding: 12px 24px; border-radius: 100px; text-decoration: none;
+      box-shadow: 0 0 24px var(--violet-glow);
+      transition: transform 0.25s, box-shadow 0.25s; width: 100%;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(139,92,246,0.50); }
+
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .toc-list a { font-size: 0.78rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+    .toc-list a::before { content: '—'; color: rgba(139,92,246,0.4); }
+    .toc-list a:hover { color: var(--violet); }
+
+    /* FOOTER */
+    footer {
+      position: relative; z-index: 1;
+      border-top: 1px solid var(--border); padding: 48px 52px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-size: 0.9rem; font-weight: 700; }
+    .footer-logo .orb { width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5); box-shadow: 0 0 10px rgba(99,102,241,0.5); }
+    .footer-copy { font-size: 0.75rem; color: var(--muted); }
+    .footer-copy span { color: rgba(139,92,246,0.55); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .content-section:nth-child(1) { animation-delay: 0.05s; }
+    .content-section:nth-child(2) { animation-delay: 0.10s; }
+    .content-section:nth-child(3) { animation-delay: 0.15s; }
+    .content-section:nth-child(4) { animation-delay: 0.20s; }
+    .content-section:nth-child(5) { animation-delay: 0.25s; }
+
+    @media (max-width: 960px) {
+      nav { padding: 16px 24px; }
+      .hero { grid-template-columns: 1fr; padding: 130px 24px 60px; gap: 40px; }
+      .page-body { grid-template-columns: 1fr; padding: 0 24px 80px; }
+      .side-col { position: static; }
+      .use-cases, .action-grid { grid-template-columns: 1fr 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      footer { padding: 36px 24px; }
+    }
+    @media (max-width: 520px) {
+      .use-cases, .action-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo"><div class="orb"></div>Agentstant Galaxy</a>
+    <a href="/" class="nav-back">← Back to Galaxy</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-left">
+      <div class="hero-breadcrumb">Agentstant Galaxy <span>/</span> AI Agents <span>/</span> MultiOn</div>
+
+      <div class="identity-badge"><span class="cursor-icon">▌</span> The AI That Clicks, Types & Acts For You</div>
+
+      <h1>
+        <em>MultiOn</em> — Your<br/>
+        Personal AI That<br/>
+        Navigates the Web
+      </h1>
+
+      <p class="hero-sub">
+        MultiOn doesn't just look up information — it acts on it. Book restaurants, fill forms, send emails, purchase tickets, and complete any web task through a single conversational command. This is the AI agent that bridges the gap between intention and internet action.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">🖱️ Web Actions</span>
+        <span class="tag">🤖 Personal Agent</span>
+        <span class="tag purple">💬 Conversational</span>
+        <span class="tag indigo">⚡ API Access</span>
+        <span class="tag">🔌 Chrome Extension</span>
+      </div>
+    </div>
+
+    <div class="score-card">
+      <div class="type-badge">🖱️ Web Action AI Agent</div>
+      <div class="score-ring"><span class="score-number">8.8</span></div>
+      <div class="score-label">Galaxy Score / 10</div>
+
+      <div class="score-rows">
+        <div class="score-row">
+          <span class="score-row-label">Web Task Accuracy</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:91%"></div></div>
+          <span class="score-val">9.1</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Conversational UX</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:93%"></div></div>
+          <span class="score-val">9.3</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Action Breadth</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:88%"></div></div>
+          <span class="score-val">8.8</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">API & Dev Tools</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div>
+          <span class="score-val">8.5</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Ease of Use</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:94%"></div></div>
+          <span class="score-val">9.4</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE BODY -->
+  <div class="page-body">
+    <main class="main-col">
+
+      <!-- EXPERT VERDICT -->
+      <article class="content-section" id="verdict">
+        <span class="section-eyebrow">✦ Expert Verdict</span>
+        <h2>What Is MultiOn — And Why Is It the Most Intuitive Action Agent of 2026?</h2>
+
+        <div class="verdict-box">
+          <p>"Every other AI tool tells you things. MultiOn does things. In a world where the gap between knowing and doing is still measured in hours of human effort, MultiOn collapses that gap to a single sentence. It is not a search engine. It is not a chatbot. It is the first AI that genuinely acts as a proxy for your presence on the internet."</p>
+        </div>
+
+        <p>
+          <strong>MultiOn</strong> is a web action AI agent built around a deceptively simple but revolutionary principle: the most valuable thing an AI can do is not answer your questions — it is complete your tasks. Founded by Div Garg and launched in 2023, MultiOn emerged from the insight that the internet is fundamentally an action space, not just an information space. You don't just want to know where to book a dinner reservation — you want it booked. You don't just want to know how to apply for a job — you want the application submitted. MultiOn builds AI that operates in that gap.
+        </p>
+
+        <p>
+          At its technical core, MultiOn is a <strong>browser-native AI agent</strong> that operates through a Chrome extension and API, controlling real browser sessions to navigate websites, read page content, make decisions, and execute actions — clicks, form fills, text entry, file uploads, and navigation — exactly as a human user would. Unlike AI assistants that synthesize information from static knowledge bases, MultiOn interacts with the live, dynamic web: authenticated accounts, real-time inventory, dynamic forms, and interactive dashboards. The result is an agent that can operate in the same digital environments a human can — and increasingly, with comparable reliability.
+        </p>
+
+        <p>
+          In 2026, MultiOn has matured significantly from its early viral demonstrations. The <strong>MultiOn API</strong> — which allows developers to embed web-action capability into their own products and agent workflows — has become one of the most widely adopted building blocks in the agentic AI stack. Teams building AI assistants, productivity tools, and enterprise automation platforms use MultiOn's API to add genuine web-action capability without building and maintaining their own browser automation infrastructure. This positions MultiOn not just as a consumer tool, but as critical middleware in the emerging AI-native software stack.
+        </p>
+
+        <p>
+          What gives MultiOn its distinctive character compared to more technical browser automation tools like Induced AI or Playwright is its <strong>conversational interface</strong>. You don't configure automation scripts or define action schemas — you describe what you want in natural language, the same way you'd ask a capable human assistant. "Order me a large pepperoni pizza from the cheapest option on DoorDash near my office" or "Apply to the three most recent senior product manager roles on LinkedIn that match my resume" are valid MultiOn instructions. The agent interprets intent, navigates to the right starting point, and executes the task — surfacing only the decisions that genuinely require human judgment.
+        </p>
+
+        <p>
+          For <strong>professionals and knowledge workers</strong>, MultiOn functions as a frictionless delegation layer for the repetitive web tasks that consume disproportionate time: scheduling, form submission, data lookups, purchasing, account management, and research-and-act workflows where gathering information and acting on it happen in the same flow. The agent's ability to operate within authenticated sessions — logged into your Gmail, LinkedIn, Shopify, or any other web account — means it can take actions on your behalf with the same permissions and access you have, making it genuinely useful for real business workflows rather than just toy demonstrations.
+        </p>
+
+        <!-- Web Action Demo Strip -->
+        <div class="action-strip">
+          <div class="action-strip-label">↳ MultiOn in Action — A Real Task Sequence</div>
+          <div class="action-items">
+            <div class="action-item">
+              <div class="action-step">1</div>
+              <div class="action-icon">💬</div>
+              <div class="action-text"><strong>User Prompt:</strong> "Find the best-reviewed Italian restaurant near my office and book a table for 2 at 7pm Friday"</div>
+              <div class="action-status doing">Received</div>
+            </div>
+            <div class="action-item">
+              <div class="action-step">2</div>
+              <div class="action-icon">🌐</div>
+              <div class="action-text"><strong>MultiOn navigates</strong> to Google Maps, searches "Italian restaurant near [office location]", reads ratings and reviews</div>
+              <div class="action-status">Done</div>
+            </div>
+            <div class="action-item">
+              <div class="action-step">3</div>
+              <div class="action-icon">🔍</div>
+              <div class="action-text"><strong>Selects top result</strong> (Osteria Romana, 4.8★), identifies reservation link, navigates to OpenTable</div>
+              <div class="action-status">Done</div>
+            </div>
+            <div class="action-item">
+              <div class="action-step">4</div>
+              <div class="action-icon">📋</div>
+              <div class="action-text"><strong>Fills booking form</strong> — party size: 2, date: Friday, time: 7:00 PM, confirms with your saved contact details</div>
+              <div class="action-status">Done</div>
+            </div>
+            <div class="action-item">
+              <div class="action-step">5</div>
+              <div class="action-icon">✅</div>
+              <div class="action-text"><strong>Confirms reservation</strong> — returns booking confirmation number and restaurant address to user</div>
+              <div class="action-status">Complete</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- WHAT MULTION CAN DO -->
+        <h2>What MultiOn Can Do — Six Action Categories That Replace Human Effort</h2>
+        <div class="action-grid">
+          <div class="action-card">
+            <div class="ac-icon">🛒</div>
+            <div class="ac-title">Shopping & Orders</div>
+            <div class="ac-desc">Purchase products, compare prices, apply discount codes, and track orders across any e-commerce platform.</div>
+          </div>
+          <div class="action-card">
+            <div class="ac-icon">📅</div>
+            <div class="ac-title">Booking & Scheduling</div>
+            <div class="ac-desc">Reserve restaurants, book flights, schedule appointments, and manage calendar events autonomously.</div>
+          </div>
+          <div class="action-card">
+            <div class="ac-icon">📝</div>
+            <div class="ac-title">Form Submission</div>
+            <div class="ac-desc">Complete job applications, sign-up flows, government portals, and any multi-field web form accurately.</div>
+          </div>
+          <div class="action-card">
+            <div class="ac-icon">🔍</div>
+            <div class="ac-title">Research & Extract</div>
+            <div class="ac-desc">Navigate multiple sites, extract structured data, and compile research results into organized summaries.</div>
+          </div>
+          <div class="action-card">
+            <div class="ac-icon">📧</div>
+            <div class="ac-title">Communication</div>
+            <div class="ac-desc">Draft and send emails, reply to LinkedIn messages, post social updates, and manage inbox actions.</div>
+          </div>
+          <div class="action-card">
+            <div class="ac-icon">🏢</div>
+            <div class="ac-title">SaaS Management</div>
+            <div class="ac-desc">Navigate dashboards, update CRM records, pull reports, and execute routine admin tasks in any web app.</div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Real-World Use Cases</h2>
+        <p>MultiOn's conversational-to-action pipeline makes it the most accessible autonomous agent for non-technical users — and one of the most powerful for developers integrating web-action into products:</p>
+
+        <div class="use-cases">
+          <div class="use-case-card">
+            <div class="use-case-icon">🎬</div>
+            <div class="use-case-title">YouTube Creators</div>
+            <div class="use-case-desc">Automate the operational side of content creation: MultiOn monitors trending topics across YouTube and Reddit, submits videos to directories and promotion platforms, responds to templated partnership inquiries on email, and manages merchandise order follow-ups — freeing creators to focus entirely on making content.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">💼</div>
+            <div class="use-case-title">Job Seekers & Recruiters</div>
+            <div class="use-case-desc">Compress weeks of job searching into hours: MultiOn scans listings matching your criteria, auto-fills applications with your profile data, tracks submission status across portals, and sends personalized follow-up emails — giving you the application volume of a full-time job search while you focus on interview prep.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">💰</div>
+            <div class="use-case-title">E-Commerce & Dropshippers</div>
+            <div class="use-case-desc">Use MultiOn to monitor competitor stores for price and inventory changes, submit wholesale inquiries to suppliers, update product listings across multiple marketplaces, and process routine customer service actions — running a multi-channel e-commerce operation with the overhead of a solo operator.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">🏗️</div>
+            <div class="use-case-title">Developers & AI Builders</div>
+            <div class="use-case-desc">Embed MultiOn's API into your own agent stacks, productivity apps, or enterprise tools to add genuine web-action capability. Build products that complete real-world browser tasks on behalf of your users — without managing browser infrastructure or writing brittle automation scripts.</div>
+          </div>
+        </div>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- TECHNICAL CAPABILITIES -->
+      <article class="content-section" id="features">
+        <span class="section-eyebrow">✦ Technical Capabilities</span>
+        <h2>Five Core Capabilities That Define MultiOn in 2026</h2>
+
+        <ul class="feature-list">
+          <li>
+            <div class="feature-icon">🖱️</div>
+            <div class="feature-text">
+              <strong>Natural Language to Web Action Pipeline</strong>
+              <span>MultiOn's core capability is the translation of plain English instructions into precise sequences of browser actions — navigation, clicking, typing, selecting, scrolling, and form submission — executed in real browser sessions. The agent interprets user intent holistically rather than literally, understanding that "book me a dinner for two this Friday" requires finding a restaurant, evaluating options, navigating to a booking system, and completing a multi-step form — without needing those steps to be spelled out. This intent-to-action translation is MultiOn's deepest moat and the capability that makes it feel qualitatively different from scripted automation.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🔌</div>
+            <div class="feature-text">
+              <strong>MultiOn API — Web Actions as a Service</strong>
+              <span>MultiOn's developer API is its most strategically important product in 2026. With a simple REST call, developers can instruct MultiOn to perform any web task on behalf of their users — returning structured results, screenshots, and action logs. The API supports both synchronous (wait for completion) and asynchronous (webhook notification on completion) execution modes, making it flexible for both real-time user-facing features and background automation pipelines. For AI agent frameworks like LangChain and AutoGen, MultiOn's API functions as a ready-made web-browsing tool that can be registered in minutes — instantly giving agents the ability to act on the live internet without any browser infrastructure investment.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🔐</div>
+            <div class="feature-text">
+              <strong>Authenticated Session Actions</strong>
+              <span>MultiOn operates within authenticated browser sessions — logged into your Gmail, LinkedIn, bank portals, SaaS dashboards, or any web account — enabling actions that require genuine user identity and permissions. Session credentials are encrypted and scoped to specific task execution windows, with no persistent credential storage. This authenticated capability is what separates MultiOn from agents limited to public web pages: it can post to your social accounts, manage your CRM, process your email, and interact with any service where your account has access — making it a true digital proxy for your web presence.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">👁️</div>
+            <div class="feature-text">
+              <strong>Visual Page Understanding & Adaptive Navigation</strong>
+              <span>MultiOn uses multimodal AI to understand web pages visually — identifying buttons, forms, navigation elements, and content by appearance rather than HTML structure. This visual comprehension makes MultiOn resilient to the constant UI changes that break code-based automation: when a website redesigns its checkout flow or moves a button, MultiOn adapts by recognizing the element's visual function rather than failing on a broken CSS selector. For production automation that needs to remain reliable over months, this adaptive visual navigation is a critical reliability advantage over traditional scraping and automation tools.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🧠</div>
+            <div class="feature-text">
+              <strong>Multi-Step Task Planning & Execution</strong>
+              <span>Complex web tasks rarely map to a single action. MultiOn's planning layer breaks high-level goals into ordered action sequences, tracks progress through multi-step workflows, handles intermediate decision points, recovers from unexpected page states (error messages, CAPTCHAs, confirmation dialogs), and surfaces only the decisions that require human judgment before proceeding. This planning capability allows users to delegate genuinely complex tasks — not just "click this button" but "find, evaluate, compare, select, and purchase the best option" — and receive a completed result rather than a list of steps to execute manually.</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- COMPARISON -->
+      <article class="content-section" id="comparison">
+        <span class="section-eyebrow">✦ Competitor Comparison</span>
+        <h2>MultiOn vs. HyperWrite Agent vs. Induced AI vs. Rabbit R1 — 2026</h2>
+        <p>The web-action AI space is one of 2026's most contested categories. MultiOn occupies the consumer-friendly personal agent lane while competing on the developer API front. Here's how it stacks up:</p>
+
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th class="hi">MultiOn</th>
+              <th>HyperWrite Agent</th>
+              <th>Induced AI</th>
+              <th>Rabbit R1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hl">
+              <td>Primary Use</td>
+              <td><span class="pill-violet">Personal + API</span></td>
+              <td><span class="pill-yes">Writing + Browse</span></td>
+              <td><span class="pill-yes">Scale + Data</span></td>
+              <td><span class="pill-partial">Consumer Device</span></td>
+            </tr>
+            <tr>
+              <td>Conversational Interface</td>
+              <td><span class="pill-violet">Core Feature</span></td>
+              <td><span class="pill-yes">Yes</span></td>
+              <td><span class="pill-partial">Limited</span></td>
+              <td><span class="pill-yes">Yes</span></td>
+            </tr>
+            <tr class="hl">
+              <td>Developer API</td>
+              <td><span class="pill-violet">Full REST API</span></td>
+              <td><span class="pill-partial">Limited</span></td>
+              <td><span class="pill-yes">Full REST API</span></td>
+              <td><span class="pill-no">No</span></td>
+            </tr>
+            <tr>
+              <td>Authenticated Sessions</td>
+              <td><span class="pill-violet">Native</span></td>
+              <td><span class="pill-yes">Yes</span></td>
+              <td><span class="pill-yes">Yes</span></td>
+              <td><span class="pill-partial">LAM-based</span></td>
+            </tr>
+            <tr class="hl">
+              <td>Parallel Execution</td>
+              <td><span class="pill-partial">Growing</span></td>
+              <td><span class="pill-no">No</span></td>
+              <td><span class="pill-violet">100+ sessions</span></td>
+              <td><span class="pill-no">No</span></td>
+            </tr>
+            <tr>
+              <td>Writing Assistance</td>
+              <td><span class="pill-partial">Basic</span></td>
+              <td><span class="pill-yes">Deep/Native</span></td>
+              <td><span class="pill-no">No</span></td>
+              <td><span class="pill-partial">Voice only</span></td>
+            </tr>
+            <tr class="hl">
+              <td>Ease of Use</td>
+              <td><span class="pill-violet">Very High</span></td>
+              <td><span class="pill-yes">High</span></td>
+              <td><span class="pill-partial">Moderate</span></td>
+              <td><span class="pill-yes">High (device)</span></td>
+            </tr>
+            <tr>
+              <td>Best For</td>
+              <td><span class="pill-violet">Personal tasks</span></td>
+              <td><span class="pill-yes">Writers + ops</span></td>
+              <td><span class="pill-yes">Data at scale</span></td>
+              <td><span class="pill-partial">Voice actions</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top:18px; font-size:0.82rem;">
+          <strong>Bottom line:</strong> MultiOn is the most user-friendly and conversationally natural web-action agent in 2026 — the best choice for individuals who want to delegate real web tasks without any configuration or technical setup. For massive-scale parallel data collection, Induced AI's infrastructure superiority is unmatched. For users who need web-action plus deep writing assistance in one tool, HyperWrite's dual-mode design wins. Rabbit R1 serves the hardware-first vision but lacks MultiOn's web-action breadth and developer ecosystem.
+        </p>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- PRICING -->
+      <article class="content-section" id="pricing">
+        <span class="section-eyebrow">✦ Pricing & Integration</span>
+        <h2>MultiOn Pricing in 2026 — From Personal Agent to Developer API</h2>
+        <p>MultiOn operates on a freemium consumer model with a separate API pricing tier for developers. The Chrome extension provides personal web-action capabilities, while the API unlocks MultiOn's capabilities for product builders.</p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-tier">Free</div>
+            <div class="pricing-price">$0</div>
+            <div class="pricing-cycle">Personal use · Chrome Extension</div>
+            <ul class="pricing-features">
+              <li>Limited web actions/month</li>
+              <li>Chrome extension access</li>
+              <li>Conversational interface</li>
+              <li>Basic task types</li>
+              <li>Community support</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="pricing-tier">⭐ Pro</div>
+            <div class="pricing-price">$25</div>
+            <div class="pricing-cycle">per month · personal use</div>
+            <ul class="pricing-features">
+              <li>Unlimited web actions</li>
+              <li>Authenticated sessions</li>
+              <li>Multi-step task chains</li>
+              <li>Priority execution</li>
+              <li>Email & calendar actions</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-tier">API / Developer</div>
+            <div class="pricing-price">Usage</div>
+            <div class="pricing-cycle">Per action · volume discounts</div>
+            <ul class="pricing-features">
+              <li>Full REST API access</li>
+              <li>Async + webhook support</li>
+              <li>LangChain / AutoGen integration</li>
+              <li>Action logs & screenshots</li>
+              <li>Enterprise SLA available</li>
+            </ul>
+          </div>
+        </div>
+
+        <p style="margin-top:24px;">
+          <strong>Integration ecosystem:</strong> MultiOn operates as a Chrome extension for personal use and as a REST API for developer integrations. The API is compatible with all major AI agent frameworks — LangChain registers it as a tool, AutoGen agents can call it as a function, and CrewAI crews can use it as a web-action capability. MultiOn maintains pre-built integrations for common task categories including Gmail, LinkedIn, Google Calendar, Slack, Notion, and major e-commerce platforms. For enterprise deployments, MultiOn supports private cloud execution with customer-managed credential storage and SOC 2-aligned data handling policies. The agent is model-agnostic at the infrastructure level, with the web-action layer decoupled from the underlying LLM — allowing enterprise customers to route reasoning through their preferred model while retaining MultiOn's browser interaction layer.
+        </p>
+      </article>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="side-col">
+
+      <div class="cta-block">
+        <p>Delegate your next web task to MultiOn. Install the Chrome extension and experience what it feels like to have an AI that actually does things for you.</p>
+        <a href="https://multion.ai" class="btn-cta" target="_blank" rel="noopener">Try MultiOn Free →</a>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Quick Facts</h3>
+        <div class="quick-facts">
+          <div class="quick-fact">
+            <span class="qf-label">Founder</span>
+            <span class="qf-value">Div Garg</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Founded</span>
+            <span class="qf-badge-violet">2023</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Category</span>
+            <span class="qf-value">Web Action Agent</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Interface</span>
+            <span class="qf-value">Chrome + API</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Task Types</span>
+            <span class="qf-value">6+ categories</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Free Tier</span>
+            <span class="qf-badge">Available</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Status</span>
+            <span class="qf-badge">Active</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>On This Page</h3>
+        <ul class="toc-list">
+          <li><a href="#verdict">Expert Verdict</a></li>
+          <li><a href="#verdict">Live Task Walkthrough</a></li>
+          <li><a href="#verdict">Action Categories</a></li>
+          <li><a href="#verdict">Real-World Use Cases</a></li>
+          <li><a href="#features">Technical Capabilities</a></li>
+          <li><a href="#comparison">vs. HyperWrite & Induced AI</a></li>
+          <li><a href="#pricing">Pricing & Integrations</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Best For</h3>
+        <div class="quick-facts">
+          <div class="quick-fact"><span class="qf-label">💼 Professionals</span><span class="pill-violet">Excellent</span></div>
+          <div class="quick-fact"><span class="qf-label">💰 E-Commerce</span><span class="pill-violet">Excellent</span></div>
+          <div class="quick-fact"><span class="qf-label">🏗️ Developers</span><span class="pill-yes">Very Good</span></div>
+          <div class="quick-fact"><span class="qf-label">🎬 Creators</span><span class="pill-yes">Very Good</span></div>
+          <div class="quick-fact"><span class="qf-label">📊 Data Teams</span><span class="pill-partial">Moderate</span></div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="/" class="footer-logo"><div class="orb"></div>Agentstant Galaxy</a>
+    <p class="footer-copy">© 2026 Agentstant — <span>Mapping the Intelligence Galaxy</span></p>
+  </footer>
+
+</body>
+</html>

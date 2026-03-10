@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══════════════════════════════════
+       SEO META — OPENDEVIN / OPENHANDS
+  ═══════════════════════════════════ -->
+  <title>OpenDevin Review 2026 | Open-Source AI Engineer</title>
+  <meta name="description" content="OpenDevin (now OpenHands) review 2026: 72% SWE-Bench score, MIT-licensed, model-agnostic. The open-source AI software engineer that rivals Devin." />
+
+  <meta property="og:title" content="OpenDevin Review 2026 — Open-Source AI Software Engineer | Agentstant Galaxy" />
+  <meta property="og:description" content="OpenDevin is now OpenHands. Full 2026 expert review: CodeAct agent, sandboxed execution, 100+ LLM support, 66K+ users. The open-source answer to Devin." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Agentstant Galaxy" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "name": "OpenDevin (OpenHands) Review 2026",
+    "reviewBody": "Comprehensive expert review of OpenDevin / OpenHands autonomous AI software engineering agent for 2026.",
+    "author": { "@type": "Organization", "name": "Agentstant Galaxy" },
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": "OpenDevin / OpenHands",
+      "applicationCategory": "Autonomous AI Coding Agent",
+      "creator": { "@type": "Organization", "name": "All-Hands-AI" }
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #020204;
+      --surface:      rgba(255,255,255,0.02);
+      --accent:       #6366f1;
+      --accent-soft:  rgba(99,102,241,0.10);
+
+      /* OpenDevin identity — Emerald / Hacker Green */
+      --em:           #10b981;
+      --em-light:     #34d399;
+      --em-soft:      rgba(16,185,129,0.09);
+      --em-mid:       rgba(16,185,129,0.20);
+      --em-glow:      rgba(16,185,129,0.35);
+      --em-dark:      #059669;
+
+      --text:         #e8e8f0;
+      --text-soft:    #b0b0c8;
+      --muted:        #6b6b80;
+      --border:       rgba(255,255,255,0.05);
+      --border-hover: rgba(16,185,129,0.35);
+      --radius:       16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── STARFIELD ─────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        radial-gradient(1px   1px   at  8%  12%, rgba(255,255,255,0.50) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 22%  68%, rgba(255,255,255,0.26) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 55%   7%, rgba(255,255,255,0.55) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 78%  41%, rgba(255,255,255,0.30) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 91%  80%, rgba(255,255,255,0.20) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 43%  89%, rgba(16,185,129,0.28)  0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 14%  52%, rgba(255,255,255,0.38) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 67%  28%, rgba(16,185,129,0.18)  0%, transparent 100%),
+        radial-gradient(1px   1px   at 36%  44%, rgba(255,255,255,0.32) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 82%  19%, rgba(52,211,153,0.16)  0%, transparent 100%);
+    }
+
+    /* emerald nebula */
+    body::after {
+      content: '';
+      position: fixed; top: -18vh; left: 50%; transform: translateX(-50%);
+      width: 88vw; height: 62vh; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse at 38% 50%, rgba(16,185,129,0.07)  0%, transparent 58%),
+        radial-gradient(ellipse at 65% 50%, rgba(99,102,241,0.05)  0%, transparent 55%);
+    }
+
+    /* ── NAV ───────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 52px;
+      background: rgba(2,2,4,0.82);
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text);
+      font-size: 0.95rem; font-weight: 700;
+    }
+    .nav-logo .orb {
+      width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+      background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5);
+      box-shadow: 0 0 14px rgba(99,102,241,0.7);
+    }
+    .nav-back {
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--muted);
+      text-decoration: none; transition: color 0.25s;
+    }
+    .nav-back:hover { color: var(--em-light); }
+
+    /* ── HERO ──────────────────────────────── */
+    .hero {
+      position: relative; z-index: 1;
+      padding: 160px 52px 80px;
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 340px;
+      gap: 64px; align-items: center;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hero-breadcrumb {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--em-light); margin-bottom: 20px;
+    }
+    .hero-breadcrumb span { color: var(--muted); }
+
+    .identity-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--em-soft); border: 1px solid var(--em-mid);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #6ee7b7; margin-bottom: 20px;
+    }
+
+    /* terminal cursor blink */
+    .cursor-blink {
+      display: inline-block; width: 8px; height: 14px;
+      background: var(--em); border-radius: 1px;
+      animation: blink 1.1s step-end infinite;
+      vertical-align: middle; margin-bottom: 1px;
+    }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      font-weight: 800; letter-spacing: -0.035em;
+      line-height: 1.08; margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #a7f3d0 0%, #10b981 45%, #059669 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem; color: var(--text-soft);
+      max-width: 520px; line-height: 1.75; margin-bottom: 36px;
+    }
+
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--em-soft); border: 1px solid var(--em-mid);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.72rem; font-weight: 600; color: #6ee7b7; letter-spacing: 0.06em;
+    }
+    .tag.indigo {
+      background: var(--accent-soft); border-color: rgba(99,102,241,0.2); color: #a5b4fc;
+    }
+    .tag.amber {
+      background: rgba(245,158,11,0.07); border-color: rgba(245,158,11,0.18); color: #fcd34d;
+    }
+
+    /* ── SCORE CARD ────────────────────────── */
+    .score-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 24px; padding: 36px 32px;
+      text-align: center; backdrop-filter: blur(12px);
+      position: relative; overflow: hidden;
+    }
+    .score-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(16,185,129,0.10), transparent 60%);
+      pointer-events: none;
+    }
+    .type-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--em-soft); border: 1px solid var(--em-mid);
+      border-radius: 100px; padding: 4px 12px;
+      font-size: 0.64rem; font-weight: 700;
+      letter-spacing: 0.1em; color: #6ee7b7;
+      text-transform: uppercase; margin-bottom: 18px;
+    }
+
+    .score-ring {
+      width: 110px; height: 110px; border-radius: 50%;
+      background: conic-gradient(#10b981 0% 88%, rgba(255,255,255,0.05) 88% 100%);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; position: relative;
+    }
+    .score-ring::after {
+      content: ''; position: absolute; inset: 8px;
+      background: #020a06; border-radius: 50%;
+    }
+    .score-number {
+      position: relative; z-index: 1;
+      font-size: 1.8rem; font-weight: 800;
+      background: linear-gradient(135deg, #a7f3d0, #10b981);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .score-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 24px;
+    }
+    .score-rows { display: flex; flex-direction: column; gap: 12px; }
+    .score-row  { display: flex; align-items: center; gap: 12px; }
+    .score-row-label { font-size: 0.75rem; color: var(--muted); font-weight: 500; flex: 1; text-align: left; }
+    .score-bar-track { flex: 2; height: 4px; border-radius: 4px; background: rgba(255,255,255,0.06); overflow: hidden; }
+    .score-bar-fill  { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--em-dark), var(--em)); }
+    .score-val { font-size: 0.72rem; font-weight: 700; color: var(--em-light); width: 28px; text-align: right; }
+
+    /* ── PAGE BODY ─────────────────────────── */
+    .page-body {
+      position: relative; z-index: 1;
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 52px 120px;
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 64px; align-items: start;
+    }
+    .side-col { position: sticky; top: 100px; }
+
+    /* ── CONTENT ───────────────────────────── */
+    .content-section { margin-bottom: 64px; animation: fadeUp 0.6s ease both; }
+    .section-eyebrow {
+      display: inline-block; font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--em-light); margin-bottom: 14px;
+    }
+    .content-section h2 {
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 800; letter-spacing: -0.025em;
+      line-height: 1.2; margin-bottom: 20px;
+    }
+    .content-section p {
+      color: var(--text-soft); margin-bottom: 18px;
+      font-size: 0.97rem; line-height: 1.8;
+    }
+    .content-section p strong { color: var(--text); font-weight: 600; }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 48px 0;
+    }
+
+    /* ── VERDICT BOX ───────────────────────── */
+    .verdict-box {
+      background: var(--em-soft);
+      border: 1px solid rgba(16,185,129,0.14);
+      border-left: 3px solid var(--em);
+      border-radius: var(--radius);
+      padding: 32px 30px; margin-bottom: 32px;
+      position: relative; overflow: hidden;
+    }
+    .verdict-box::before {
+      content: '✦ EXPERT VERDICT';
+      position: absolute; top: 18px; right: 20px;
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.14em; color: rgba(16,185,129,0.30);
+    }
+    .verdict-box p {
+      font-size: 1.05rem; color: var(--text);
+      font-style: italic; line-height: 1.75; margin: 0;
+    }
+
+    /* ── REBRAND NOTICE ────────────────────── */
+    .rebrand-notice {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: rgba(99,102,241,0.07);
+      border: 1px solid rgba(99,102,241,0.18);
+      border-radius: var(--radius); padding: 20px 22px; margin-bottom: 28px;
+    }
+    .rebrand-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+    .rebrand-text { font-size: 0.85rem; color: var(--text-soft); line-height: 1.7; }
+    .rebrand-text strong { color: #a5b4fc; }
+
+    /* ── ECOSYSTEM MAP ─────────────────────── */
+    .ecosystem-map {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px 24px; margin: 28px 0;
+    }
+    .ecosystem-label {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 20px;
+    }
+    .ecosystem-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+    }
+    .eco-node {
+      background: rgba(255,255,255,0.02); border: 1px solid var(--border);
+      border-radius: 12px; padding: 14px 10px; text-align: center;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .eco-node:hover { border-color: var(--border-hover); background: var(--em-soft); }
+    .eco-node.core  { border-color: rgba(16,185,129,0.25); background: var(--em-soft); }
+    .eco-icon  { font-size: 1.2rem; margin-bottom: 6px; }
+    .eco-name  { font-size: 0.7rem; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+    .eco-sub   { font-size: 0.62rem; color: var(--muted); line-height: 1.4; }
+    .eco-badge {
+      display: inline-block; margin-top: 6px;
+      background: rgba(16,185,129,0.1); color: #6ee7b7;
+      border: 1px solid rgba(16,185,129,0.2);
+      border-radius: 100px; padding: 1px 8px;
+      font-size: 0.58rem; font-weight: 700;
+    }
+
+    /* ── AGENT LOOP ────────────────────────── */
+    .flow-strip {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px 24px; margin: 24px 0;
+    }
+    .flow-label {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 18px;
+    }
+    .flow-steps {
+      display: flex; align-items: center; gap: 0; flex-wrap: nowrap; overflow-x: auto;
+    }
+    .flow-step {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 8px; flex: 1; min-width: 80px; text-align: center;
+    }
+    .flow-node {
+      width: 48px; height: 48px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; border: 1px solid;
+    }
+    .fn-task    { background: rgba(16,185,129,0.10); border-color: rgba(16,185,129,0.30); }
+    .fn-plan    { background: rgba(99,102,241,0.10);  border-color: rgba(99,102,241,0.30);  }
+    .fn-code    { background: rgba(245,158,11,0.08);  border-color: rgba(245,158,11,0.25);  }
+    .fn-test    { background: rgba(139,92,246,0.10);  border-color: rgba(139,92,246,0.28);  }
+    .fn-commit  { background: rgba(16,185,129,0.12);  border-color: rgba(16,185,129,0.30);  }
+    .flow-name   { font-size: 0.62rem; color: var(--muted); font-weight: 600; line-height: 1.3; }
+    .flow-arrow  { color: rgba(16,185,129,0.50); font-size: 0.9rem; flex-shrink: 0; position: relative; top: -12px; padding: 0 2px; }
+
+    /* ── CODE BLOCK ────────────────────────── */
+    .code-block {
+      background: #02100a; border: 1px solid rgba(16,185,129,0.14);
+      border-radius: 12px; padding: 20px 22px; margin: 16px 0;
+      overflow-x: auto; position: relative;
+    }
+    .code-block::before {
+      content: '$ terminal'; position: absolute; top: 12px; right: 16px;
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em;
+      color: rgba(16,185,129,0.30); text-transform: uppercase;
+    }
+    .code-block pre {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.8rem; line-height: 1.75; color: #d4d4d8;
+    }
+    .code-block .prompt { color: rgba(16,185,129,0.7); }
+    .code-block .cmd    { color: #a7f3d0; }
+    .code-block .flag   { color: #6ee7b7; }
+    .code-block .cm     { color: #6b7280; font-style: italic; }
+    .code-block .out    { color: #9ca3af; }
+    .code-block .hi     { color: #34d399; font-weight: 600; }
+
+    /* ── USE CASES ─────────────────────────── */
+    .use-cases { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+    .use-case-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px 20px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .use-case-card:hover { border-color: rgba(16,185,129,0.30); transform: translateY(-3px); }
+    .use-case-icon  { font-size: 1.4rem; margin-bottom: 10px; }
+    .use-case-title { font-size: 0.85rem; font-weight: 700; margin-bottom: 8px; }
+    .use-case-desc  { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── FEATURES ──────────────────────────── */
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+    .feature-list li { display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; }
+    .feature-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--em-soft); border: 1px solid var(--em-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .feature-text strong { display: block; font-size: 0.88rem; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+    .feature-text span   { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── BENCHMARK BLOCK ───────────────────── */
+    .bench-grid {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin: 24px 0;
+    }
+    .bench-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px 16px; text-align: center;
+      transition: border-color 0.3s;
+    }
+    .bench-card:hover { border-color: rgba(16,185,129,0.25); }
+    .bench-num {
+      font-size: 2rem; font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #a7f3d0, #10b981);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; line-height: 1.1;
+    }
+    .bench-label { font-size: 0.7rem; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+    .bench-model { font-size: 0.62rem; color: rgba(16,185,129,0.55); margin-top: 4px; font-weight: 600; }
+
+    /* ── COMPARE TABLE ─────────────────────── */
+    .compare-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.83rem; }
+    .compare-table thead tr { border-bottom: 1px solid var(--border); }
+    .compare-table th { text-align: left; padding: 14px 16px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .compare-table th:first-child { color: var(--text); }
+    .compare-table th.hi { color: var(--em-light); }
+    .compare-table tbody tr { border-bottom: 1px solid rgba(255,255,255,0.03); transition: background 0.2s; }
+    .compare-table tbody tr:hover { background: rgba(16,185,129,0.03); }
+    .compare-table tbody tr.hl   { background: rgba(16,185,129,0.04); }
+    .compare-table td { padding: 14px 16px; color: var(--text-soft); vertical-align: middle; }
+    .compare-table td:first-child { font-weight: 600; color: var(--text); }
+
+    .pill-yes  { display:inline-block; background:rgba(52,211,153,0.10);  color:#34d399; border:1px solid rgba(52,211,153,0.25); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-part { display:inline-block; background:rgba(251,191,36,0.10);  color:#fbbf24; border:1px solid rgba(251,191,36,0.20); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-no   { display:inline-block; background:rgba(248,113,113,0.08); color:#f87171; border:1px solid rgba(248,113,113,0.20);border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-em   { display:inline-block; background:var(--em-soft);          color:#6ee7b7; border:1px solid var(--em-mid);         border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+
+    /* ── PRICING ───────────────────────────── */
+    .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 20px; }
+    .pricing-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px 22px; text-align: center;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .pricing-card.featured {
+      border-color: rgba(16,185,129,0.35);
+      background: var(--em-soft);
+      box-shadow: 0 0 30px rgba(16,185,129,0.08);
+    }
+    .pricing-card:hover { border-color: rgba(16,185,129,0.28); transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,0,0,0.35); }
+    .pricing-tier { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    .pricing-card.featured .pricing-tier { color: var(--em-light); }
+    .pricing-price {
+      font-size: 1.7rem; font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #a7f3d0, #10b981);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; margin-bottom: 4px;
+    }
+    .pricing-cycle { font-size: 0.72rem; color: var(--muted); margin-bottom: 16px; }
+    .pricing-features { list-style: none; text-align: left; }
+    .pricing-features li { font-size: 0.76rem; color: var(--text-soft); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; align-items: center; gap: 7px; }
+    .pricing-features li::before { content: '✦'; color: var(--em); font-size: 0.5rem; }
+
+    /* ── MODEL PILLS ───────────────────────── */
+    .model-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .model-pill {
+      padding: 4px 12px; background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border); border-radius: 100px;
+      font-size: 0.72rem; color: var(--muted);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .model-pill:hover { border-color: var(--em-mid); color: var(--em-light); }
+
+    /* ── SIDEBAR ───────────────────────────── */
+    .sidebar-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px 24px; margin-bottom: 20px;
+    }
+    .sidebar-card h3 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+    .quick-facts { display: flex; flex-direction: column; gap: 12px; }
+    .quick-fact { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+    .quick-fact:last-child { border-bottom: none; padding-bottom: 0; }
+    .qf-label { color: var(--muted); font-weight: 500; }
+    .qf-value { color: var(--text); font-weight: 600; }
+    .qf-badge    { display:inline-block; background:rgba(52,211,153,0.10); color:#34d399; border:1px solid rgba(52,211,153,0.20); border-radius:100px; padding:2px 10px; font-size:0.65rem; font-weight:700; }
+    .qf-badge-em { display:inline-block; background:var(--em-soft);        color:#6ee7b7; border:1px solid var(--em-mid);         border-radius:100px; padding:2px 10px; font-size:0.65rem; font-weight:700; }
+
+    .cta-block {
+      background: linear-gradient(135deg, rgba(16,185,129,0.10), rgba(99,102,241,0.05));
+      border: 1px solid rgba(16,185,129,0.28);
+      border-radius: var(--radius); padding: 26px 24px; text-align: center; margin-bottom: 20px;
+    }
+    .cta-block p { font-size: 0.82rem; color: var(--text-soft); margin-bottom: 16px; line-height: 1.6; }
+    .btn-cta {
+      display: inline-block;
+      background: linear-gradient(135deg, #059669, #10b981);
+      color: #020204; font-weight: 800; font-size: 0.82rem;
+      padding: 12px 24px; border-radius: 100px; text-decoration: none;
+      box-shadow: 0 0 24px var(--em-glow);
+      transition: transform 0.25s, box-shadow 0.25s; width: 100%;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(16,185,129,0.50); }
+
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .toc-list a { font-size: 0.78rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+    .toc-list a::before { content: '—'; color: rgba(16,185,129,0.4); }
+    .toc-list a:hover { color: var(--em-light); }
+
+    /* ── FOOTER ────────────────────────────── */
+    footer {
+      position: relative; z-index: 1;
+      border-top: 1px solid var(--border); padding: 48px 52px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-size: 0.9rem; font-weight: 700; }
+    .footer-logo .orb { width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5); box-shadow: 0 0 10px rgba(99,102,241,0.5); }
+    .footer-copy { font-size: 0.75rem; color: var(--muted); }
+    .footer-copy span { color: rgba(16,185,129,0.50); }
+
+    @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    .content-section:nth-child(1) { animation-delay: 0.05s; }
+    .content-section:nth-child(2) { animation-delay: 0.10s; }
+    .content-section:nth-child(3) { animation-delay: 0.15s; }
+    .content-section:nth-child(4) { animation-delay: 0.20s; }
+    .content-section:nth-child(5) { animation-delay: 0.25s; }
+
+    @media (max-width: 960px) {
+      nav { padding: 16px 24px; }
+      .hero { grid-template-columns: 1fr; padding: 130px 24px 60px; gap: 40px; }
+      .page-body { grid-template-columns: 1fr; padding: 0 24px 80px; }
+      .side-col { position: static; }
+      .use-cases { grid-template-columns: 1fr 1fr; }
+      .ecosystem-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .bench-grid { grid-template-columns: 1fr 1fr; }
+      footer { padding: 36px 24px; }
+    }
+    @media (max-width: 520px) {
+      .use-cases { grid-template-columns: 1fr; }
+      .ecosystem-grid { grid-template-columns: 1fr 1fr; }
+      .bench-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════ NAV ══════════════ -->
+  <nav>
+    <a href="/" class="nav-logo"><div class="orb"></div>Agentstant Galaxy</a>
+    <a href="/" class="nav-back">← Back to Galaxy</a>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <header class="hero">
+    <div class="hero-left">
+      <div class="hero-breadcrumb">
+        Agentstant Galaxy <span>/</span> AI Agents <span>/</span> OpenDevin
+      </div>
+
+      <div class="identity-badge">
+        <span class="cursor-blink"></span> Autonomous AI Software Engineer
+      </div>
+
+      <h1>
+        <em>OpenDevin</em> —<br/>
+        The Open-Source AI<br/>
+        Engineer That Actually Ships
+      </h1>
+
+      <p class="hero-sub">
+        Now rebranded as OpenHands, OpenDevin is the world's most popular open-source AI software agent — writing code, running tests, fixing bugs, and browsing the web autonomously, with a 72% SWE-Bench score and zero vendor lock-in.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">💻 Autonomous Coding</span>
+        <span class="tag">🔓 MIT Licensed</span>
+        <span class="tag amber">🧪 72% SWE-Bench</span>
+        <span class="tag indigo">🤖 100+ LLM Models</span>
+        <span class="tag">🐳 Docker Sandboxed</span>
+      </div>
+    </div>
+
+    <div class="score-card">
+      <div class="type-badge">💻 Autonomous Code Agent</div>
+      <div class="score-ring"><span class="score-number">8.8</span></div>
+      <div class="score-label">Galaxy Score / 10</div>
+
+      <div class="score-rows">
+        <div class="score-row">
+          <span class="score-row-label">Coding Autonomy</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:95%"></div></div>
+          <span class="score-val">9.5</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">SWE-Bench Score</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:92%"></div></div>
+          <span class="score-val">9.2</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Model Flexibility</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:99%"></div></div>
+          <span class="score-val">9.9</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Ease of Setup</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:72%"></div></div>
+          <span class="score-val">7.2</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Session Memory</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:55%"></div></div>
+          <span class="score-val">5.5</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════ PAGE BODY ══════════════ -->
+  <div class="page-body">
+    <main class="main-col">
+
+      <!-- ── EXPERT VERDICT ── -->
+      <article class="content-section" id="verdict">
+        <span class="section-eyebrow">✦ Expert Verdict</span>
+        <h2>What Is OpenDevin — And Why Is It the Most Important Open-Source AI Agent of 2026?</h2>
+
+        <div class="rebrand-notice">
+          <div class="rebrand-icon">🔄</div>
+          <div class="rebrand-text">
+            <strong>Rebrand Note:</strong> OpenDevin officially rebranded to <strong>OpenHands</strong> under the All-Hands-AI organization in late 2024. The canonical repository is now <strong>github.com/OpenHands/OpenHands</strong>. This review covers both names as they are used interchangeably across the community in 2026. All core capabilities, benchmarks, and installation guidance reflect the current OpenHands v1.4+ platform.
+          </div>
+        </div>
+
+        <div class="verdict-box">
+          <p>"OpenDevin is what happens when the open-source community refuses to accept that a $500/month closed-source tool should be the only path to autonomous AI software engineering. In 2026, OpenHands matches Devin on benchmarks, runs on any LLM, costs nothing to self-host, and has 66,000 users proving it in production every day."</p>
+        </div>
+
+        <p>
+          <strong>OpenDevin (OpenHands)</strong> was born from a defiant premise: Cognition AI's Devin — the first AI software engineer capable of planning, writing, executing, and debugging real code — should not be the exclusive property of a single company charging enterprise prices. In early 2024, the All-Hands-AI team began building an open replica, and what emerged exceeded expectations. By 2026, OpenHands has not merely caught up with its proprietary inspiration; in several benchmark categories it has surpassed it entirely.
+        </p>
+
+        <p>
+          The platform operates as a genuine autonomous software engineer. You provide it with a task — a GitHub issue, a feature description, a bug report, or a natural language specification — and OpenHands does what a human developer would do: it reads the relevant code, plans an approach, writes implementation code, installs dependencies, runs the existing test suite, identifies failures, fixes them, and prepares a clean commit for review. Every step happens inside a <strong>Docker sandbox</strong> that prevents any action from affecting your host machine without explicit permission. The agent loops autonomously until the task is complete or it hits an unresolvable blocker — at which point it asks you precisely the right question rather than hallucinating a solution.
+        </p>
+
+        <p>
+          The <strong>OpenHands Software Agent SDK</strong>, released in late 2025, transformed the platform from a single-agent tool into a composable production framework. The SDK's architecture separates the agent logic (the CodeAct agent), the execution environment (local Docker or remote cloud sandbox), and the interface layer (CLI, GUI, REST API) into clean, independently replaceable modules. This means an engineering team can deploy OpenHands in a CI/CD pipeline triggered by GitHub issue labels, with no human in the loop, resolving routine bugs and submitting pull requests entirely autonomously. That is not a demo. Teams are running this in production today.
+        </p>
+
+        <p>
+          <strong>What separates OpenHands from tools like Cursor and GitHub Copilot</strong> is the level of abstraction at which it operates. Copilot completes the line you are typing. Cursor's Agent mode executes multi-file edits on your instruction. OpenHands executes <em>entire development tasks</em> — with planning, environment management, test execution, and error recovery — from a single English sentence. The closest proprietary comparison is Devin, but at a cost differential that is effectively infinite: OpenHands is free to self-host, runs on your own API keys, and can be deployed on-premise for organizations with data sovereignty requirements that no SaaS product can meet.
+        </p>
+
+        <!-- Benchmark Stats -->
+        <div class="bench-grid">
+          <div class="bench-card">
+            <div class="bench-num">72%</div>
+            <div class="bench-label">SWE-Bench Verified Resolution Rate</div>
+            <div class="bench-model">Claude Sonnet 4.5 + Extended Thinking</div>
+          </div>
+          <div class="bench-card">
+            <div class="bench-num">67.9%</div>
+            <div class="bench-label">GAIA Benchmark Accuracy</div>
+            <div class="bench-model">Multi-step reasoning & tool use</div>
+          </div>
+          <div class="bench-card">
+            <div class="bench-num">66K+</div>
+            <div class="bench-label">Active Production Users</div>
+            <div class="bench-model">As of January 2026</div>
+          </div>
+        </div>
+
+        <!-- Ecosystem Map -->
+        <div class="ecosystem-map">
+          <div class="ecosystem-label">↳ The OpenHands Platform — Four Architectural Layers</div>
+          <div class="ecosystem-grid">
+            <div class="eco-node core">
+              <div class="eco-icon">🤖</div>
+              <div class="eco-name">CodeAct Agent</div>
+              <div class="eco-sub">Plan → code → test → fix autonomous loop</div>
+              <div class="eco-badge">Core</div>
+            </div>
+            <div class="eco-node core">
+              <div class="eco-icon">🐳</div>
+              <div class="eco-name">Docker Sandbox</div>
+              <div class="eco-sub">Isolated, safe code execution environment</div>
+              <div class="eco-badge">Security</div>
+            </div>
+            <div class="eco-node core">
+              <div class="eco-icon">🔌</div>
+              <div class="eco-name">Agent SDK</div>
+              <div class="eco-sub">Composable production framework & REST API</div>
+              <div class="eco-badge">Framework</div>
+            </div>
+            <div class="eco-node core">
+              <div class="eco-icon">🌐</div>
+              <div class="eco-name">Web Browser</div>
+              <div class="eco-sub">Integrated browser for research & web tasks</div>
+              <div class="eco-badge">Computer Use</div>
+            </div>
+            <div class="eco-node">
+              <div class="eco-icon">💻</div>
+              <div class="eco-name">CLI Interface</div>
+              <div class="eco-sub">pip install openhands-ai — no Docker needed</div>
+            </div>
+            <div class="eco-node">
+              <div class="eco-icon">🖼️</div>
+              <div class="eco-name">Local GUI</div>
+              <div class="eco-sub">React SPA + REST API for visual interaction</div>
+            </div>
+            <div class="eco-node">
+              <div class="eco-icon">☁️</div>
+              <div class="eco-name">OpenHands Cloud</div>
+              <div class="eco-sub">Hosted option — free with Minimax model</div>
+            </div>
+            <div class="eco-node">
+              <div class="eco-icon">🔬</div>
+              <div class="eco-name">Micro Agents</div>
+              <div class="eco-sub">Specialized sub-agents for domain-specific tasks</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Agent Loop -->
+        <h2>How OpenHands Works — The CodeAct Autonomous Development Loop</h2>
+        <p>
+          OpenHands' CodeAct agent follows a structured reasoning-execution cycle. Unlike chatbots that generate code for you to run, OpenHands <em>runs</em> the code itself — observing results, recovering from errors, and iterating until the task is resolved:
+        </p>
+
+        <div class="flow-strip">
+          <div class="flow-label">↳ OpenHands CodeAct Loop — Task to Merged Commit</div>
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-node fn-task">📋</div>
+              <div class="flow-name">Receive<br/>Task</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-node fn-plan">🧠</div>
+              <div class="flow-name">Plan<br/>Steps</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-node fn-code">⌨️</div>
+              <div class="flow-name">Write &<br/>Execute</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-node fn-test">🧪</div>
+              <div class="flow-name">Run Tests<br/>& Fix</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-node fn-commit">✅</div>
+              <div class="flow-name">Commit<br/>for Review</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Install snippet -->
+        <div class="code-block">
+          <pre><span class="cm"># Option 1: CLI (no Docker required)</span>
+<span class="prompt">$</span> <span class="cmd">pip install</span> <span class="flag">openhands-ai</span>
+<span class="prompt">$</span> <span class="cmd">openhands</span>
+<span class="out">  → Select your LLM provider (Claude, GPT-5, Gemini, Ollama...)</span>
+<span class="out">  → Point at your repo</span>
+<span class="out">  → Describe the task in plain English</span>
+<span class="hi">  ✓ Agent running — plan → code → test → commit</span>
+
+<span class="cm"># Option 2: Docker GUI (Devin-like interface)</span>
+<span class="prompt">$</span> <span class="cmd">docker pull</span> <span class="flag">docker.openhands.dev/openhands:latest</span>
+<span class="prompt">$</span> <span class="cmd">docker run</span> <span class="flag">-p 3000:3000</span> docker.openhands.dev/openhands
+<span class="out">  → Open localhost:3000 in your browser</span>
+<span class="hi">  ✓ Full GUI with terminal, editor & browser panels</span></pre>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Real-World Use Cases</h2>
+        <p>OpenHands serves a distinct audience: developers and technical teams who want maximum control, cost efficiency, and data privacy in their AI-assisted engineering workflows.</p>
+
+        <div class="use-cases">
+          <div class="use-case-card">
+            <div class="use-case-icon">💻</div>
+            <div class="use-case-title">Indie Developers & Passive Income</div>
+            <div class="use-case-desc">Solo founders use OpenHands to build and iterate micro-SaaS products — REST APIs, admin dashboards, Chrome extensions — at a cost of only their LLM API tokens. A $15 Claude Haiku session can ship a feature that would take a junior developer a full day. No subscription, no per-seat fee.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">🏢</div>
+            <div class="use-case-title">Enterprise CI/CD Automation</div>
+            <div class="use-case-desc">Engineering teams integrate OpenHands into GitHub Actions to automatically resolve labelled issues and submit PRs for human review. Routine bug fixes, dependency upgrades, test coverage additions, and documentation generation run unattended — freeing senior engineers for architecture work.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">🔬</div>
+            <div class="use-case-title">AI Research & Benchmark Teams</div>
+            <div class="use-case-desc">The OpenHands SDK is the reference platform for SWE-Bench and GAIA evaluation. Research teams building novel agent architectures use it as the execution backbone — swapping in custom agents while reusing the battle-tested sandbox, evaluation harness, and multi-LLM routing infrastructure.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">🏥</div>
+            <div class="use-case-title">Data-Sovereign Organizations</div>
+            <div class="use-case-desc">Healthcare, legal, and financial institutions that cannot send source code to external SaaS APIs deploy OpenHands on-premise with local LLMs via Ollama or enterprise API endpoints. Full MIT licensing means there are no legal blockers to private deployment — unlike every closed-source alternative.</div>
+          </div>
+        </div>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ── TECHNICAL CAPABILITIES ── -->
+      <article class="content-section" id="features">
+        <span class="section-eyebrow">✦ Technical Capabilities</span>
+        <h2>Five Core Capabilities That Define OpenHands in 2026</h2>
+
+        <ul class="feature-list">
+          <li>
+            <div class="feature-icon">🤖</div>
+            <div class="feature-text">
+              <strong>CodeAct Agent — Plan, Execute, Test, Repeat</strong>
+              <span>OpenHands' primary agent is CodeAct: a reasoning loop that converts a natural language task into a stepwise development plan, executes each step using real shell commands and file operations, runs the existing test suite after every change, analyzes failures, and iterates until the tests pass or the task is complete. CodeAct doesn't just generate code — it <em>runs</em> code and observes the result, replicating the exact feedback loop a human developer uses. When combined with Claude Sonnet 4.5's extended thinking mode, CodeAct achieves the platform's 72% SWE-Bench Verified resolution rate — the highest score achieved by any open-source agent framework in 2026.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🐳</div>
+            <div class="feature-text">
+              <strong>Docker Sandbox — Safe Execution Without Risk</strong>
+              <span>Every OpenHands agent session runs inside an isolated Docker container. The agent can install packages, execute shell scripts, start web servers, run database migrations, and interact with the filesystem — all within a contained environment that cannot affect your host system without explicit approval. This security architecture is what makes OpenHands suitable for production use and CI/CD integration. When the session ends, the container is destroyed. For cloud deployments, each agent gets a fresh environment, preventing cross-task state contamination. This isolation model is architecturally superior to IDE-integrated agents like Cursor, which operate directly in your local environment.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🔌</div>
+            <div class="feature-text">
+              <strong>100+ LLM Providers — Complete Model Agnosticism</strong>
+              <span>OpenHands routes to any LLM through LiteLLM, supporting over 100 model providers and configurations out of the box. Teams can run Claude Opus for complex architectural tasks, switch to GPT-5 Codex for long-horizon greenfield development, use Gemini Flash for cost-sensitive high-volume tasks, or run Qwen3 Coder or DeepSeek locally via Ollama for complete data privacy. The January 2026 OpenHands Index benchmark confirmed Claude Opus 4.6 and GPT-5.2 Codex as top performers on the platform, while open models like Qwen3 Coder 480B remain competitive at a fraction of the cost. This model agnosticism is a strategic advantage no proprietary agent platform can match.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🧩</div>
+            <div class="feature-text">
+              <strong>Multi-Agent Architecture & Micro Agents</strong>
+              <span>OpenHands supports delegation between agents at runtime. A generalist CodeAct agent can spawn specialized micro agents for specific subtasks — a documentation writer, a test generator, a security analyzer — each inheriting the project context from the parent agent but applying a specialized prompt and workflow. Micro agents require no code to create: users define them through a structured prompt schema, and the community shares agent definitions via the OpenHands Hub. For complex software engineering tasks that span multiple domains — backend implementation, API documentation, frontend integration, and deployment scripting — the multi-agent model can distribute parallel workstreams in a way no single-agent loop can match.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🌐</div>
+            <div class="feature-text">
+              <strong>Integrated Browser & Web Research</strong>
+              <span>OpenHands agents have access to a full Playwright-powered browser session within their sandbox. When implementing a feature that requires understanding an external API, reading library documentation, or finding a solution to an unfamiliar error, the agent browses the web exactly as a developer would — navigating to documentation, reading relevant sections, and incorporating what it learns into the implementation. This computer use capability extends to web scraping, UI testing of web applications built by the agent itself, and interaction with web-based development tools. Combined with the GAIA benchmark score of 67.9%, OpenHands demonstrates that its web browsing ability is substantively useful — not just a feature checkbox.</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ── COMPARISON ── -->
+      <article class="content-section" id="comparison">
+        <span class="section-eyebrow">✦ Competitor Comparison</span>
+        <h2>OpenDevin vs. Devin vs. Claude Code vs. Cursor — 2026</h2>
+        <p>The AI coding agent space has bifurcated between autonomous agents that execute full development tasks and assisted coding tools that enhance a human developer's IDE workflow. OpenHands competes in the former category, where the comparison set is narrow and the stakes are high:</p>
+
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th class="hi">OpenHands</th>
+              <th>Devin 2.0</th>
+              <th>Claude Code</th>
+              <th>Cursor Agent</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hl">
+              <td>Primary Mode</td>
+              <td><span class="pill-em">Full Autonomous</span></td>
+              <td><span class="pill-yes">Full Autonomous</span></td>
+              <td><span class="pill-yes">Autonomous CLI</span></td>
+              <td><span class="pill-part">IDE-Assisted</span></td>
+            </tr>
+            <tr>
+              <td>License</td>
+              <td><span class="pill-em">MIT (Free)</span></td>
+              <td><span class="pill-no">Proprietary</span></td>
+              <td><span class="pill-no">Proprietary</span></td>
+              <td><span class="pill-no">Proprietary</span></td>
+            </tr>
+            <tr class="hl">
+              <td>Model Choice</td>
+              <td><span class="pill-em">100+ (BYOK)</span></td>
+              <td><span class="pill-no">Devin-only</span></td>
+              <td><span class="pill-part">Claude only</span></td>
+              <td><span class="pill-part">Multi-model</span></td>
+            </tr>
+            <tr>
+              <td>SWE-Bench Score</td>
+              <td><span class="pill-em">72% (Sonnet 4.5)</span></td>
+              <td><span class="pill-part">~50% unassisted</span></td>
+              <td><span class="pill-yes">~70%+ (Sonnet)</span></td>
+              <td><span class="pill-part">N/A (IDE tool)</span></td>
+            </tr>
+            <tr class="hl">
+              <td>Self-Hostable</td>
+              <td><span class="pill-em">✓ Full on-premise</span></td>
+              <td><span class="pill-part">VPC add-on</span></td>
+              <td><span class="pill-no">✗</span></td>
+              <td><span class="pill-no">✗</span></td>
+            </tr>
+            <tr>
+              <td>Sandboxed Execution</td>
+              <td><span class="pill-em">✓ Docker native</span></td>
+              <td><span class="pill-yes">✓ Cloud sandbox</span></td>
+              <td><span class="pill-part">Approval-based</span></td>
+              <td><span class="pill-part">Local + Rules</span></td>
+            </tr>
+            <tr class="hl">
+              <td>Session Memory</td>
+              <td><span class="pill-part">Within session</span></td>
+              <td><span class="pill-yes">Devin Wiki/Search</span></td>
+              <td><span class="pill-part">CLAUDE.md docs</span></td>
+              <td><span class="pill-part">Cursor Rules</span></td>
+            </tr>
+            <tr>
+              <td>Starting Cost</td>
+              <td><span class="pill-em">Free (API tokens)</span></td>
+              <td><span class="pill-no">~$500/month</span></td>
+              <td><span class="pill-part">~$20/month+</span></td>
+              <td><span class="pill-part">$20/month</span></td>
+            </tr>
+            <tr class="hl">
+              <td>Best For</td>
+              <td><span class="pill-em">Devs & enterprises</span></td>
+              <td><span class="pill-yes">Funded startups</span></td>
+              <td><span class="pill-yes">CLI-first devs</span></td>
+              <td><span class="pill-yes">IDE workflows</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top:18px; font-size:0.82rem;">
+          <strong>Bottom line:</strong> For any developer or engineering team that values model choice, data sovereignty, or cost control, OpenHands is the definitive choice in 2026. Devin 2.0 wins on long-term project memory and polish — its "Devin Wiki" and "Devin Search" make it the strongest option for multi-week autonomous projects. Claude Code leads for developers already in the Anthropic ecosystem who want CLI-first integration. Cursor wins for developers who prioritize IDE integration and real-time collaborative coding over full autonomy. OpenHands wins for everyone who wants all the capability at a fraction of the cost, with full source visibility and no vendor lock-in.
+        </p>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ── PRICING ── -->
+      <article class="content-section" id="pricing">
+        <span class="section-eyebrow">✦ Pricing & Integration</span>
+        <h2>OpenDevin Pricing in 2026 — Free at Core, Pay Only for LLM Tokens</h2>
+        <p>OpenHands' pricing model is structurally different from every other agent platform in this space. The framework itself is free forever under the MIT license. You pay only for the LLM API tokens your agents consume — a cost you control completely by choosing your model and setting usage limits.</p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-tier">Self-Hosted OSS</div>
+            <div class="pricing-price">$0</div>
+            <div class="pricing-cycle">MIT License · Forever</div>
+            <ul class="pricing-features">
+              <li>Full CodeAct agent</li>
+              <li>Docker sandbox execution</li>
+              <li>CLI + Local GUI</li>
+              <li>100+ LLM providers (BYOK)</li>
+              <li>Multi-agent & micro agents</li>
+              <li>Community support</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="pricing-tier">⭐ OpenHands Cloud</div>
+            <div class="pricing-price">Free+</div>
+            <div class="pricing-cycle">Pay-per-use · GitHub login</div>
+            <ul class="pricing-features">
+              <li>Free tier with Minimax model</li>
+              <li>Hosted sandboxed environment</li>
+              <li>GitHub & GitLab integration</li>
+              <li>No Docker setup required</li>
+              <li>Bring your own API key</li>
+              <li>Team features (waitlist)</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-tier">Enterprise / VPC</div>
+            <div class="pricing-price">Custom</div>
+            <div class="pricing-cycle">Annual license</div>
+            <ul class="pricing-features">
+              <li>Kubernetes self-host (VPC)</li>
+              <li>Source-available enterprise dir.</li>
+              <li>SSO & RBAC</li>
+              <li>HIPAA/compliance ready</li>
+              <li>Dedicated support & SLA</li>
+              <li>CI/CD pipeline integration</li>
+            </ul>
+          </div>
+        </div>
+
+        <p style="margin-top:20px; font-size:0.85rem; color:var(--text-soft);">
+          ⚠️ <strong style="color:var(--text);">Cost guidance:</strong> A typical bounded task (fix a failing test, add a REST endpoint, write documentation) costs between $0.05 and $0.80 in LLM API tokens using Claude Sonnet 4.5. Complex multi-file refactors with multiple test iterations can reach $3–10. Using Haiku or open models via Ollama reduces costs by 80–95% for suitable tasks. Set monthly budget caps in your LLM provider dashboard to prevent runaway spending on long-horizon tasks.
+        </p>
+
+        <p style="margin-top: 18px;">
+          <strong>Supported LLM providers:</strong> OpenHands supports every major model provider through LiteLLM's unified routing layer. Choose the right model for each task — frontier reasoning for complex architecture, fast cheap models for boilerplate and documentation.
+        </p>
+
+        <div class="model-wrap">
+          <span class="model-pill">Claude Opus 4.6</span>
+          <span class="model-pill">Claude Sonnet 4.5</span>
+          <span class="model-pill">Claude Haiku 3.5</span>
+          <span class="model-pill">GPT-5.2 Codex</span>
+          <span class="model-pill">GPT-5</span>
+          <span class="model-pill">Gemini Flash 2.0</span>
+          <span class="model-pill">Gemini 3 Pro</span>
+          <span class="model-pill">DeepSeek V3.2</span>
+          <span class="model-pill">Qwen3 Coder 480B</span>
+          <span class="model-pill">Mistral Large</span>
+          <span class="model-pill">Ollama (local)</span>
+          <span class="model-pill">LM Studio</span>
+          <span class="model-pill">Groq (fast inference)</span>
+          <span class="model-pill">+ 88 more via LiteLLM</span>
+        </div>
+      </article>
+
+    </main>
+
+    <!-- ══════════ SIDEBAR ══════════ -->
+    <aside class="side-col">
+
+      <div class="cta-block">
+        <p>The open-source AI engineer that rivals Devin at zero license cost. Start in 60 seconds with a single pip install — use your own API keys, run on your own hardware.</p>
+        <a href="https://github.com/OpenHands/OpenHands" class="btn-cta" target="_blank" rel="noopener">Get OpenHands Free →</a>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Quick Facts</h3>
+        <div class="quick-facts">
+          <div class="quick-fact">
+            <span class="qf-label">Also Known As</span>
+            <span class="qf-value">OpenHands</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Org</span>
+            <span class="qf-value">All-Hands-AI</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">License</span>
+            <span class="qf-badge">MIT — Free</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">SWE-Bench</span>
+            <span class="qf-value">72% (Sonnet 4.5)</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">LLM Support</span>
+            <span class="qf-value">100+ providers</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Active Users</span>
+            <span class="qf-value">66,000+</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Status</span>
+            <span class="qf-badge-em">Production v1.4</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>On This Page</h3>
+        <ul class="toc-list">
+          <li><a href="#verdict">Expert Verdict</a></li>
+          <li><a href="#verdict">Benchmark Scores</a></li>
+          <li><a href="#verdict">Platform Architecture Map</a></li>
+          <li><a href="#verdict">CodeAct Agent Loop</a></li>
+          <li><a href="#verdict">Real-World Use Cases</a></li>
+          <li><a href="#features">Technical Capabilities</a></li>
+          <li><a href="#comparison">vs. Devin, Claude Code & Cursor</a></li>
+          <li><a href="#pricing">Pricing & LLM Support</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Best For</h3>
+        <div class="quick-facts">
+          <div class="quick-fact"><span class="qf-label">💻 Developers</span>         <span class="pill-em">Exceptional</span></div>
+          <div class="quick-fact"><span class="qf-label">🔬 AI Researchers</span>     <span class="pill-em">Exceptional</span></div>
+          <div class="quick-fact"><span class="qf-label">🏢 Enterprise Ops</span>     <span class="pill-em">Exceptional</span></div>
+          <div class="quick-fact"><span class="qf-label">💰 Indie Builders</span>     <span class="pill-yes">Very Good</span></div>
+          <div class="quick-fact"><span class="qf-label">🔰 Non-Technical</span>      <span class="pill-part">Moderate</span></div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer>
+    <a href="/" class="footer-logo"><div class="orb"></div>Agentstant Galaxy</a>
+    <p class="footer-copy">© 2026 Agentstant — <span>Mapping the Intelligence Galaxy</span></p>
+  </footer>
+
+</body>
+</html>

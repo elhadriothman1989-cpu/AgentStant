@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>HyperWrite Review 2026 — AI Writing & Browser Agent</title>
+  <meta name="description" content="HyperWrite review 2026: personal AI assistant for writing, research & web browsing. Real use cases, vs Jasper & Copy.ai, pricing — full expert breakdown." />
+
+  <meta property="og:title" content="HyperWrite Review 2026 — AI Writing & Browser Agent | Agentstant Galaxy" />
+  <meta property="og:description" content="The definitive HyperWrite review for 2026. AI writing, autonomous web browsing, real-world use cases and expert verdict from Agentstant Galaxy." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Agentstant Galaxy" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "name": "HyperWrite Review 2026",
+    "reviewBody": "Comprehensive expert review of HyperWrite AI personal assistant for writing and browsing in 2026.",
+    "author": { "@type": "Organization", "name": "Agentstant Galaxy" },
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": "HyperWrite",
+      "applicationCategory": "AI Writing & Browser Agent",
+      "creator": { "@type": "Organization", "name": "OthersideAI" }
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #020204;
+      --surface:      rgba(255,255,255,0.02);
+      --accent:       #6366f1;
+      --accent-glow:  rgba(99,102,241,0.35);
+      --accent-soft:  rgba(99,102,241,0.10);
+      /* HyperWrite identity — rose/pink for creativity & writing */
+      --rose:         #f43f5e;
+      --rose-soft:    rgba(244,63,94,0.08);
+      --rose-glow:    rgba(244,63,94,0.28);
+      --rose-mid:     rgba(244,63,94,0.18);
+      --pink:         #ec4899;
+      --pink-soft:    rgba(236,72,153,0.08);
+      --text:         #e8e8f0;
+      --text-soft:    #b0b0c8;
+      --muted:        #6b6b80;
+      --border:       rgba(255,255,255,0.05);
+      --border-hover: rgba(244,63,94,0.35);
+      --radius:       16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* starfield */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        radial-gradient(1px 1px at 7%  14%, rgba(255,255,255,0.55) 0%, transparent 100%),
+        radial-gradient(1px 1px at 31% 67%, rgba(255,255,255,0.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 53% 9%,  rgba(255,255,255,0.58) 0%, transparent 100%),
+        radial-gradient(1px 1px at 77% 44%, rgba(255,255,255,0.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 91% 77%, rgba(255,255,255,0.22) 0%, transparent 100%),
+        radial-gradient(1px 1px at 44% 88%, rgba(255,255,255,0.18) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 18% 48%, rgba(255,255,255,0.42) 0%, transparent 100%),
+        radial-gradient(1px 1px at 66% 29%, rgba(244,63,94,0.22) 0%, transparent 100%),
+        radial-gradient(1px 1px at 87% 15%, rgba(255,255,255,0.32) 0%, transparent 100%),
+        radial-gradient(1px 1px at 23% 92%, rgba(236,72,153,0.18) 0%, transparent 100%);
+    }
+
+    /* rose nebula — writing/creativity identity */
+    body::after {
+      content: '';
+      position: fixed; top: -18vh; left: 50%; transform: translateX(-50%);
+      width: 85vw; height: 60vh; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse at 38% 50%, rgba(244,63,94,0.06) 0%, transparent 58%),
+        radial-gradient(ellipse at 66% 50%, rgba(99,102,241,0.06) 0%, transparent 58%);
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 52px;
+      background: rgba(2,2,4,0.82);
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text);
+      font-size: 0.95rem; font-weight: 700;
+    }
+
+    .nav-logo .orb {
+      width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+      background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5);
+      box-shadow: 0 0 14px rgba(99,102,241,0.7);
+    }
+
+    .nav-back {
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--muted);
+      text-decoration: none; transition: color 0.25s;
+    }
+    .nav-back:hover { color: var(--rose); }
+
+    /* HERO */
+    .hero {
+      position: relative; z-index: 1;
+      padding: 160px 52px 80px;
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 340px;
+      gap: 64px; align-items: center;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hero-breadcrumb {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--rose);
+      margin-bottom: 20px;
+    }
+    .hero-breadcrumb span { color: var(--muted); }
+
+    .identity-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--rose-soft);
+      border: 1px solid var(--rose-mid);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #fda4af; margin-bottom: 20px;
+    }
+
+    .identity-badge .quill { animation: quillBob 2.2s ease-in-out infinite; display: inline-block; }
+    @keyframes quillBob {
+      0%, 100% { transform: rotate(-5deg); }
+      50%       { transform: rotate(5deg); }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      font-weight: 800; letter-spacing: -0.035em;
+      line-height: 1.08; margin-bottom: 24px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #fecdd3 0%, #f43f5e 45%, #be185d 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem; color: var(--text-soft);
+      max-width: 520px; line-height: 1.75; margin-bottom: 36px;
+    }
+
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--rose-soft);
+      border: 1px solid var(--rose-mid);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.72rem; font-weight: 600;
+      color: #fda4af; letter-spacing: 0.06em;
+    }
+    .tag.indigo {
+      background: var(--accent-soft);
+      border-color: rgba(99,102,241,0.2);
+      color: #a5b4fc;
+    }
+
+    /* Score card */
+    .score-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 24px; padding: 36px 32px;
+      text-align: center; backdrop-filter: blur(12px);
+      position: relative; overflow: hidden;
+    }
+    .score-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(244,63,94,0.08), transparent 60%);
+      pointer-events: none;
+    }
+
+    .type-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--rose-soft); border: 1px solid var(--rose-mid);
+      border-radius: 100px; padding: 4px 12px;
+      font-size: 0.64rem; font-weight: 700;
+      letter-spacing: 0.1em; color: #fda4af;
+      text-transform: uppercase; margin-bottom: 18px;
+    }
+
+    .score-ring {
+      width: 110px; height: 110px; border-radius: 50%;
+      background: conic-gradient(#f43f5e 0% 87%, rgba(255,255,255,0.05) 87% 100%);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; position: relative;
+    }
+    .score-ring::after {
+      content: ''; position: absolute; inset: 8px;
+      background: #080508; border-radius: 50%;
+    }
+    .score-number {
+      position: relative; z-index: 1;
+      font-size: 1.8rem; font-weight: 800;
+      background: linear-gradient(135deg, #fecdd3, #f43f5e);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .score-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 24px;
+    }
+
+    .score-rows { display: flex; flex-direction: column; gap: 12px; }
+    .score-row  { display: flex; align-items: center; gap: 12px; }
+    .score-row-label { font-size: 0.75rem; color: var(--muted); font-weight: 500; flex: 1; text-align: left; }
+    .score-bar-track { flex: 2; height: 4px; border-radius: 4px; background: rgba(255,255,255,0.06); overflow: hidden; }
+    .score-bar-fill  { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #9f1239, #f43f5e); }
+    .score-val { font-size: 0.72rem; font-weight: 700; color: #f43f5e; width: 28px; text-align: right; }
+
+    /* PAGE BODY */
+    .page-body {
+      position: relative; z-index: 1;
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 52px 120px;
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 64px; align-items: start;
+    }
+    .side-col { position: sticky; top: 100px; }
+
+    /* CONTENT */
+    .content-section { margin-bottom: 64px; animation: fadeUp 0.6s ease both; }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--rose); margin-bottom: 14px;
+    }
+
+    .content-section h2 {
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 800; letter-spacing: -0.025em;
+      line-height: 1.2; margin-bottom: 20px;
+    }
+
+    .content-section p {
+      color: var(--text-soft); margin-bottom: 18px;
+      font-size: 0.97rem; line-height: 1.8;
+    }
+    .content-section p strong { color: var(--text); font-weight: 600; }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 48px 0;
+    }
+
+    /* VERDICT BOX */
+    .verdict-box {
+      background: var(--rose-soft);
+      border: 1px solid rgba(244,63,94,0.14);
+      border-left: 3px solid var(--rose);
+      border-radius: var(--radius);
+      padding: 32px 30px; margin-bottom: 32px;
+      position: relative; overflow: hidden;
+    }
+    .verdict-box::before {
+      content: '✦ EXPERT VERDICT';
+      position: absolute; top: 18px; right: 20px;
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.14em; color: rgba(244,63,94,0.30);
+    }
+    .verdict-box p {
+      font-size: 1.05rem; color: var(--text);
+      font-style: italic; line-height: 1.75; margin: 0;
+    }
+
+    /* TWO MODES SPLIT */
+    .modes-split {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 16px; margin: 28px 0;
+    }
+
+    .mode-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px 22px;
+      position: relative; overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .mode-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
+
+    .mode-card::before {
+      content: '';
+      position: absolute; top: 0; right: 0;
+      width: 80px; height: 80px;
+      border-radius: 0 var(--radius) 0 0;
+      pointer-events: none;
+    }
+    .mode-card.write::before { background: radial-gradient(circle at top right, rgba(244,63,94,0.12), transparent 70%); }
+    .mode-card.browse::before { background: radial-gradient(circle at top right, rgba(99,102,241,0.12), transparent 70%); }
+
+    .mode-icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .mode-title { font-size: 0.95rem; font-weight: 800; margin-bottom: 8px; }
+    .mode-title.rose  { color: #fda4af; }
+    .mode-title.indigo { color: #a5b4fc; }
+    .mode-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.65; }
+
+    /* WRITING STYLE DNA */
+    .style-bars { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; }
+
+    .style-bar-row { display: flex; align-items: center; gap: 12px; }
+    .style-bar-label { font-size: 0.75rem; color: var(--text-soft); font-weight: 500; width: 130px; flex-shrink: 0; }
+    .style-bar-track { flex: 1; height: 6px; border-radius: 6px; background: rgba(255,255,255,0.05); overflow: hidden; }
+    .style-bar-fill  { height: 100%; border-radius: 6px; background: linear-gradient(90deg, #9f1239, #f43f5e); }
+    .style-bar-pct   { font-size: 0.7rem; color: #f43f5e; font-weight: 700; width: 36px; text-align: right; }
+
+    /* USE CASES */
+    .use-cases { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+
+    .use-case-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px 20px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .use-case-card:hover { border-color: rgba(244,63,94,0.3); transform: translateY(-3px); }
+
+    .use-case-icon  { font-size: 1.4rem; margin-bottom: 10px; }
+    .use-case-title { font-size: 0.85rem; font-weight: 700; margin-bottom: 8px; }
+    .use-case-desc  { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+
+    /* FEATURES */
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+    .feature-list li { display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; }
+
+    .feature-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--rose-soft); border: 1px solid var(--rose-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .feature-text strong { display: block; font-size: 0.88rem; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+    .feature-text span   { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+    /* COMPARE TABLE */
+    .compare-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.83rem; }
+    .compare-table thead tr { border-bottom: 1px solid var(--border); }
+    .compare-table th { text-align: left; padding: 14px 16px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .compare-table th:first-child { color: var(--text); }
+    .compare-table th.hi { color: var(--rose); }
+    .compare-table tbody tr { border-bottom: 1px solid rgba(255,255,255,0.03); transition: background 0.2s; }
+    .compare-table tbody tr:hover { background: rgba(244,63,94,0.03); }
+    .compare-table tbody tr.hl  { background: rgba(244,63,94,0.04); }
+    .compare-table td { padding: 14px 16px; color: var(--text-soft); vertical-align: middle; }
+    .compare-table td:first-child { font-weight: 600; color: var(--text); }
+
+    .pill-yes     { display:inline-block; background:rgba(52,211,153,0.10); color:#34d399; border:1px solid rgba(52,211,153,0.25); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-partial { display:inline-block; background:rgba(251,191,36,0.10); color:#fbbf24; border:1px solid rgba(251,191,36,0.20); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-no      { display:inline-block; background:rgba(248,113,113,0.08);color:#f87171; border:1px solid rgba(248,113,113,0.20);border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-rose    { display:inline-block; background:var(--rose-soft);      color:#fb7185; border:1px solid var(--rose-mid);       border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+
+    /* PRICING */
+    .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 20px; }
+
+    .pricing-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px 22px; text-align: center;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .pricing-card.featured {
+      border-color: rgba(244,63,94,0.30);
+      background: var(--rose-soft);
+      box-shadow: 0 0 30px rgba(244,63,94,0.08);
+    }
+    .pricing-card:hover { border-color: rgba(244,63,94,0.28); transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,0,0,0.35); }
+
+    .pricing-tier { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    .pricing-card.featured .pricing-tier { color: var(--rose); }
+
+    .pricing-price {
+      font-size: 1.7rem; font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #fecdd3, #f43f5e);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; margin-bottom: 4px;
+    }
+    .pricing-cycle { font-size: 0.72rem; color: var(--muted); margin-bottom: 16px; }
+
+    .pricing-features { list-style: none; text-align: left; }
+    .pricing-features li { font-size: 0.76rem; color: var(--text-soft); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; align-items: center; gap: 7px; }
+    .pricing-features li::before { content: '✦'; color: var(--rose); font-size: 0.5rem; }
+
+    /* SIDEBAR */
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 24px; margin-bottom: 20px; }
+    .sidebar-card h3 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+
+    .quick-facts { display: flex; flex-direction: column; gap: 12px; }
+    .quick-fact { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+    .quick-fact:last-child { border-bottom: none; padding-bottom: 0; }
+    .qf-label { color: var(--muted); font-weight: 500; }
+    .qf-value { color: var(--text); font-weight: 600; }
+    .qf-badge      { display:inline-block; background:rgba(52,211,153,0.10); color:#34d399; border:1px solid rgba(52,211,153,0.20); border-radius:100px; padding:2px 10px; font-size:0.65rem; font-weight:700; }
+    .qf-badge-rose { display:inline-block; background:var(--rose-soft);      color:#fb7185; border:1px solid var(--rose-mid);       border-radius:100px; padding:2px 10px; font-size:0.65rem; font-weight:700; }
+
+    .cta-block {
+      background: linear-gradient(135deg, rgba(244,63,94,0.12), rgba(99,102,241,0.06));
+      border: 1px solid rgba(244,63,94,0.28);
+      border-radius: var(--radius); padding: 26px 24px; text-align: center; margin-bottom: 20px;
+    }
+    .cta-block p { font-size: 0.82rem; color: var(--text-soft); margin-bottom: 16px; line-height: 1.6; }
+
+    .btn-cta {
+      display: inline-block;
+      background: linear-gradient(135deg, #9f1239, #f43f5e);
+      color: #fff; font-weight: 800; font-size: 0.82rem;
+      padding: 12px 24px; border-radius: 100px;
+      text-decoration: none;
+      box-shadow: 0 0 24px var(--rose-glow);
+      transition: transform 0.25s, box-shadow 0.25s; width: 100%;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(244,63,94,0.48); }
+
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .toc-list a { font-size: 0.78rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+    .toc-list a::before { content: '—'; color: rgba(244,63,94,0.4); }
+    .toc-list a:hover { color: var(--rose); }
+
+    /* FOOTER */
+    footer {
+      position: relative; z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 48px 52px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-size: 0.9rem; font-weight: 700; }
+    .footer-logo .orb { width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5); box-shadow: 0 0 10px rgba(99,102,241,0.5); }
+    .footer-copy { font-size: 0.75rem; color: var(--muted); }
+    .footer-copy span { color: rgba(244,63,94,0.50); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .content-section:nth-child(1) { animation-delay: 0.05s; }
+    .content-section:nth-child(2) { animation-delay: 0.10s; }
+    .content-section:nth-child(3) { animation-delay: 0.15s; }
+    .content-section:nth-child(4) { animation-delay: 0.20s; }
+    .content-section:nth-child(5) { animation-delay: 0.25s; }
+
+    @media (max-width: 960px) {
+      nav { padding: 16px 24px; }
+      .hero { grid-template-columns: 1fr; padding: 130px 24px 60px; gap: 40px; }
+      .page-body { grid-template-columns: 1fr; padding: 0 24px 80px; }
+      .side-col { position: static; }
+      .modes-split, .use-cases { grid-template-columns: 1fr 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      footer { padding: 36px 24px; }
+    }
+    @media (max-width: 520px) {
+      .modes-split, .use-cases { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo"><div class="orb"></div>Agentstant Galaxy</a>
+    <a href="/" class="nav-back">← Back to Galaxy</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-left">
+      <div class="hero-breadcrumb">Agentstant Galaxy <span>/</span> AI Agents <span>/</span> HyperWrite</div>
+
+      <div class="identity-badge"><span class="quill">✍️</span> Personal AI Assistant for Writers & Operators</div>
+
+      <h1>
+        <em>HyperWrite</em> —<br/>
+        Write Smarter,<br/>
+        Browse Autonomously
+      </h1>
+
+      <p class="hero-sub">
+        HyperWrite combines a deeply personal AI writing assistant with a fully autonomous browser agent — giving creators, researchers, and operators a single tool that both thinks in your voice and acts on your behalf across the live web.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">✍️ AI Writing</span>
+        <span class="tag">🌐 Browser Agent</span>
+        <span class="tag indigo">🧠 Style Learning</span>
+        <span class="tag indigo">🔌 Chrome Extension</span>
+        <span class="tag">⚡ Real-Time Assist</span>
+      </div>
+    </div>
+
+    <div class="score-card">
+      <div class="type-badge">✍️ Writing + Browsing Agent</div>
+      <div class="score-ring"><span class="score-number">8.7</span></div>
+      <div class="score-label">Galaxy Score / 10</div>
+
+      <div class="score-rows">
+        <div class="score-row">
+          <span class="score-row-label">Writing Quality</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:93%"></div></div>
+          <span class="score-val">9.3</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Browser Autonomy</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:88%"></div></div>
+          <span class="score-val">8.8</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Style Adaptation</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:95%"></div></div>
+          <span class="score-val">9.5</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Ease of Use</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:90%"></div></div>
+          <span class="score-val">9.0</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Value for Money</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:85%"></div></div>
+          <span class="score-val">8.5</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE BODY -->
+  <div class="page-body">
+    <main class="main-col">
+
+      <!-- EXPERT VERDICT -->
+      <article class="content-section" id="verdict">
+        <span class="section-eyebrow">✦ Expert Verdict</span>
+        <h2>What Is HyperWrite — And Why Is It the Creator's Agent of Choice in 2026?</h2>
+
+        <div class="verdict-box">
+          <p>"Most AI writing tools hand you a generic assistant. HyperWrite hands you a digital clone of yourself — one that writes in your voice, navigates the web for you, and learns your habits over time. In 2026, that's not a feature. That's a fundamental shift in how individuals extend their capacity to create and operate."</p>
+        </div>
+
+        <p>
+          <strong>HyperWrite</strong> is a personal AI assistant built by OthersideAI around a deceptively human-centered thesis: the best AI writing tool is one that disappears into your workflow, sounds like you, and eventually anticipates what you need before you ask. Founded in 2020 and accelerated by the GPT-4 era, HyperWrite has evolved from a smart autocomplete Chrome extension into a dual-capability platform — part writing co-pilot, part autonomous browser agent — that occupies a unique niche in the 2026 AI landscape.
+        </p>
+
+        <p>
+          What separates HyperWrite from the sea of generic AI writing tools is its <strong>Personal Style Profile</strong>. Most AI assistants generate plausible prose — but it sounds like everyone else's AI. HyperWrite analyzes your previous writing samples, emails, documents, and content to build a model of your unique voice: your sentence rhythm, vocabulary preferences, tonal register, even your punctuation habits. Every output it generates is filtered through this profile, producing content that reads as authentically yours rather than generically machine-generated. In 2026, as AI-detection tools proliferate and audiences grow more sophisticated, this authenticity layer is commercially invaluable.
+        </p>
+
+        <p>
+          The second pillar of HyperWrite's 2026 identity is its <strong>Agent Mode</strong> — a fully autonomous browser agent accessible via the Chrome extension and web platform. Unlike traditional AI writing tools that operate entirely within a text box, HyperWrite's Agent can be given a task and will open tabs, navigate websites, fill out forms, extract data, click buttons, and compile results autonomously. Ask it to research the top 10 competitors in your niche, fill out a job application, book a restaurant, or compile pricing data from five different websites — it executes these tasks with a level of real-world web fluency that feels genuinely transformative.
+        </p>
+
+        <p>
+          <strong>For YouTube content creators</strong>, HyperWrite operates as a complete content production suite: research a topic via Agent Mode, generate a script in your exact voice using the writing assistant, draft video descriptions optimized for SEO, compose community post captions, and write email newsletters to subscribers — all from a single interface that maintains tonal consistency across every format. The workflow compression this enables is extraordinary; what previously required four separate tools and two hours now happens in one session.
+        </p>
+
+        <p>
+          In the broader competitive landscape, HyperWrite occupies a distinct space between two categories that rarely overlap: <strong>AI writing platforms</strong> (Jasper, Copy.ai, Writesonic) and <strong>browser-based AI agents</strong> (MultiOn, Induced AI). It is neither purely one nor the other — it is the only mainstream tool in 2026 that meaningfully combines both capabilities within a single, coherently designed product. This dual identity is its most defensible moat. A content creator who adopts HyperWrite for writing quickly discovers the browser agent; a business operator who starts with the agent inevitably leans on the writing tools. Retention is built into the architecture.
+        </p>
+
+        <!-- Two Modes Split -->
+        <div class="modes-split">
+          <div class="mode-card write">
+            <div class="mode-icon">✍️</div>
+            <div class="mode-title rose">Writing Assistant Mode</div>
+            <div class="mode-desc">Your personal AI co-writer. Generates long-form content, emails, scripts, and social copy in your unique voice — trained on your past writing to match your tone, style, and rhythm exactly.</div>
+          </div>
+          <div class="mode-card browse">
+            <div class="mode-icon">🌐</div>
+            <div class="mode-title indigo">Agent / Browser Mode</div>
+            <div class="mode-desc">Your autonomous web operator. Give HyperWrite a task — research, form-filling, data extraction, booking — and it navigates the live browser independently, returning completed results to you.</div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Personal Style DNA — How HyperWrite Learns Your Voice</h2>
+        <p>HyperWrite's style engine analyzes multiple writing dimensions from your uploaded samples to calibrate outputs to your exact voice. Here's what it measures and how strongly it weights each dimension:</p>
+
+        <div class="style-bars">
+          <div class="style-bar-row">
+            <span class="style-bar-label">Sentence Rhythm</span>
+            <div class="style-bar-track"><div class="style-bar-fill" style="width:96%"></div></div>
+            <span class="style-bar-pct">96%</span>
+          </div>
+          <div class="style-bar-row">
+            <span class="style-bar-label">Vocabulary Range</span>
+            <div class="style-bar-track"><div class="style-bar-fill" style="width:92%"></div></div>
+            <span class="style-bar-pct">92%</span>
+          </div>
+          <div class="style-bar-row">
+            <span class="style-bar-label">Tonal Register</span>
+            <div class="style-bar-track"><div class="style-bar-fill" style="width:89%"></div></div>
+            <span class="style-bar-pct">89%</span>
+          </div>
+          <div class="style-bar-row">
+            <span class="style-bar-label">Structural Patterns</span>
+            <div class="style-bar-track"><div class="style-bar-fill" style="width:85%"></div></div>
+            <span class="style-bar-pct">85%</span>
+          </div>
+          <div class="style-bar-row">
+            <span class="style-bar-label">Punctuation Habits</span>
+            <div class="style-bar-track"><div class="style-bar-fill" style="width:78%"></div></div>
+            <span class="style-bar-pct">78%</span>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Real-World Use Cases</h2>
+        <p>HyperWrite's combined writing and browsing capability makes it uniquely productive across a wide range of creator and operator workflows:</p>
+
+        <div class="use-cases">
+          <div class="use-case-card">
+            <div class="use-case-icon">🎬</div>
+            <div class="use-case-title">YouTube Creators</div>
+            <div class="use-case-desc">Research trending topics via Agent Mode, generate full video scripts in your voice, write SEO-optimized descriptions, craft community posts, and draft Patreon newsletters — all in one session, all sounding like you wrote every word yourself.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">💼</div>
+            <div class="use-case-title">Job Seekers & Recruiters</div>
+            <div class="use-case-desc">Let Agent Mode research target companies, auto-fill job applications, and customize cover letters in your personal writing style for each role — compressing a 3-hour application session into 20 minutes of supervised automation.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">💰</div>
+            <div class="use-case-title">Passive Income Builders</div>
+            <div class="use-case-desc">Run a content-driven affiliate site almost entirely through HyperWrite: Agent Mode researches products and gathers pricing data, the writing assistant produces SEO articles in a consistent brand voice, and the email assistant handles list nurture campaigns.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">📧</div>
+            <div class="use-case-title">Sales & Business Development</div>
+            <div class="use-case-desc">Generate highly personalized cold outreach emails that sound hand-written, use Agent Mode to research prospects from LinkedIn and company websites, and scale a personalized outreach campaign that converts at human-written rates — at machine speed.</div>
+          </div>
+        </div>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- TECHNICAL CAPABILITIES -->
+      <article class="content-section" id="features">
+        <span class="section-eyebrow">✦ Technical Capabilities</span>
+        <h2>Five Core Capabilities That Define HyperWrite in 2026</h2>
+
+        <ul class="feature-list">
+          <li>
+            <div class="feature-icon">🎭</div>
+            <div class="feature-text">
+              <strong>Personal Style Profile & Voice Cloning</strong>
+              <span>HyperWrite's most distinctive capability: upload your existing writing — emails, blog posts, social content, documents — and it builds a persistent style model that calibrates every output to match your voice. Unlike one-time tone settings in competitor tools, HyperWrite's style profile deepens over time, becoming more accurate with every piece of content you generate. The result is AI-assisted writing that passes the closest human scrutiny because it genuinely mirrors your linguistic fingerprint.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🤖</div>
+            <div class="feature-text">
+              <strong>Autonomous Browser Agent (Agent Mode)</strong>
+              <span>HyperWrite's Agent Mode is a fully autonomous web-browsing AI accessible directly from the Chrome extension. You give it a natural language instruction — "find the 5 best standing desks under $400 and compile a comparison table," or "apply to the three most recent marketing roles on LinkedIn" — and it navigates the live browser, makes decisions, fills fields, extracts data, and returns results. It operates with a human-like understanding of web UI patterns, handling modern SPAs, login flows, and dynamic content that simpler scraping tools cannot navigate.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">⚡</div>
+            <div class="feature-text">
+              <strong>Inline AI Assistance Across Every App</strong>
+              <span>The HyperWrite Chrome extension injects AI writing assistance directly into any web-based text field — Gmail, Google Docs, LinkedIn, Notion, WordPress, Substack, Twitter/X, Slack, and thousands more. There's no copy-pasting to a separate AI tool; the assistant surfaces suggestions inline as you type, with a single keyboard shortcut to accept or refine. This zero-friction integration makes HyperWrite the only AI writing tool that truly lives inside your existing workflow rather than beside it.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">📚</div>
+            <div class="feature-text">
+              <strong>500+ Specialized Writing Templates</strong>
+              <span>Beyond free-form generation, HyperWrite ships with over 500 task-specific writing templates spanning every format a professional creator or operator encounters: cold emails, YouTube scripts, LinkedIn posts, product descriptions, performance reviews, investor updates, grant proposals, SEO meta descriptions, podcast outlines, and more. Each template is parameterized for your personal style, so the outputs carry your voice even in formats you've never written before — giving you a credible first draft in seconds for any content type.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🔁</div>
+            <div class="feature-text">
+              <strong>TypeAhead — Real-Time Sentence Completion</strong>
+              <span>HyperWrite's TypeAhead feature provides real-time next-sentence prediction as you write, surfacing contextually appropriate completions in a subtle ghost-text overlay. Trained on your style profile, TypeAhead doesn't just complete sentences grammatically — it completes them in the direction your argument or narrative is heading. Professional writers use it to break past blank-page paralysis; operators use it to dramatically accelerate email and document drafting without switching to a generation interface.</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- COMPARISON -->
+      <article class="content-section" id="comparison">
+        <span class="section-eyebrow">✦ Competitor Comparison</span>
+        <h2>HyperWrite vs. Jasper vs. Copy.ai vs. MultiOn — 2026</h2>
+        <p>HyperWrite competes on two fronts simultaneously — AI writing and browser autonomy. No single competitor matches it across both dimensions, but each has areas of strength worth understanding:</p>
+
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th class="hi">HyperWrite</th>
+              <th>Jasper AI</th>
+              <th>Copy.ai</th>
+              <th>MultiOn</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hl">
+              <td>Personal Style Learning</td>
+              <td><span class="pill-rose">Deep Profile</span></td>
+              <td><span class="pill-partial">Brand Voice</span></td>
+              <td><span class="pill-partial">Basic Tone</span></td>
+              <td><span class="pill-no">No</span></td>
+            </tr>
+            <tr>
+              <td>Browser Agent Mode</td>
+              <td><span class="pill-rose">Native</span></td>
+              <td><span class="pill-no">No</span></td>
+              <td><span class="pill-no">No</span></td>
+              <td><span class="pill-yes">Core Feature</span></td>
+            </tr>
+            <tr class="hl">
+              <td>Chrome Extension</td>
+              <td><span class="pill-rose">Full Inline AI</span></td>
+              <td><span class="pill-yes">Yes</span></td>
+              <td><span class="pill-partial">Limited</span></td>
+              <td><span class="pill-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>Writing Templates</td>
+              <td><span class="pill-rose">500+</span></td>
+              <td><span class="pill-yes">90+</span></td>
+              <td><span class="pill-yes">100+</span></td>
+              <td><span class="pill-no">No</span></td>
+            </tr>
+            <tr class="hl">
+              <td>Real-Time TypeAhead</td>
+              <td><span class="pill-rose">Native</span></td>
+              <td><span class="pill-no">No</span></td>
+              <td><span class="pill-no">No</span></td>
+              <td><span class="pill-no">No</span></td>
+            </tr>
+            <tr>
+              <td>Team Collaboration</td>
+              <td><span class="pill-partial">Growing</span></td>
+              <td><span class="pill-yes">Strong</span></td>
+              <td><span class="pill-yes">Strong</span></td>
+              <td><span class="pill-partial">Limited</span></td>
+            </tr>
+            <tr class="hl">
+              <td>Best For</td>
+              <td><span class="pill-rose">Creators + Ops</span></td>
+              <td><span class="pill-yes">Marketing Teams</span></td>
+              <td><span class="pill-yes">GTM Teams</span></td>
+              <td><span class="pill-yes">Web Automation</span></td>
+            </tr>
+            <tr>
+              <td>Starting Price / mo</td>
+              <td><span class="pill-rose">$19.99</span></td>
+              <td><span class="pill-partial">$39</span></td>
+              <td><span class="pill-partial">$36</span></td>
+              <td><span class="pill-partial">$40</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top:18px; font-size:0.82rem;">
+          <strong>Bottom line:</strong> HyperWrite is the clear choice for individual creators, solopreneurs, and operators who want one tool that handles both high-quality personalized writing and autonomous web tasks. For large marketing teams needing brand governance and workflow management, Jasper's team features lead. For pure browser automation without a writing use case, MultiOn offers deeper web-agent capability. Copy.ai wins for automated go-to-market workflows at scale. But for the solo operator who writes and acts? HyperWrite has no real peer.
+        </p>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- PRICING -->
+      <article class="content-section" id="pricing">
+        <span class="section-eyebrow">✦ Pricing & Integration</span>
+        <h2>HyperWrite Pricing in 2026 — Accessible Power for Every Creator</h2>
+        <p>HyperWrite offers one of the most competitive pricing structures in the AI assistant market, with a generous free tier that lets you experience the core writing tools before committing. Agent Mode and style customization unlock on paid plans.</p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-tier">Free</div>
+            <div class="pricing-price">$0</div>
+            <div class="pricing-cycle">Forever · No credit card</div>
+            <ul class="pricing-features">
+              <li>15 AI Writes / month</li>
+              <li>Chrome extension access</li>
+              <li>Core writing templates</li>
+              <li>TypeAhead (limited)</li>
+              <li>Community support</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="pricing-tier">⭐ Premium</div>
+            <div class="pricing-price">$19.99</div>
+            <div class="pricing-cycle">per month · billed monthly</div>
+            <ul class="pricing-features">
+              <li>Unlimited AI writing</li>
+              <li>Full Agent Mode access</li>
+              <li>Personal Style Profile</li>
+              <li>500+ templates</li>
+              <li>Unlimited TypeAhead</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-tier">Ultra</div>
+            <div class="pricing-price">$44.99</div>
+            <div class="pricing-cycle">per month · billed monthly</div>
+            <ul class="pricing-features">
+              <li>Everything in Premium</li>
+              <li>Priority model access</li>
+              <li>Advanced Agent tasks</li>
+              <li>Higher rate limits</li>
+              <li>Priority support</li>
+            </ul>
+          </div>
+        </div>
+
+        <p style="margin-top:24px;">
+          <strong>Integration ecosystem:</strong> HyperWrite's Chrome extension injects seamlessly into Gmail, Google Docs, Outlook, Notion, WordPress, Substack, LinkedIn, Twitter/X, Slack, Discord, HubSpot, Salesforce, and any web-based text input — covering virtually every tool in a modern creator or operator's stack. The platform supports GPT-4o and Claude as underlying models, with automatic routing based on task type. For developers, HyperWrite offers a limited API for embedding style-aware generation into custom applications, with expanded API access on enterprise plans. The Agent Mode integrates with Chrome's full browser context, meaning it can operate inside authenticated sessions, interact with SaaS dashboards, and navigate password-protected content — a capability that positions it closer to a true digital employee than a writing tool.
+        </p>
+      </article>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="side-col">
+
+      <div class="cta-block">
+        <p>Start writing in your own voice — and browsing the web on autopilot. HyperWrite's free plan gets you started in 60 seconds.</p>
+        <a href="https://www.hyperwriteai.com" class="btn-cta" target="_blank" rel="noopener">Try HyperWrite Free →</a>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Quick Facts</h3>
+        <div class="quick-facts">
+          <div class="quick-fact">
+            <span class="qf-label">Creator</span>
+            <span class="qf-value">OthersideAI</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Founded</span>
+            <span class="qf-value">2020</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Category</span>
+            <span class="qf-badge-rose">Writing + Agent</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Platform</span>
+            <span class="qf-value">Web + Chrome Ext.</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Templates</span>
+            <span class="qf-value">500+</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Free Tier</span>
+            <span class="qf-badge">Available</span>
+          </div>
+          <div class="quick-fact">
+            <span class="qf-label">Status</span>
+            <span class="qf-badge">Active</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>On This Page</h3>
+        <ul class="toc-list">
+          <li><a href="#verdict">Expert Verdict</a></li>
+          <li><a href="#verdict">Style DNA Breakdown</a></li>
+          <li><a href="#verdict">Real-World Use Cases</a></li>
+          <li><a href="#features">Technical Capabilities</a></li>
+          <li><a href="#comparison">vs. Jasper & MultiOn</a></li>
+          <li><a href="#pricing">Pricing & Integrations</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Best For</h3>
+        <div class="quick-facts">
+          <div class="quick-fact"><span class="qf-label">🎬 Creators</span><span class="pill-rose">Excellent</span></div>
+          <div class="quick-fact"><span class="qf-label">📧 Sales & BizDev</span><span class="pill-rose">Excellent</span></div>
+          <div class="quick-fact"><span class="qf-label">💰 Solopreneurs</span><span class="pill-rose">Excellent</span></div>
+          <div class="quick-fact"><span class="qf-label">💼 Job Seekers</span><span class="pill-yes">Very Good</span></div>
+          <div class="quick-fact"><span class="qf-label">🏢 Large Teams</span><span class="pill-partial">Moderate</span></div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="/" class="footer-logo"><div class="orb"></div>Agentstant Galaxy</a>
+    <p class="footer-copy">© 2026 Agentstant — <span>Mapping the Intelligence Galaxy</span></p>
+  </footer>
+
+</body>
+</html>

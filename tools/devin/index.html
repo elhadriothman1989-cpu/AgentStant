@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Devin AI Review 2026 — World's First AI Software Engineer</title>
+  <meta name="description" content="Devin AI review 2026: the autonomous software engineer that plans, codes, debugs & deploys full projects. vs Cursor & SWE-agent, pricing — full expert breakdown." />
+
+  <meta property="og:title" content="Devin AI Review 2026 — World's First AI Software Engineer | Agentstant Galaxy" />
+  <meta property="og:description" content="The definitive Devin AI review for 2026. Full software engineering autonomy, real-world dev use cases and expert verdict from Agentstant Galaxy." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Agentstant Galaxy" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "name": "Devin AI Review 2026",
+    "reviewBody": "Comprehensive expert review of Devin AI autonomous software engineer for 2026.",
+    "author": { "@type": "Organization", "name": "Agentstant Galaxy" },
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": "Devin",
+      "applicationCategory": "Autonomous AI Software Engineer",
+      "creator": { "@type": "Organization", "name": "Cognition AI" }
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #020204;
+      --surface:      rgba(255,255,255,0.02);
+      --accent:       #6366f1;
+      --accent-soft:  rgba(99,102,241,0.10);
+      /* Devin identity — deep teal/green for "engineering precision" and "code that ships" */
+      --teal:         #14b8a6;
+      --teal-soft:    rgba(20,184,166,0.08);
+      --teal-glow:    rgba(20,184,166,0.28);
+      --teal-mid:     rgba(20,184,166,0.18);
+      --green:        #22c55e;
+      --green-soft:   rgba(34,197,94,0.07);
+      --text:         #e8e8f0;
+      --text-soft:    #b0b0c8;
+      --muted:        #6b6b80;
+      --border:       rgba(255,255,255,0.05);
+      --border-hover: rgba(20,184,166,0.38);
+      --radius:       16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* starfield */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        radial-gradient(1px 1px at 7%  15%, rgba(255,255,255,0.52) 0%, transparent 100%),
+        radial-gradient(1px 1px at 28% 65%, rgba(255,255,255,0.26) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 52% 8%,  rgba(255,255,255,0.55) 0%, transparent 100%),
+        radial-gradient(1px 1px at 75% 44%, rgba(255,255,255,0.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 77%, rgba(255,255,255,0.20) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 88%, rgba(20,184,166,0.30) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 15% 51%, rgba(255,255,255,0.38) 0%, transparent 100%),
+        radial-gradient(1px 1px at 64% 27%, rgba(34,197,94,0.22) 0%, transparent 100%),
+        radial-gradient(1px 1px at 83% 14%, rgba(255,255,255,0.33) 0%, transparent 100%),
+        radial-gradient(1px 1px at 31% 73%, rgba(20,184,166,0.18) 0%, transparent 100%),
+        radial-gradient(1px 1px at 57% 57%, rgba(255,255,255,0.16) 0%, transparent 100%);
+    }
+
+    /* teal nebula — engineering mastery identity */
+    body::after {
+      content: '';
+      position: fixed; top: -18vh; left: 50%; transform: translateX(-50%);
+      width: 88vw; height: 64vh; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse at 37% 50%, rgba(20,184,166,0.08) 0%, transparent 58%),
+        radial-gradient(ellipse at 66% 50%, rgba(99,102,241,0.05) 0%, transparent 55%);
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 52px;
+      background: rgba(2,2,4,0.82);
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text); font-size: 0.95rem; font-weight: 700;
+    }
+    .nav-logo .orb {
+      width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+      background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5);
+      box-shadow: 0 0 14px rgba(99,102,241,0.7);
+    }
+    .nav-back {
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--muted);
+      text-decoration: none; transition: color 0.25s;
+    }
+    .nav-back:hover { color: var(--teal); }
+
+    /* HERO */
+    .hero {
+      position: relative; z-index: 1;
+      padding: 160px 52px 80px;
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 340px;
+      gap: 64px; align-items: center;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero-breadcrumb {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 20px;
+    }
+    .hero-breadcrumb span { color: var(--muted); }
+
+    .identity-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--teal-soft); border: 1px solid var(--teal-mid);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #5eead4; margin-bottom: 20px;
+    }
+    .gear-icon { animation: gearSpin 6s linear infinite; display: inline-block; transform-origin: center; }
+    @keyframes gearSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      font-weight: 800; letter-spacing: -0.035em;
+      line-height: 1.08; margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #ccfbf1 0%, #14b8a6 45%, #0f766e 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem; color: var(--text-soft);
+      max-width: 520px; line-height: 1.75; margin-bottom: 36px;
+    }
+
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--teal-soft); border: 1px solid var(--teal-mid);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.72rem; font-weight: 600; color: #5eead4; letter-spacing: 0.06em;
+    }
+    .tag.indigo { background: var(--accent-soft); border-color: rgba(99,102,241,0.2); color: #a5b4fc; }
+    .tag.green  { background: var(--green-soft);  border-color: rgba(34,197,94,0.2);  color: #86efac; }
+
+    /* Score card */
+    .score-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 24px; padding: 36px 32px;
+      text-align: center; backdrop-filter: blur(12px);
+      position: relative; overflow: hidden;
+    }
+    .score-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(20,184,166,0.09), transparent 60%);
+      pointer-events: none;
+    }
+    .type-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--teal-soft); border: 1px solid var(--teal-mid);
+      border-radius: 100px; padding: 4px 12px;
+      font-size: 0.64rem; font-weight: 700; letter-spacing: 0.1em;
+      color: #5eead4; text-transform: uppercase; margin-bottom: 18px;
+    }
+    .score-ring {
+      width: 110px; height: 110px; border-radius: 50%;
+      background: conic-gradient(#14b8a6 0% 90%, rgba(255,255,255,0.05) 90% 100%);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; position: relative;
+    }
+    .score-ring::after {
+      content: ''; position: absolute; inset: 8px;
+      background: #020809; border-radius: 50%;
+    }
+    .score-number {
+      position: relative; z-index: 1; font-size: 1.8rem; font-weight: 800;
+      background: linear-gradient(135deg, #ccfbf1, #14b8a6);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .score-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
+    .score-rows { display: flex; flex-direction: column; gap: 12px; }
+    .score-row  { display: flex; align-items: center; gap: 12px; }
+    .score-row-label { font-size: 0.75rem; color: var(--muted); font-weight: 500; flex: 1; text-align: left; }
+    .score-bar-track { flex: 2; height: 4px; border-radius: 4px; background: rgba(255,255,255,0.06); overflow: hidden; }
+    .score-bar-fill  { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #0f766e, #14b8a6); }
+    .score-val { font-size: 0.72rem; font-weight: 700; color: var(--teal); width: 28px; text-align: right; }
+
+    /* PAGE BODY */
+    .page-body {
+      position: relative; z-index: 1; max-width: 1100px; margin: 0 auto;
+      padding: 0 52px 120px; display: grid; grid-template-columns: 1fr 300px;
+      gap: 64px; align-items: start;
+    }
+    .side-col { position: sticky; top: 100px; }
+
+    /* CONTENT */
+    .content-section { margin-bottom: 64px; animation: fadeUp 0.6s ease both; }
+    .section-eyebrow { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; }
+    .content-section h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 20px; }
+    .content-section p { color: var(--text-soft); margin-bottom: 18px; font-size: 0.97rem; line-height: 1.8; }
+    .content-section p strong { color: var(--text); font-weight: 600; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 48px 0; }
+
+    /* VERDICT BOX */
+    .verdict-box {
+      background: var(--teal-soft); border: 1px solid rgba(20,184,166,0.15);
+      border-left: 3px solid var(--teal); border-radius: var(--radius);
+      padding: 32px 30px; margin-bottom: 32px; position: relative; overflow: hidden;
+    }
+    .verdict-box::before {
+      content: '✦ EXPERT VERDICT'; position: absolute; top: 18px; right: 20px;
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em; color: rgba(20,184,166,0.32);
+    }
+    .verdict-box p { font-size: 1.05rem; color: var(--text); font-style: italic; line-height: 1.75; margin: 0; }
+
+    /* DEVIN WORKFLOW TERMINAL */
+    .terminal {
+      background: #04100e; border: 1px solid rgba(20,184,166,0.14);
+      border-radius: var(--radius); overflow: hidden; margin: 28px 0;
+    }
+    .terminal-bar {
+      display: flex; align-items: center; gap: 8px; padding: 11px 16px;
+      background: rgba(20,184,166,0.04); border-bottom: 1px solid rgba(20,184,166,0.08);
+    }
+    .t-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .t-red    { background: #ef4444; }
+    .t-yellow { background: #eab308; }
+    .t-green  { background: #22c55e; }
+    .t-title  { margin-left: 8px; font-size: 0.72rem; color: var(--muted); font-weight: 500; }
+    .t-badge  {
+      margin-left: auto; font-size: 0.62rem; font-weight: 700;
+      background: rgba(20,184,166,0.10); border: 1px solid rgba(20,184,166,0.22);
+      color: #5eead4; border-radius: 100px; padding: 2px 10px;
+    }
+    .terminal-body { padding: 20px 22px; }
+    .terminal-body pre { font-family: 'Courier New', Courier, monospace; font-size: 0.77rem; line-height: 1.85; }
+    .t-prompt { color: #5eead4; }
+    .t-cmd    { color: #e2e8f0; }
+    .t-out    { color: #94a3b8; }
+    .t-ok     { color: #22c55e; font-weight: 700; }
+    .t-step   { color: #14b8a6; font-weight: 600; }
+    .t-warn   { color: #fbbf24; }
+
+    /* ENGINEERING PHASES */
+    .phase-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 24px 0; }
+    .phase-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 20px 18px;
+      transition: border-color 0.3s, transform 0.3s, background 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .phase-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--teal), transparent);
+    }
+    .phase-card:hover { border-color: var(--border-hover); background: var(--teal-soft); transform: translateY(-3px); }
+    .phase-num  { font-size: 0.6rem; font-weight: 800; color: var(--teal); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 6px; }
+    .phase-icon { font-size: 1.3rem; margin-bottom: 8px; }
+    .phase-title{ font-size: 0.85rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .phase-desc { font-size: 0.75rem; color: var(--muted); line-height: 1.6; }
+
+    /* USE CASES */
+    .use-cases { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+    .use-case-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px 20px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .use-case-card:hover { border-color: rgba(20,184,166,0.30); transform: translateY(-3px); }
+    .use-case-icon  { font-size: 1.4rem; margin-bottom: 10px; }
+    .use-case-title { font-size: 0.85rem; font-weight: 700; margin-bottom: 8px; }
+    .use-case-desc  { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+
+    /* FEATURES */
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+    .feature-list li { display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; }
+    .feature-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--teal-soft); border: 1px solid var(--teal-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .feature-text strong { display: block; font-size: 0.88rem; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+    .feature-text span   { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+    /* COMPARE TABLE */
+    .compare-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.83rem; }
+    .compare-table thead tr { border-bottom: 1px solid var(--border); }
+    .compare-table th { text-align: left; padding: 14px 16px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .compare-table th:first-child { color: var(--text); }
+    .compare-table th.hi { color: var(--teal); }
+    .compare-table tbody tr { border-bottom: 1px solid rgba(255,255,255,0.03); transition: background 0.2s; }
+    .compare-table tbody tr:hover { background: rgba(20,184,166,0.03); }
+    .compare-table tbody tr.hl-row { background: rgba(20,184,166,0.04); }
+    .compare-table td { padding: 14px 16px; color: var(--text-soft); vertical-align: middle; }
+    .compare-table td:first-child { font-weight: 600; color: var(--text); }
+
+    .pill-yes  { display:inline-block; background:rgba(52,211,153,0.10);  color:#34d399; border:1px solid rgba(52,211,153,0.25); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-part { display:inline-block; background:rgba(251,191,36,0.10);  color:#fbbf24; border:1px solid rgba(251,191,36,0.20); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-no   { display:inline-block; background:rgba(248,113,113,0.08); color:#f87171; border:1px solid rgba(248,113,113,0.20); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-teal { display:inline-block; background:var(--teal-soft);        color:#5eead4; border:1px solid var(--teal-mid);       border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+
+    /* PRICING */
+    .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 20px; }
+    .pricing-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px 22px; text-align: center;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .pricing-card.featured {
+      border-color: rgba(20,184,166,0.30); background: var(--teal-soft);
+      box-shadow: 0 0 30px rgba(20,184,166,0.08);
+    }
+    .pricing-card:hover { border-color: rgba(20,184,166,0.28); transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,0,0,0.35); }
+    .pricing-tier { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    .pricing-card.featured .pricing-tier { color: var(--teal); }
+    .pricing-price { font-size: 1.7rem; font-weight: 800; letter-spacing: -0.03em; background: linear-gradient(135deg, #ccfbf1, #14b8a6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 4px; }
+    .pricing-cycle { font-size: 0.72rem; color: var(--muted); margin-bottom: 16px; }
+    .pricing-features { list-style: none; text-align: left; }
+    .pricing-features li { font-size: 0.76rem; color: var(--text-soft); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; align-items: center; gap: 7px; }
+    .pricing-features li::before { content: '✦'; color: var(--teal); font-size: 0.5rem; }
+
+    /* SIDEBAR */
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 24px; margin-bottom: 20px; }
+    .sidebar-card h3 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+    .quick-facts { display: flex; flex-direction: column; gap: 12px; }
+    .quick-fact { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+    .quick-fact:last-child { border-bottom: none; padding-bottom: 0; }
+    .qf-label { color: var(--muted); font-weight: 500; }
+    .qf-value { color: var(--text); font-weight: 600; }
+    .qf-badge      { display:inline-block; background:rgba(52,211,153,0.10); color:#34d399; border:1px solid rgba(52,211,153,0.20); border-radius:100px; padding:2px 10px; font-size:0.65rem; font-weight:700; }
+    .qf-badge-teal { display:inline-block; background:var(--teal-soft);       color:#5eead4; border:1px solid var(--teal-mid);      border-radius:100px; padding:2px 10px; font-size:0.65rem; font-weight:700; }
+
+    .cta-block {
+      background: linear-gradient(135deg, rgba(20,184,166,0.12), rgba(99,102,241,0.07));
+      border: 1px solid rgba(20,184,166,0.28); border-radius: var(--radius);
+      padding: 26px 24px; text-align: center; margin-bottom: 20px;
+    }
+    .cta-block p { font-size: 0.82rem; color: var(--text-soft); margin-bottom: 16px; line-height: 1.6; }
+    .btn-cta {
+      display: inline-block; background: linear-gradient(135deg, #0f766e, #14b8a6);
+      color: #fff; font-weight: 800; font-size: 0.82rem;
+      padding: 12px 24px; border-radius: 100px; text-decoration: none;
+      box-shadow: 0 0 24px var(--teal-glow); transition: transform 0.25s, box-shadow 0.25s; width: 100%;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(20,184,166,0.50); }
+
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .toc-list a { font-size: 0.78rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+    .toc-list a::before { content: '—'; color: rgba(20,184,166,0.4); }
+    .toc-list a:hover { color: var(--teal); }
+
+    /* FOOTER */
+    footer {
+      position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 48px 52px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-size: 0.9rem; font-weight: 700; }
+    .footer-logo .orb { width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5); box-shadow: 0 0 10px rgba(99,102,241,0.5); }
+    .footer-copy { font-size: 0.75rem; color: var(--muted); }
+    .footer-copy span { color: rgba(20,184,166,0.55); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .content-section:nth-child(1) { animation-delay: 0.05s; }
+    .content-section:nth-child(2) { animation-delay: 0.10s; }
+    .content-section:nth-child(3) { animation-delay: 0.15s; }
+    .content-section:nth-child(4) { animation-delay: 0.20s; }
+    .content-section:nth-child(5) { animation-delay: 0.25s; }
+
+    @media (max-width: 960px) {
+      nav { padding: 16px 24px; }
+      .hero { grid-template-columns: 1fr; padding: 130px 24px 60px; gap: 40px; }
+      .page-body { grid-template-columns: 1fr; padding: 0 24px 80px; }
+      .side-col { position: static; }
+      .use-cases, .phase-grid { grid-template-columns: 1fr 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      footer { padding: 36px 24px; }
+    }
+    @media (max-width: 520px) {
+      .use-cases, .phase-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo"><div class="orb"></div>Agentstant Galaxy</a>
+    <a href="/" class="nav-back">← Back to Galaxy</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-left">
+      <div class="hero-breadcrumb">Agentstant Galaxy <span>/</span> AI Agents <span>/</span> Devin</div>
+      <div class="identity-badge"><span class="gear-icon">⚙️</span> World's First Autonomous AI Software Engineer</div>
+
+      <h1>
+        <em>Devin</em> — The AI<br/>
+        Engineer That Plans,<br/>
+        Codes & Deploys
+      </h1>
+
+      <p class="hero-sub">
+        Devin is not a coding assistant. It is a colleague — one that opens its own terminal, writes its own code, searches its own documentation, fixes its own bugs, and ships complete software projects from a single English instruction. The software engineering profession changed on March 12, 2024.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">⚙️ Full-Stack Engineer</span>
+        <span class="tag">🖥️ Own Terminal & IDE</span>
+        <span class="tag green">🔁 Self-Debugging</span>
+        <span class="tag indigo">🚀 End-to-End Deploy</span>
+        <span class="tag">🤝 Collaborative Mode</span>
+      </div>
+    </div>
+
+    <div class="score-card">
+      <div class="type-badge">⚙️ Autonomous AI Engineer</div>
+      <div class="score-ring"><span class="score-number">9.0</span></div>
+      <div class="score-label">Galaxy Score / 10</div>
+      <div class="score-rows">
+        <div class="score-row">
+          <span class="score-row-label">Engineering Autonomy</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:97%"></div></div>
+          <span class="score-val">9.7</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Long-Horizon Tasks</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:94%"></div></div>
+          <span class="score-val">9.4</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Self-Debugging</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:92%"></div></div>
+          <span class="score-val">9.2</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Collaboration UX</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:88%"></div></div>
+          <span class="score-val">8.8</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Value for Cost</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:78%"></div></div>
+          <span class="score-val">7.8</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE BODY -->
+  <div class="page-body">
+    <main class="main-col">
+
+      <!-- EXPERT VERDICT -->
+      <article class="content-section" id="verdict">
+        <span class="section-eyebrow">✦ Expert Verdict</span>
+        <h2>What Is Devin — And Why Did It Redefine What AI Can Do in Software Engineering?</h2>
+
+        <div class="verdict-box">
+          <p>"Devin didn't just raise the benchmark for AI coding tools — it obsoleted the category entirely. Every AI before Devin was an assistant: it helped engineers write code faster. Devin is an engineer: it plans the architecture, opens the terminal, installs dependencies, writes the code, reads the error, fixes it, runs the tests, and deploys. The conversation shifted from 'AI that helps you code' to 'AI that codes while you sleep.'"</p>
+        </div>
+
+        <p>
+          <strong>Devin</strong> is the world's first fully autonomous AI software engineer, built by Cognition AI and unveiled to the world on March 12, 2024 — a date that will be remembered as a genuine inflection point in the history of software development. Founded by Scott Wu and a team of competitive programming champions from MIT and other top institutions, Cognition AI built Devin around a singular thesis: that the bottleneck to AI-powered software engineering was not model intelligence but <strong>long-horizon planning and tool use</strong>. Where other AI coding tools excelled at completing the next line or the next function, Devin was designed to hold a complete engineering task in mind across hundreds of steps — planning, executing, observing results, and adapting — until the task is done.
+        </p>
+
+        <p>
+          The technical architecture that enables this is Devin's <strong>fully sandboxed engineering environment</strong>. Unlike AI assistants that suggest code changes in a human's editor, Devin operates in its own persistent compute environment: its own shell, its own code editor, its own browser, and its own ability to install packages, configure environments, run commands, and read output. When Devin encounters a bug — a dependency conflict, a failing test, an unexpected API response — it reads the error output the same way a human engineer would, reasons about the cause, formulates a fix, applies it, and reruns the test. This self-debugging loop, operating autonomously across an entire project lifecycle, is what separates Devin from every tool that preceded it.
+        </p>
+
+        <p>
+          The original Devin demonstration in March 2024 achieved a landmark result on SWE-bench — a benchmark of real GitHub issues requiring software engineering solutions — with a <strong>13.86% resolution rate</strong> at the time of release, compared to less than 5% for the best prior models. By 2026, Devin and the competitive landscape it catalyzed have pushed SWE-bench resolution rates dramatically higher, transforming what was once a theoretical ceiling into an active engineering race. The benchmark scores matter less than the practical reality they reflect: Devin can reliably complete real software engineering tasks that range from implementing features from a spec, to fixing bugs from a GitHub issue, to migrating codebases from one framework to another, to building complete full-stack applications from a product description.
+        </p>
+
+        <p>
+          In 2026, Cognition AI has evolved Devin into a <strong>collaborative engineering platform</strong> rather than a fully autonomous black box. The current Devin experience allows engineers to observe Devin's work in real time through a shared session interface — watching it plan tasks, write code, and debug — and intervene with guidance, corrections, or course changes at any point. This collaborative mode addresses the primary criticism of early Devin: that its failures on complex tasks were difficult to catch and correct before they cascaded into larger problems. The result is a more practical working relationship: Devin handles the implementation work, the human provides architectural judgment, and together they complete projects that would take either party significantly longer independently.
+        </p>
+
+        <p>
+          For <strong>engineering teams and technical founders</strong>, Devin's value proposition in 2026 is clear: it functions as a force multiplier for senior engineers. Rather than spending 60% of their time on implementation details — writing boilerplate, setting up environments, migrating APIs, writing tests — senior engineers can delegate those tasks to Devin and focus entirely on architecture, product decisions, and the genuinely novel engineering problems that require human creativity and judgment. Early adopters report that teams of three engineers using Devin match the output of teams of eight working without it — not because Devin replaces engineers, but because it handles the work that previously required headcount without requiring management overhead.
+        </p>
+
+        <!-- Terminal Simulation -->
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div class="t-dot t-red"></div>
+            <div class="t-dot t-yellow"></div>
+            <div class="t-dot t-green"></div>
+            <div class="t-title">Devin — Autonomous Session</div>
+            <div class="t-badge">● LIVE</div>
+          </div>
+          <div class="terminal-body">
+            <pre><span class="t-step">[ Task ]</span> <span class="t-cmd">Build a REST API with JWT auth, CRUD for users, Postgres, deploy to Railway</span>
+
+<span class="t-step">[ Plan  ]</span> <span class="t-out">1. Scaffold FastAPI project  2. Set up Postgres models  3. Implement JWT auth
+          4. Write CRUD endpoints  5. Add tests  6. Configure Railway deploy</span>
+
+<span class="t-prompt">devin@sandbox:~$</span> <span class="t-cmd">pip install fastapi uvicorn sqlalchemy psycopg2-binary python-jose</span>
+<span class="t-ok">✓ Dependencies installed</span>
+
+<span class="t-prompt">devin@sandbox:~$</span> <span class="t-cmd">python -m pytest tests/ -v</span>
+<span class="t-warn">FAILED tests/test_auth.py::test_refresh_token — AssertionError: 401 != 200</span>
+
+<span class="t-step">[ Debug ]</span> <span class="t-out">Token expiry set to 0s in test env. Fixing JWT_EXPIRE_MINUTES default...</span>
+<span class="t-prompt">devin@sandbox:~$</span> <span class="t-cmd">python -m pytest tests/ -v</span>
+<span class="t-ok">✓ 24 passed in 3.41s</span>
+
+<span class="t-step">[ Deploy]</span> <span class="t-out">Pushing to Railway... Build successful. Service live at:</span>
+<span class="t-ok">✓ https://api-prod.up.railway.app — Health check: 200 OK</span></pre>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ENGINEERING PHASES -->
+        <h2>The Six Phases of a Devin Engineering Session</h2>
+        <p>Every Devin task flows through a structured engineering lifecycle that mirrors — and often surpasses — the discipline of an experienced software engineer:</p>
+
+        <div class="phase-grid">
+          <div class="phase-card">
+            <div class="phase-num">Phase 01</div>
+            <div class="phase-icon">🗺️</div>
+            <div class="phase-title">Task Planning</div>
+            <div class="phase-desc">Devin reads the task, explores the existing codebase, identifies relevant files, and generates a step-by-step engineering plan before writing a single line of code.</div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">Phase 02</div>
+            <div class="phase-icon">🔍</div>
+            <div class="phase-title">Research & Documentation</div>
+            <div class="phase-desc">Uses its own browser to read API docs, Stack Overflow, GitHub issues, and library changelogs — gathering exactly the context a human engineer would before implementation.</div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">Phase 03</div>
+            <div class="phase-icon">⌨️</div>
+            <div class="phase-title">Implementation</div>
+            <div class="phase-desc">Writes production-quality code across multiple files, installs dependencies, configures environments, and structures the implementation coherently with the existing codebase architecture.</div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">Phase 04</div>
+            <div class="phase-icon">🐛</div>
+            <div class="phase-title">Self-Debugging</div>
+            <div class="phase-desc">Runs tests, reads error output, diagnoses root causes, applies fixes, and iterates — autonomously, without human intervention — until tests pass or the failure requires escalation.</div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">Phase 05</div>
+            <div class="phase-icon">✅</div>
+            <div class="phase-title">Validation</div>
+            <div class="phase-desc">Runs the full test suite, verifies edge cases, checks for regressions in existing functionality, and confirms that the implementation meets the original specification before reporting completion.</div>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">Phase 06</div>
+            <div class="phase-icon">🚀</div>
+            <div class="phase-title">Deployment</div>
+            <div class="phase-desc">Configures CI/CD pipelines, pushes to remote repositories, deploys to cloud platforms (Railway, Vercel, AWS), and verifies the live service is responding correctly — end to end.</div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Real-World Use Cases — Who Devin Works For in 2026</h2>
+        <p>Devin's full-stack engineering autonomy makes it transformative for any organization or individual where engineering capacity is the primary constraint on growth:</p>
+
+        <div class="use-cases">
+          <div class="use-case-card">
+            <div class="use-case-icon">🏗️</div>
+            <div class="use-case-title">Technical Founders & Solo Engineers</div>
+            <div class="use-case-desc">Build and ship a production-grade SaaS product without hiring a full engineering team. Delegate complete feature implementations to Devin — authentication systems, payment integrations, data pipelines, API endpoints — while focusing personal engineering time on product architecture and the decisions that require deep domain expertise.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">💼</div>
+            <div class="use-case-title">Engineering Team Acceleration</div>
+            <div class="use-case-desc">Senior engineers use Devin as a high-throughput implementation partner: hand off well-specified tickets and GitHub issues, review Devin's PRs in real time through the collaborative session interface, and merge quality code at a rate that previously required three times the engineering headcount. Particularly powerful for backlog reduction sprints.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">💰</div>
+            <div class="use-case-title">Freelance & Passive Income Developers</div>
+            <div class="use-case-desc">Freelancers use Devin to take on more client projects simultaneously than their personal capacity would otherwise allow — delegating implementation work to Devin while focusing on client communication and quality review. Passive income builders use it to maintain and extend multiple revenue-generating codebases without the cognitive overhead of context-switching between projects.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">🔧</div>
+            <div class="use-case-title">Legacy Code Modernization</div>
+            <div class="use-case-desc">Enterprise engineering teams use Devin for the unglamorous but critical work of modernizing legacy systems: migrating from deprecated frameworks, updating dependency versions across large monorepos, converting test suites from one framework to another, adding type annotations to untyped codebases, and extracting microservices from monolithic architectures — tasks too large for sprint cycles but too valuable to ignore.</div>
+          </div>
+        </div>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- TECHNICAL CAPABILITIES -->
+      <article class="content-section" id="features">
+        <span class="section-eyebrow">✦ Technical Capabilities</span>
+        <h2>Five Core Capabilities That Define Devin in 2026</h2>
+
+        <ul class="feature-list">
+          <li>
+            <div class="feature-icon">🖥️</div>
+            <div class="feature-text">
+              <strong>Persistent Sandboxed Engineering Environment</strong>
+              <span>Devin operates inside a fully isolated, persistent compute environment that includes a real Linux shell, a code editor, a web browser, and access to the internet. This is not a simulated environment — it is a genuine compute instance where Devin installs packages with pip and npm, configures databases, sets environment variables, runs build processes, and reads the actual output of every command it executes. The persistence of this environment across an entire engineering session means Devin maintains complete context of everything it has done, seen, and decided — exactly as a human engineer maintains a working environment across a multi-hour task. This architectural choice is what enables Devin to complete genuinely long-horizon engineering work rather than context-windowed code suggestions.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🧠</div>
+            <div class="feature-text">
+              <strong>Long-Horizon Planning & Adaptive Execution</strong>
+              <span>Devin's planning model was built specifically to maintain coherent engineering intent across hundreds of individual actions — a capability that Cognition AI identified as the central missing piece in prior AI coding systems. Before writing any code, Devin generates a structured engineering plan that sequences tasks in logical dependency order, identifies potential blockers, and establishes the verification criteria for each step. As execution proceeds and the plan encounters unexpected complexity — a third-party API that behaves differently than documented, a dependency with a breaking change, a performance requirement that changes the architectural approach — Devin revises its plan rather than continuing blindly, adapting to discovered reality the way an experienced engineer would.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🔄</div>
+            <div class="feature-text">
+              <strong>Autonomous Self-Debugging with Test-Driven Iteration</strong>
+              <span>When Devin's code fails — whether through a test assertion, a runtime exception, a type error, or a linting violation — it does not wait for human intervention. It reads the error output, reasons about the likely cause given its knowledge of the codebase and what it has already changed, generates a hypothesis, applies a fix, and reruns the failing test. This debugging loop can iterate dozens of times across a single task until all tests pass, with each iteration informed by the accumulated evidence of prior attempts. For well-specified tasks with comprehensive test coverage, Devin's self-debugging capability means that "give Devin this GitHub issue and it will return a passing PR" is a realistic workflow rather than an aspirational one.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🤝</div>
+            <div class="feature-text">
+              <strong>Real-Time Collaborative Session Interface</strong>
+              <span>Devin's 2026 collaborative mode allows engineers to watch Devin work through a shared session interface in real time — observing every file it opens, every command it runs, and every piece of output it reads. Engineers can interrupt at any point to provide guidance, ask questions, redirect the approach, or approve a decision before Devin proceeds. This transparency transforms Devin from a black-box automation into a supervised engineering partner — one that does the work but keeps the human in the loop at the level of architectural decisions rather than implementation details. The collaborative interface also supports asynchronous review: engineers can assign tasks to Devin, check in on progress via the session replay, and provide feedback without blocking their own work.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🌐</div>
+            <div class="feature-text">
+              <strong>Web Research & Documentation Integration</strong>
+              <span>Devin's browser access enables it to perform the research that precedes good engineering decisions — reading official API documentation, searching for solutions to specific error messages, reviewing GitHub discussions about library behavior, and consulting changelog entries to understand breaking changes. This web-grounded research capability means Devin's implementation decisions are informed by current, accurate information rather than potentially stale training data. When working with a newly released library, an unfamiliar API, or a recently changed platform behavior, Devin reads the source documentation before writing code — the same discipline that distinguishes senior engineers from those who blindly apply outdated patterns.</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- COMPARISON -->
+      <article class="content-section" id="comparison">
+        <span class="section-eyebrow">✦ Competitor Comparison</span>
+        <h2>Devin vs. Cursor vs. GitHub Copilot Workspace vs. OpenDevin — 2026</h2>
+        <p>The autonomous engineering landscape in 2026 has fractured into two clear segments: AI-assisted editors that amplify human engineers, and autonomous agents that replace engineering work entirely. Devin sits firmly in the latter category:</p>
+
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th class="hi">Devin</th>
+              <th>Cursor</th>
+              <th>Copilot Workspace</th>
+              <th>OpenDevin</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hl-row">
+              <td>Category</td>
+              <td><span class="pill-teal">Autonomous Engineer</span></td>
+              <td><span class="pill-yes">AI-Native Editor</span></td>
+              <td><span class="pill-part">AI-Assisted Editor</span></td>
+              <td><span class="pill-yes">OSS Autonomous Agent</span></td>
+            </tr>
+            <tr>
+              <td>Own Terminal & Shell</td>
+              <td><span class="pill-teal">Native Sandbox</span></td>
+              <td><span class="pill-part">Integrated terminal</span></td>
+              <td><span class="pill-no">No</span></td>
+              <td><span class="pill-yes">Yes (Docker)</span></td>
+            </tr>
+            <tr class="hl-row">
+              <td>Self-Debugging</td>
+              <td><span class="pill-teal">Full Autonomous</span></td>
+              <td><span class="pill-part">Agent Mode only</span></td>
+              <td><span class="pill-no">No</span></td>
+              <td><span class="pill-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>Web Research</td>
+              <td><span class="pill-teal">Native Browser</span></td>
+              <td><span class="pill-no">No</span></td>
+              <td><span class="pill-no">No</span></td>
+              <td><span class="pill-yes">Yes</span></td>
+            </tr>
+            <tr class="hl-row">
+              <td>End-to-End Deploy</td>
+              <td><span class="pill-teal">Yes</span></td>
+              <td><span class="pill-no">No</span></td>
+              <td><span class="pill-no">No</span></td>
+              <td><span class="pill-part">Partial</span></td>
+            </tr>
+            <tr>
+              <td>Collaborative UI</td>
+              <td><span class="pill-teal">Real-Time Session</span></td>
+              <td><span class="pill-yes">In-editor</span></td>
+              <td><span class="pill-yes">Yes</span></td>
+              <td><span class="pill-part">Basic</span></td>
+            </tr>
+            <tr class="hl-row">
+              <td>SWE-bench Score</td>
+              <td><span class="pill-teal">Industry Leading</span></td>
+              <td><span class="pill-part">Not benchmarked</span></td>
+              <td><span class="pill-part">Not published</span></td>
+              <td><span class="pill-yes">Competitive</span></td>
+            </tr>
+            <tr>
+              <td>Cost</td>
+              <td><span class="pill-part">Premium ($500+/mo)</span></td>
+              <td><span class="pill-yes">$20/mo</span></td>
+              <td><span class="pill-yes">$10/mo (Copilot)</span></td>
+              <td><span class="pill-yes">Free (self-hosted)</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top:18px; font-size:0.82rem;">
+          <strong>Bottom line:</strong> Devin is unmatched for full engineering autonomy on well-scoped, implementable tasks — the only tool that genuinely functions as a software engineer rather than a coding assistant. Cursor wins for professional developers who want AI amplification within their own workflow and don't need full autonomy. GitHub Copilot Workspace is the safe choice for enterprise teams already in the Microsoft ecosystem. OpenDevin (the open-source Devin alternative) is the right choice for teams with the infrastructure to self-host and the willingness to trade polish for cost savings and customizability. The decision framework is simple: if you need to delegate complete engineering tasks and evaluate the result, choose Devin. If you need to code faster yourself, choose Cursor.
+        </p>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- PRICING -->
+      <article class="content-section" id="pricing">
+        <span class="section-eyebrow">✦ Pricing & Integration</span>
+        <h2>Devin Pricing in 2026 — Premium Positioning for a Premium Capability</h2>
+        <p>Devin is priced as an engineering productivity platform, not a consumer AI tool. Its pricing reflects the value of autonomous engineering output — measured in ACUs (Agent Compute Units) that represent the compute and model cost of each engineering session — rather than a flat subscription fee.</p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-tier">Starter</div>
+            <div class="pricing-price">$500</div>
+            <div class="pricing-cycle">per month · includes 250 ACUs</div>
+            <ul class="pricing-features">
+              <li>250 Agent Compute Units</li>
+              <li>Full autonomous sessions</li>
+              <li>Collaborative session UI</li>
+              <li>GitHub & GitLab integration</li>
+              <li>Standard support</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="pricing-tier">⭐ Teams</div>
+            <div class="pricing-price">$1,500</div>
+            <div class="pricing-cycle">per month · up to 5 seats</div>
+            <ul class="pricing-features">
+              <li>1,000 ACUs / month</li>
+              <li>Parallel session execution</li>
+              <li>Team session sharing</li>
+              <li>Slack & Jira integrations</li>
+              <li>Priority support & SLA</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-tier">Enterprise</div>
+            <div class="pricing-price">Custom</div>
+            <div class="pricing-cycle">Annual · volume ACU pricing</div>
+            <ul class="pricing-features">
+              <li>Unlimited seats & ACUs</li>
+              <li>Private cloud deployment</li>
+              <li>SSO, RBAC & audit logs</li>
+              <li>Custom model routing</li>
+              <li>Dedicated customer success</li>
+            </ul>
+          </div>
+        </div>
+
+        <p style="margin-top:24px;">
+          <strong>Integration ecosystem:</strong> Devin integrates natively with GitHub and GitLab for repository access, pull request creation, and issue-to-PR workflows — allowing engineering teams to assign GitHub issues directly to Devin and receive completed PRs for review. Jira and Linear integrations enable ticket-to-implementation pipelines where project management actions automatically trigger Devin sessions. Slack integration provides real-time progress notifications and allows engineers to send guidance to active Devin sessions without leaving their communication tool. For deployment targets, Devin supports Railway, Vercel, Netlify, AWS, Google Cloud, and Azure — covering the full spectrum of modern cloud deployment environments. Devin's sandboxed environments can also be configured with custom toolchains, private npm/PyPI registries, and internal API access for enterprise codebases with specific infrastructure requirements.
+        </p>
+      </article>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="side-col">
+
+      <div class="cta-block">
+        <p>Delegate your next engineering task to a tireless AI engineer. Devin plans, codes, debugs, and ships — while you focus on what only you can do.</p>
+        <a href="https://devin.ai" class="btn-cta" target="_blank" rel="noopener">Meet Devin →</a>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Quick Facts</h3>
+        <div class="quick-facts">
+          <div class="quick-fact"><span class="qf-label">Creator</span><span class="qf-value">Cognition AI</span></div>
+          <div class="quick-fact"><span class="qf-label">Launched</span><span class="qf-badge-teal">Mar 2024</span></div>
+          <div class="quick-fact"><span class="qf-label">Category</span><span class="qf-value">Autonomous Engineer</span></div>
+          <div class="quick-fact"><span class="qf-label">Environment</span><span class="qf-value">Full Sandbox</span></div>
+          <div class="quick-fact"><span class="qf-label">Benchmark</span><span class="qf-value">SWE-bench Leader</span></div>
+          <div class="quick-fact"><span class="qf-label">Collab Mode</span><span class="qf-badge">Available</span></div>
+          <div class="quick-fact"><span class="qf-label">Status</span><span class="qf-badge">Active</span></div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>On This Page</h3>
+        <ul class="toc-list">
+          <li><a href="#verdict">Expert Verdict</a></li>
+          <li><a href="#verdict">Live Terminal Demo</a></li>
+          <li><a href="#verdict">Six Engineering Phases</a></li>
+          <li><a href="#verdict">Real-World Use Cases</a></li>
+          <li><a href="#features">Technical Capabilities</a></li>
+          <li><a href="#comparison">vs. Cursor & OpenDevin</a></li>
+          <li><a href="#pricing">Pricing & Integrations</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Best For</h3>
+        <div class="quick-facts">
+          <div class="quick-fact"><span class="qf-label">🏗️ Tech Founders</span><span class="pill-teal">Exceptional</span></div>
+          <div class="quick-fact"><span class="qf-label">💼 Eng Teams</span><span class="pill-teal">Exceptional</span></div>
+          <div class="quick-fact"><span class="qf-label">💰 Freelancers</span><span class="pill-yes">Very Good</span></div>
+          <div class="quick-fact"><span class="qf-label">🔧 Legacy Refactor</span><span class="pill-yes">Very Good</span></div>
+          <div class="quick-fact"><span class="qf-label">🔰 Beginners</span><span class="pill-part">Moderate</span></div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="/" class="footer-logo"><div class="orb"></div>Agentstant Galaxy</a>
+    <p class="footer-copy">© 2026 Agentstant — <span>Mapping the Intelligence Galaxy</span></p>
+  </footer>
+
+</body>
+</html>

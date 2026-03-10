@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agentstant Galaxy — Map the Future of Work</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #020204;
+      --bg2: #07070f;
+      --accent: #6366f1;
+      --accent-glow: rgba(99,102,241,0.35);
+      --accent-soft: rgba(99,102,241,0.12);
+      --text: #e8e8f0;
+      --muted: #6b6b80;
+      --border: rgba(255,255,255,0.05);
+      --border-hover: rgba(99,102,241,0.4);
+      --card-bg: rgba(255,255,255,0.02);
+      --card-bg-hover: rgba(99,102,241,0.06);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* ── Star field ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,0.55) 0%, transparent 100%),
+        radial-gradient(1px 1px at 34% 72%, rgba(255,255,255,0.35) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 55% 10%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 78% 45%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 91% 80%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 6%  60%, rgba(255,255,255,0.25) 0%, transparent 100%),
+        radial-gradient(1px 1px at 47% 90%, rgba(255,255,255,0.45) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 68% 28%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 22% 50%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 83% 12%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 38% 35%, rgba(255,255,255,0.2) 0%, transparent 100%),
+        radial-gradient(1px 1px at 61% 65%, rgba(255,255,255,0.35) 0%, transparent 100%),
+        radial-gradient(1px 1px at 5%  88%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 95% 55%, rgba(255,255,255,0.25) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 29% 5%, rgba(255,255,255,0.55) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Nebula ambient glow ── */
+    body::after {
+      content: '';
+      position: fixed;
+      top: -20vh;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80vw;
+      height: 60vh;
+      background: radial-gradient(ellipse at center, rgba(99,102,241,0.08) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+      background: rgba(2,2,4,0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo .orb {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5);
+      box-shadow: 0 0 14px rgba(99,102,241,0.7);
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.25s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-cta {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent) !important;
+      border: 1px solid var(--border-hover);
+      padding: 7px 18px;
+      border-radius: 20px;
+      transition: background 0.25s, box-shadow 0.25s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--accent-soft) !important;
+      box-shadow: 0 0 16px var(--accent-glow) !important;
+      color: #a5b4fc !important;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(99,102,241,0.08);
+      border: 1px solid rgba(99,102,241,0.25);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #a5b4fc;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 36px;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .hero-badge .pulse {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #6366f1;
+      box-shadow: 0 0 8px #6366f1;
+      animation: pulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.7); }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 6rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      max-width: 900px;
+      margin-bottom: 28px;
+      animation: fadeUp 0.7s ease 0.1s both;
+    }
+
+    .hero h1 .gradient-text {
+      background: linear-gradient(135deg, #e0e7ff 0%, #818cf8 40%, #6366f1 70%, #4338ca 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--muted);
+      font-weight: 400;
+      max-width: 500px;
+      line-height: 1.7;
+      margin-bottom: 48px;
+      animation: fadeUp 0.7s ease 0.2s both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeUp 0.7s ease 0.3s both;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #6366f1;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 14px 32px;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      box-shadow: 0 0 30px rgba(99,102,241,0.4), 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 0 48px rgba(99,102,241,0.6), 0 8px 24px rgba(0,0,0,0.5);
+      background: #5254cc;
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 14px 28px;
+      border-radius: 100px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: color 0.25s, border-color 0.25s, background 0.25s;
+    }
+
+    .btn-ghost:hover {
+      color: var(--text);
+      border-color: rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.03);
+    }
+
+    /* ── Scroll indicator ── */
+    .scroll-hint {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      animation: fadeUp 1s ease 0.6s both;
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, transparent, var(--accent));
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    /* ── SECTION ── */
+    .section {
+      position: relative;
+      z-index: 1;
+      padding: 80px 48px 120px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── GRID ── */
+    .galaxy-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 1200px) { .galaxy-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 800px)  { .galaxy-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px)  { .galaxy-grid { grid-template-columns: 1fr; } }
+
+    /* ── TOOL CARD ── */
+    .tool-card {
+      position: relative;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px 26px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+      transition: border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      cursor: pointer;
+    }
+
+    .tool-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at top left, rgba(99,102,241,0.08), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s;
+      pointer-events: none;
+      border-radius: inherit;
+    }
+
+    .tool-card:hover {
+      border-color: var(--border-hover);
+      background: var(--card-bg-hover);
+      transform: translateY(-4px) scale(1.015);
+      box-shadow: 0 0 40px rgba(99,102,241,0.18), 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .tool-card:hover::before { opacity: 1; }
+
+    /* corner accent */
+    .tool-card::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 60px; height: 60px;
+      background: radial-gradient(circle at top right, rgba(99,102,241,0.15), transparent 70%);
+      border-radius: 0 18px 0 0;
+      pointer-events: none;
+    }
+
+    .card-icon {
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(99,102,241,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      transition: box-shadow 0.3s;
+    }
+
+    .tool-card:hover .card-icon {
+      box-shadow: 0 0 18px var(--accent-glow);
+    }
+
+    .card-number {
+      position: absolute;
+      top: 22px; right: 24px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: rgba(99,102,241,0.35);
+      letter-spacing: 0.1em;
+    }
+
+    .card-body { flex: 1; }
+
+    .card-name {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+      color: #e8e8f0;
+    }
+
+    .card-tagline {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #818cf8;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      margin-top: 4px;
+      transition: gap 0.25s, color 0.25s;
+    }
+
+    .tool-card:hover .card-cta {
+      gap: 10px;
+      color: #a5b4fc;
+    }
+
+    .card-cta .arrow {
+      font-size: 0.9em;
+      transition: transform 0.25s;
+    }
+
+    .tool-card:hover .card-cta .arrow { transform: translateX(3px); }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: rgba(99,102,241,0.03);
+      padding: 40px 48px;
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item { text-align: center; }
+
+    .stat-value {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      background: linear-gradient(135deg, #c7d2fe, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      padding: 60px 48px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .footer-logo .orb {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5);
+      box-shadow: 0 0 10px rgba(99,102,241,0.5);
+    }
+
+    .footer-logo span {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .footer-copy span {
+      color: rgba(99,102,241,0.7);
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .tool-card {
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .tool-card:nth-child(1)  { animation-delay: 0.05s; }
+    .tool-card:nth-child(2)  { animation-delay: 0.10s; }
+    .tool-card:nth-child(3)  { animation-delay: 0.15s; }
+    .tool-card:nth-child(4)  { animation-delay: 0.20s; }
+    .tool-card:nth-child(5)  { animation-delay: 0.25s; }
+    .tool-card:nth-child(6)  { animation-delay: 0.30s; }
+    .tool-card:nth-child(7)  { animation-delay: 0.35s; }
+    .tool-card:nth-child(8)  { animation-delay: 0.40s; }
+    .tool-card:nth-child(9)  { animation-delay: 0.45s; }
+    .tool-card:nth-child(10) { animation-delay: 0.50s; }
+    .tool-card:nth-child(11) { animation-delay: 0.55s; }
+    .tool-card:nth-child(12) { animation-delay: 0.60s; }
+    .tool-card:nth-child(13) { animation-delay: 0.65s; }
+    .tool-card:nth-child(14) { animation-delay: 0.70s; }
+    .tool-card:nth-child(15) { animation-delay: 0.75s; }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .section { padding: 60px 24px 80px; }
+      .stats-strip { gap: 40px; padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <div class="orb"></div>
+      Agentstant Galaxy
+    </a>
+    <ul class="nav-links">
+      <li><a href="#galaxy">Directory</a></li>
+      <li><a href="#">Submit Agent</a></li>
+      <li><a href="#" class="nav-cta">Join Galaxy →</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">
+      <div class="pulse"></div>
+      2026 · 15 Autonomous Agents Catalogued
+    </div>
+    <h1>Map the <span class="gradient-text">Future<br/>of Work</span></h1>
+    <p>The ultimate directory for autonomous intelligence. Explore, compare, and deploy the agents reshaping how humanity operates.</p>
+    <div class="hero-actions">
+      <a href="#galaxy" class="btn-primary">
+        ✦ Explore the Galaxy
+      </a>
+      <a href="#" class="btn-ghost">
+        Submit an Agent →
+      </a>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="stat-item">
+      <div class="stat-value">15</div>
+      <div class="stat-label">AI Agents</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">2026</div>
+      <div class="stat-label">Curated For</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">∞</div>
+      <div class="stat-label">Possibilities</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">01</div>
+      <div class="stat-label">Galaxy</div>
+    </div>
+  </div>
+
+  <!-- GALAXY GRID -->
+  <section class="section" id="galaxy">
+    <div class="section-header">
+      <div class="section-label">✦ The Galaxy Grid</div>
+      <h2>Autonomous Intelligence,<br/>Mapped & Catalogued</h2>
+      <p>Every agent in the galaxy, hand-picked for builders, founders, and operators who move fast.</p>
+    </div>
+
+    <div class="galaxy-grid">
+
+      <!-- 1 -->
+      <a class="tool-card" href="tools/crewai/">
+        <div class="card-number">01</div>
+        <div class="card-icon">🤝</div>
+        <div class="card-body">
+          <div class="card-name">CrewAI</div>
+          <div class="card-tagline">Orchestrate role-based AI agents to tackle complex multi-step tasks as a unified crew.</div>
+        </div>
+        <div class="card-cta">Explore Galaxy <span class="arrow">→</span></div>
+      </a>
+
+      <!-- 2 -->
+      <a class="tool-card" href="tools/devin-ai/">
+        <div class="card-number">02</div>
+        <div class="card-icon">💻</div>
+        <div class="card-body">
+          <div class="card-name">Devin AI</div>
+          <div class="card-tagline">The world's first AI Software Engineer — codes, debugs, and ships entirely on its own.</div>
+        </div>
+        <div class="card-cta">Explore Galaxy <span class="arrow">→</span></div>
+      </a>
+
+      <!-- 3 -->
+      <a class="tool-card" href="tools/cursor/">
+        <div class="card-number">03</div>
+        <div class="card-icon">⚡</div>
+        <div class="card-body">
+          <div class="card-name">Cursor</div>
+          <div class="card-tagline">AI-native code editor for rapid development — your codebase, supercharged by intelligence.</div>
+        </div>
+        <div class="card-cta">Explore Galaxy <span class="arrow">→</span></div>
+      </a>
+
+      <!-- 4 -->
+      <a class="tool-card" href="tools/perplexity/">
+        <div class="card-number">04</div>
+        <div class="card-icon">🔍</div>
+        <div class="card-body">
+          <div class="card-name">Perplexity</div>
+          <div class="card-tagline">Real-time AI search and citation engine — answers grounded in live, verifiable sources.</div>
+        </div>
+        <div class="card-cta">Explore Galaxy <span class="arrow">→</span></div>
+      </a>
+
+      <!-- 5 -->
+      <a class="tool-card" href="tools/zapier-central/">
+        <div class="card-number">05</div>
+        <div class="card-icon">⚙️</div>
+        <div class="card-body">
+          <div class="card-name">Zapier Central</div>
+          <div class="card-tagline">AI hub for 6,000+ app automations — your entire workflow, orchestrated by one brain.</div>
+        </div>
+        <div class="card-cta">Explore Galaxy <span class="arrow">→</span></div>
+      </a>
+
+      <!-- 6 -->
+      <a class="tool-card" href="tools/autogpt/">
+        <div class="card-number">06</div>
+        <div class="card-icon">🎯</div>
+        <div class="card-body">
+          <div class="card-name">AutoGPT</div>
+          <div class="card-tagline">Autonomous goal-seeking AI agent that breaks objectives into tasks and executes them end-to-end.</div>
+        </div>
+        <div class="card-cta">Explore Galaxy <span class="arrow">→</span></div>
+      </a>
+
+      <!-- 7 -->
+      <a class="tool-card" href="tools/multion/">
+        <div class="card-number">07</div>
+        <div class="card-icon">🌐</div>
+        <div class="card-body">
+          <div class="card-name">MultiOn</div>
+          <div class="card-tagline">An agent that acts on the live web — browse, click, and complete tasks on your behalf.</div>
+        </div>
+        <div class="card-cta">Explore Galaxy <span class="arrow">→</span></div>
+      </a>
+
+      <!-- 8 -->
+      <a class="tool-card" href="tools/replit-agent/">
+        <div class="card-number">08</div>
+        <div class="card-icon">🚀</div>
+        <div class="card-body">
+          <div class="card-name">Replit Agent</div>
+          <div class="card-tagline">AI that builds and deploys full web apps from a single prompt — zero setup required.</div>
+        </div>
+        <div class="card-cta">Explore Galaxy <span class="arrow">→</span></div>
+      </a>
+
+      <!-- 9 -->
+      <a class="tool-card" href="tools/opendevin/">
+        <div class="card-number">09</div>
+        <div class="card-icon">🛠️</div>
+        <div class="card-body">
+          <div class="card-name">OpenDevin</div>
+          <div class="card-tagline">Open-source autonomous coding agent built for developers who want full control and transparency.</div>
+        </div>
+        <div class="card-cta">Explore Galaxy <span class="arrow">→</span></div>
+      </a>
+
+      <!-- 10 -->
+      <a class="tool-card" href="tools/babyagi/">
+        <div class="card-number">10</div>
+        <div class="card-icon">🧠</div>
+        <div class="card-body">
+          <div class="card-name">BabyAGI</div>
+          <div class="card-tagline">Task-driven autonomous agent system that self-generates, prioritizes, and executes its own to-dos.</div>
+        </div>
+        <div class="card-cta">Explore Galaxy <span class="arrow">→</span></div>
+      </a>
+
+      <!-- 11 -->
+      <a class="tool-card" href="tools/langchain/">
+        <div class="card-number">11</div>
+        <div class="card-icon">🔗</div>
+        <div class="card-body">
+          <div class="card-name">LangChain</div>
+          <div class="card-tagline">The definitive framework for building composable, production-ready LLM-powered applications.</div>
+        </div>
+        <div class="card-cta">Explore Galaxy <span class="arrow">→</span></div>
+      </a>
+
+      <!-- 12 -->
+      <a class="tool-card" href="tools/autogen/">
+        <div class="card-number">12</div>
+        <div class="card-icon">💬</div>
+        <div class="card-body">
+          <div class="card-name">AutoGen</div>
+          <div class="card-tagline">Multi-agent conversation framework that lets AI models collaborate, debate, and co-solve problems.</div>
+        </div>
+        <div class="card-cta">Explore Galaxy <span class="arrow">→</span></div>
+      </a>
+
+      <!-- 13 -->
+      <a class="tool-card" href="tools/lindy-ai/">
+        <div class="card-number">13</div>
+        <div class="card-icon">🤖</div>
+        <div class="card-body">
+          <div class="card-name">Lindy AI</div>
+          <div class="card-tagline">Your personal AI employee — manages email, calendar, and daily workflows without supervision.</div>
+        </div>
+        <div class="card-cta">Explore Galaxy <span class="arrow">→</span></div>
+      </a>
+
+      <!-- 14 -->
+      <a class="tool-card" href="tools/induced-ai/">
+        <div class="card-number">14</div>
+        <div class="card-icon">🖥️</div>
+        <div class="card-body">
+          <div class="card-name">Induced AI</div>
+          <div class="card-tagline">Browser-based AI automation that navigates the web and handles repetitive tasks at scale.</div>
+        </div>
+        <div class="card-cta">Explore Galaxy <span class="arrow">→</span></div>
+      </a>
+
+      <!-- 15 -->
+      <a class="tool-card" href="tools/hyperwrite/">
+        <div class="card-number">15</div>
+        <div class="card-icon">✍️</div>
+        <div class="card-body">
+          <div class="card-name">HyperWrite</div>
+          <div class="card-tagline">Personal assistant for writing and browsing — drafts, researches, and navigates the web for you.</div>
+        </div>
+        <div class="card-cta">Explore Galaxy <span class="arrow">→</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <div class="orb"></div>
+      <span>Agentstant Galaxy</span>
+    </div>
+    <p class="footer-copy">© 2026 Agentstant — <span>Mapping the Intelligence Galaxy</span></p>
+  </footer>
+
+</body>
+</html>
