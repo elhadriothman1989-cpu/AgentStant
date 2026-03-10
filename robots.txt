@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /tools/
+
+# Link to your sitemap
+Sitemap: https://agentstant.com/sitemap.xml
