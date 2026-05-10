@@ -40,7 +40,6 @@
       --surface:      rgba(255,255,255,0.02);
       --accent:       #6366f1;
       --accent-soft:  rgba(99,102,241,0.10);
-      /* Devin identity — deep teal/green for "engineering precision" and "code that ships" */
       --teal:         #14b8a6;
       --teal-soft:    rgba(20,184,166,0.08);
       --teal-glow:    rgba(20,184,166,0.28);
@@ -66,7 +65,6 @@
       overflow-x: hidden;
     }
 
-    /* starfield */
     body::before {
       content: '';
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
@@ -84,7 +82,6 @@
         radial-gradient(1px 1px at 57% 57%, rgba(255,255,255,0.16) 0%, transparent 100%);
     }
 
-    /* teal nebula — engineering mastery identity */
     body::after {
       content: '';
       position: fixed; top: -18vh; left: 50%; transform: translateX(-50%);
@@ -94,7 +91,6 @@
         radial-gradient(ellipse at 66% 50%, rgba(99,102,241,0.05) 0%, transparent 55%);
     }
 
-    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
@@ -119,7 +115,6 @@
     }
     .nav-back:hover { color: var(--teal); }
 
-    /* HERO */
     .hero {
       position: relative; z-index: 1;
       padding: 160px 52px 80px;
@@ -173,7 +168,6 @@
     .tag.indigo { background: var(--accent-soft); border-color: rgba(99,102,241,0.2); color: #a5b4fc; }
     .tag.green  { background: var(--green-soft);  border-color: rgba(34,197,94,0.2);  color: #86efac; }
 
-    /* Score card */
     .score-card {
       background: var(--surface); border: 1px solid var(--border);
       border-radius: 24px; padding: 36px 32px;
@@ -215,7 +209,6 @@
     .score-bar-fill  { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #0f766e, #14b8a6); }
     .score-val { font-size: 0.72rem; font-weight: 700; color: var(--teal); width: 28px; text-align: right; }
 
-    /* PAGE BODY */
     .page-body {
       position: relative; z-index: 1; max-width: 1100px; margin: 0 auto;
       padding: 0 52px 120px; display: grid; grid-template-columns: 1fr 300px;
@@ -223,7 +216,6 @@
     }
     .side-col { position: sticky; top: 100px; }
 
-    /* CONTENT */
     .content-section { margin-bottom: 64px; animation: fadeUp 0.6s ease both; }
     .section-eyebrow { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; }
     .content-section h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 20px; }
@@ -231,7 +223,24 @@
     .content-section p strong { color: var(--text); font-weight: 600; }
     .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 48px 0; }
 
-    /* VERDICT BOX */
+    /* ── SEO BULLET LISTS ─────────────────── */
+    .seo-list {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 10px;
+      margin: 20px 0;
+    }
+    .seo-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 0.94rem; color: var(--text-soft); line-height: 1.7;
+    }
+    .seo-list li::before {
+      content: '✦';
+      color: var(--teal); font-size: 0.6rem;
+      flex-shrink: 0; margin-top: 6px;
+    }
+    .seo-list li strong { color: var(--text); font-weight: 600; }
+
+    /* ── VERDICT BOX ──────────────────────── */
     .verdict-box {
       background: var(--teal-soft); border: 1px solid rgba(20,184,166,0.15);
       border-left: 3px solid var(--teal); border-radius: var(--radius);
@@ -243,7 +252,46 @@
     }
     .verdict-box p { font-size: 1.05rem; color: var(--text); font-style: italic; line-height: 1.75; margin: 0; }
 
-    /* DEVIN WORKFLOW TERMINAL */
+    /* ── REVIEW VERDICT BOX (new section) ─── */
+    .review-verdict {
+      background: linear-gradient(135deg, rgba(20,184,166,0.06), rgba(99,102,241,0.04));
+      border: 1px solid rgba(20,184,166,0.18);
+      border-radius: var(--radius);
+      padding: 32px 30px; margin: 28px 0;
+      position: relative; overflow: hidden;
+    }
+    .review-verdict::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--teal), transparent);
+    }
+
+    /* ── PRICING BOX (new section) ────────── */
+    .pricing-summary {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 28px; margin: 24px 0;
+    }
+    .pricing-summary-row {
+      display: grid; grid-template-columns: 160px 1fr;
+      gap: 12px 20px; align-items: start;
+      padding: 12px 0; border-bottom: 1px solid var(--border);
+    }
+    .pricing-summary-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .ps-tier {
+      font-size: 0.8rem; font-weight: 700; color: var(--text);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .ps-price {
+      font-size: 0.82rem; font-weight: 700;
+      background: linear-gradient(135deg, #ccfbf1, #14b8a6);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .ps-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+    .ps-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+
+    /* ── TERMINAL ─────────────────────────── */
     .terminal {
       background: #04100e; border: 1px solid rgba(20,184,166,0.14);
       border-radius: var(--radius); overflow: hidden; margin: 28px 0;
@@ -271,7 +319,6 @@
     .t-step   { color: #14b8a6; font-weight: 600; }
     .t-warn   { color: #fbbf24; }
 
-    /* ENGINEERING PHASES */
     .phase-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 24px 0; }
     .phase-card {
       background: var(--surface); border: 1px solid var(--border);
@@ -289,7 +336,6 @@
     .phase-title{ font-size: 0.85rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
     .phase-desc { font-size: 0.75rem; color: var(--muted); line-height: 1.6; }
 
-    /* USE CASES */
     .use-cases { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
     .use-case-card {
       background: var(--surface); border: 1px solid var(--border);
@@ -301,7 +347,6 @@
     .use-case-title { font-size: 0.85rem; font-weight: 700; margin-bottom: 8px; }
     .use-case-desc  { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
 
-    /* FEATURES */
     .feature-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
     .feature-list li { display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; }
     .feature-icon {
@@ -313,7 +358,6 @@
     .feature-text strong { display: block; font-size: 0.88rem; font-weight: 700; margin-bottom: 4px; color: var(--text); }
     .feature-text span   { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
 
-    /* COMPARE TABLE */
     .compare-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.83rem; }
     .compare-table thead tr { border-bottom: 1px solid var(--border); }
     .compare-table th { text-align: left; padding: 14px 16px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
@@ -330,7 +374,6 @@
     .pill-no   { display:inline-block; background:rgba(248,113,113,0.08); color:#f87171; border:1px solid rgba(248,113,113,0.20); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
     .pill-teal { display:inline-block; background:var(--teal-soft);        color:#5eead4; border:1px solid var(--teal-mid);       border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
 
-    /* PRICING */
     .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 20px; }
     .pricing-card {
       background: var(--surface); border: 1px solid var(--border);
@@ -350,7 +393,6 @@
     .pricing-features li { font-size: 0.76rem; color: var(--text-soft); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; align-items: center; gap: 7px; }
     .pricing-features li::before { content: '✦'; color: var(--teal); font-size: 0.5rem; }
 
-    /* SIDEBAR */
     .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 24px; margin-bottom: 20px; }
     .sidebar-card h3 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
     .quick-facts { display: flex; flex-direction: column; gap: 12px; }
@@ -380,7 +422,6 @@
     .toc-list a::before { content: '—'; color: rgba(20,184,166,0.4); }
     .toc-list a:hover { color: var(--teal); }
 
-    /* FOOTER */
     footer {
       position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 48px 52px;
       display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
@@ -396,6 +437,8 @@
     .content-section:nth-child(3) { animation-delay: 0.15s; }
     .content-section:nth-child(4) { animation-delay: 0.20s; }
     .content-section:nth-child(5) { animation-delay: 0.25s; }
+    .content-section:nth-child(6) { animation-delay: 0.30s; }
+    .content-section:nth-child(7) { animation-delay: 0.35s; }
 
     @media (max-width: 960px) {
       nav { padding: 16px 24px; }
@@ -404,6 +447,7 @@
       .side-col { position: static; }
       .use-cases, .phase-grid { grid-template-columns: 1fr 1fr; }
       .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-summary-row { grid-template-columns: 1fr; }
       footer { padding: 36px 24px; }
     }
     @media (max-width: 520px) {
@@ -428,7 +472,7 @@
       <h1>
         <em>Devin</em> — The AI<br/>
         Engineer That Plans,<br/>
-        Codes & Deploys
+        Codes &amp; Deploys
       </h1>
 
       <p class="hero-sub">
@@ -437,7 +481,7 @@
 
       <div class="hero-tags">
         <span class="tag">⚙️ Full-Stack Engineer</span>
-        <span class="tag">🖥️ Own Terminal & IDE</span>
+        <span class="tag">🖥️ Own Terminal &amp; IDE</span>
         <span class="tag green">🔁 Self-Debugging</span>
         <span class="tag indigo">🚀 End-to-End Deploy</span>
         <span class="tag">🤝 Collaborative Mode</span>
@@ -482,7 +526,9 @@
   <div class="page-body">
     <main class="main-col">
 
-      <!-- EXPERT VERDICT -->
+      <!-- ══════════════════════════════════════
+           SECTION 1 — EXPERT VERDICT
+      ══════════════════════════════════════ -->
       <article class="content-section" id="verdict">
         <span class="section-eyebrow">✦ Expert Verdict</span>
         <h2>What Is Devin — And Why Did It Redefine What AI Can Do in Software Engineering?</h2>
@@ -500,7 +546,7 @@
         </p>
 
         <p>
-          The original Devin demonstration in March 2024 achieved a landmark result on SWE-bench — a benchmark of real GitHub issues requiring software engineering solutions — with a <strong>13.86% resolution rate</strong> at the time of release, compared to less than 5% for the best prior models. By 2026, Devin and the competitive landscape it catalyzed have pushed SWE-bench resolution rates dramatically higher, transforming what was once a theoretical ceiling into an active engineering race. The benchmark scores matter less than the practical reality they reflect: Devin can reliably complete real software engineering tasks that range from implementing features from a spec, to fixing bugs from a GitHub issue, to migrating codebases from one framework to another, to building complete full-stack applications from a product description.
+          The original Devin demonstration in March 2024 achieved a landmark result on SWE-bench — a benchmark of real GitHub issues requiring software engineering solutions — with a <strong>13.86% resolution rate</strong> at the time of release, compared to less than 5% for the best prior models. By 2026, Devin and the competitive landscape it catalyzed have pushed SWE-bench resolution rates dramatically higher, transforming what was once a theoretical ceiling into an active engineering race. Tracking the <strong>devin ai software engineer current status 2026</strong> reveals a platform that has matured from a landmark demo into a production-ready engineering tool deployed by engineering teams across fintech, enterprise SaaS, and developer infrastructure companies worldwide.
         </p>
 
         <p>
@@ -511,7 +557,7 @@
           For <strong>engineering teams and technical founders</strong>, Devin's value proposition in 2026 is clear: it functions as a force multiplier for senior engineers. Rather than spending 60% of their time on implementation details — writing boilerplate, setting up environments, migrating APIs, writing tests — senior engineers can delegate those tasks to Devin and focus entirely on architecture, product decisions, and the genuinely novel engineering problems that require human creativity and judgment. Early adopters report that teams of three engineers using Devin match the output of teams of eight working without it — not because Devin replaces engineers, but because it handles the work that previously required headcount without requiring management overhead.
         </p>
 
-        <!-- Terminal Simulation -->
+        <!-- Terminal -->
         <div class="terminal">
           <div class="terminal-bar">
             <div class="t-dot t-red"></div>
@@ -543,7 +589,7 @@
 
         <div class="divider"></div>
 
-        <!-- ENGINEERING PHASES -->
+        <!-- Engineering Phases -->
         <h2>The Six Phases of a Devin Engineering Session</h2>
         <p>Every Devin task flows through a structured engineering lifecycle that mirrors — and often surpasses — the discipline of an experienced software engineer:</p>
 
@@ -557,7 +603,7 @@
           <div class="phase-card">
             <div class="phase-num">Phase 02</div>
             <div class="phase-icon">🔍</div>
-            <div class="phase-title">Research & Documentation</div>
+            <div class="phase-title">Research &amp; Documentation</div>
             <div class="phase-desc">Uses its own browser to read API docs, Stack Overflow, GitHub issues, and library changelogs — gathering exactly the context a human engineer would before implementation.</div>
           </div>
           <div class="phase-card">
@@ -594,7 +640,7 @@
         <div class="use-cases">
           <div class="use-case-card">
             <div class="use-case-icon">🏗️</div>
-            <div class="use-case-title">Technical Founders & Solo Engineers</div>
+            <div class="use-case-title">Technical Founders &amp; Solo Engineers</div>
             <div class="use-case-desc">Build and ship a production-grade SaaS product without hiring a full engineering team. Delegate complete feature implementations to Devin — authentication systems, payment integrations, data pipelines, API endpoints — while focusing personal engineering time on product architecture and the decisions that require deep domain expertise.</div>
           </div>
           <div class="use-case-card">
@@ -604,7 +650,7 @@
           </div>
           <div class="use-case-card">
             <div class="use-case-icon">💰</div>
-            <div class="use-case-title">Freelance & Passive Income Developers</div>
+            <div class="use-case-title">Freelance &amp; Passive Income Developers</div>
             <div class="use-case-desc">Freelancers use Devin to take on more client projects simultaneously than their personal capacity would otherwise allow — delegating implementation work to Devin while focusing on client communication and quality review. Passive income builders use it to maintain and extend multiple revenue-generating codebases without the cognitive overhead of context-switching between projects.</div>
           </div>
           <div class="use-case-card">
@@ -617,7 +663,9 @@
 
       <div class="divider"></div>
 
-      <!-- TECHNICAL CAPABILITIES -->
+      <!-- ══════════════════════════════════════
+           SECTION 2 — TECHNICAL CAPABILITIES
+      ══════════════════════════════════════ -->
       <article class="content-section" id="features">
         <span class="section-eyebrow">✦ Technical Capabilities</span>
         <h2>Five Core Capabilities That Define Devin in 2026</h2>
@@ -633,7 +681,7 @@
           <li>
             <div class="feature-icon">🧠</div>
             <div class="feature-text">
-              <strong>Long-Horizon Planning & Adaptive Execution</strong>
+              <strong>Long-Horizon Planning &amp; Adaptive Execution</strong>
               <span>Devin's planning model was built specifically to maintain coherent engineering intent across hundreds of individual actions — a capability that Cognition AI identified as the central missing piece in prior AI coding systems. Before writing any code, Devin generates a structured engineering plan that sequences tasks in logical dependency order, identifies potential blockers, and establishes the verification criteria for each step. As execution proceeds and the plan encounters unexpected complexity — a third-party API that behaves differently than documented, a dependency with a breaking change, a performance requirement that changes the architectural approach — Devin revises its plan rather than continuing blindly, adapting to discovered reality the way an experienced engineer would.</span>
             </div>
           </li>
@@ -654,7 +702,7 @@
           <li>
             <div class="feature-icon">🌐</div>
             <div class="feature-text">
-              <strong>Web Research & Documentation Integration</strong>
+              <strong>Web Research &amp; Documentation Integration</strong>
               <span>Devin's browser access enables it to perform the research that precedes good engineering decisions — reading official API documentation, searching for solutions to specific error messages, reviewing GitHub discussions about library behavior, and consulting changelog entries to understand breaking changes. This web-grounded research capability means Devin's implementation decisions are informed by current, accurate information rather than potentially stale training data. When working with a newly released library, an unfamiliar API, or a recently changed platform behavior, Devin reads the source documentation before writing code — the same discipline that distinguishes senior engineers from those who blindly apply outdated patterns.</span>
             </div>
           </li>
@@ -663,7 +711,9 @@
 
       <div class="divider"></div>
 
-      <!-- COMPARISON -->
+      <!-- ══════════════════════════════════════
+           SECTION 3 — COMPARISON
+      ══════════════════════════════════════ -->
       <article class="content-section" id="comparison">
         <span class="section-eyebrow">✦ Competitor Comparison</span>
         <h2>Devin vs. Cursor vs. GitHub Copilot Workspace vs. OpenDevin — 2026</h2>
@@ -688,7 +738,7 @@
               <td><span class="pill-yes">OSS Autonomous Agent</span></td>
             </tr>
             <tr>
-              <td>Own Terminal & Shell</td>
+              <td>Own Terminal &amp; Shell</td>
               <td><span class="pill-teal">Native Sandbox</span></td>
               <td><span class="pill-part">Integrated terminal</span></td>
               <td><span class="pill-no">No</span></td>
@@ -746,11 +796,123 @@
 
       <div class="divider"></div>
 
-      <!-- PRICING -->
+      <!-- ══════════════════════════════════════
+           SECTION 4 — DEVIN REVIEW: IS IT WORTH IT?  ← NEW SEO SECTION
+      ══════════════════════════════════════ -->
+      <article class="content-section" id="review">
+        <span class="section-eyebrow">✦ Verdict</span>
+        <h2>Devin Review: Is It Worth It?</h2>
+
+        <p>
+          As the <strong>devin ai software engineer official 2026</strong> platform, Devin occupies a genuinely unique position in the AI tooling market: it is the only commercially available tool that can receive a software engineering task in plain English and return a completed, tested, and deployed implementation — autonomously. That capability commands a premium price, and whether it is worth that premium depends entirely on the nature and volume of your engineering work.
+        </p>
+
+        <div class="review-verdict">
+          <p style="font-size:1.02rem; color:var(--text); font-style:italic; line-height:1.75; margin:0 0 20px;">
+            "Devin earns its price tag for any team where engineering throughput is the primary bottleneck. At $500/month for 250 ACUs, one well-scoped Devin session that ships a feature your team would have spent three days on delivers immediate ROI. The question is not whether Devin is capable — it demonstrably is — but whether your workflows are structured to use it effectively."
+          </p>
+        </div>
+
+        <p><strong>Devin is worth it if:</strong></p>
+        <ul class="seo-list">
+          <li><strong>You delegate, not assist.</strong> Devin's value scales with the completeness of task delegation. Teams that hand Devin fully-specified GitHub issues and review the resulting PR extract far more value than those using it for partial assistance within an existing IDE workflow.</li>
+          <li><strong>Your tasks are well-scoped and testable.</strong> Devin performs best when success criteria are clear: a feature spec with acceptance criteria, a bug with a reproducible test case, or a migration task with a defined end state. Vague or exploratory tasks produce inconsistent results.</li>
+          <li><strong>You are a senior engineer or technical founder.</strong> The force-multiplier effect is strongest when the human directing Devin has the architectural judgment to define tasks precisely, review outputs critically, and course-correct efficiently. Non-technical users will struggle to extract the full capability.</li>
+          <li><strong>Your engineering backlog is deeper than your headcount.</strong> If the gap between what your team wants to build and what it can ship is measured in months, Devin's throughput advantage closes that gap at a fraction of the cost of a full-time hire.</li>
+          <li><strong>You work with modern, well-documented stacks.</strong> Devin excels with Python, TypeScript, Node.js, FastAPI, Next.js, and the major cloud platforms. Highly proprietary internal frameworks or legacy systems with poor documentation reduce autonomy and increase error rates.</li>
+        </ul>
+
+        <p style="margin-top: 20px;"><strong>Devin may not be worth it if:</strong></p>
+        <ul class="seo-list">
+          <li><strong>Your budget ceiling is below $500/month.</strong> There is no free tier and no trial period at the time of writing. OpenDevin (open-source) or Claude Code are better starting points for teams exploring autonomous AI engineering on a limited budget.</li>
+          <li><strong>You need real-time pair programming.</strong> Devin is an autonomous executor, not a synchronous collaborator. Cursor or GitHub Copilot provide faster, tighter feedback loops for developers who want in-editor AI assistance during their own coding sessions.</li>
+          <li><strong>Your codebase is highly proprietary or air-gapped.</strong> Devin's standard environment requires internet access for research and deployment. Enterprise private cloud deployment is available but requires a custom contract.</li>
+          <li><strong>Your tasks are primarily creative or exploratory.</strong> System design, architecture decisions, novel algorithm development, and other open-ended engineering challenges are not where Devin's autonomous loop excels — those require human judgment as the primary driver, with AI as a thought partner rather than an executor.</li>
+        </ul>
+
+        <p style="margin-top: 20px;">
+          The overall verdict: <strong>Devin is the most capable autonomous AI software engineer commercially available in 2026</strong>, and for the right user profile — engineering teams with structured backlogs, technical founders building at pace, and senior engineers willing to invest in learning effective delegation patterns — it delivers ROI that justifies the premium positioning. It is not a tool for everyone, and it is not a replacement for engineering judgment. It is a force multiplier for those who already have that judgment and want more hours in their engineering day.
+        </p>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ══════════════════════════════════════
+           SECTION 5 — IS DEVIN FREE?  ← NEW SEO SECTION
+      ══════════════════════════════════════ -->
+      <article class="content-section" id="free">
+        <span class="section-eyebrow">✦ Pricing Model</span>
+        <h2>Is Devin AI Free?</h2>
+
+        <p>
+          No — Devin is not free. As of 2026, Cognition AI positions Devin as a premium engineering productivity platform with no free tier, no freemium model, and no publicly available trial period. Understanding the pricing model is critical before evaluating whether Devin belongs in your toolstack, because it operates on a fundamentally different cost structure than subscription-based AI tools like Cursor or GitHub Copilot.
+        </p>
+
+        <p>
+          <strong>Devin is billed by Agent Compute Units (ACUs)</strong> — a usage-based metric that reflects the compute and model cost of each autonomous engineering session. Rather than paying a flat monthly fee for unlimited access, you purchase a pool of ACUs that are consumed as Devin works. A complex, multi-hour engineering session consumes more ACUs than a short bug fix. This consumption-based model means your Devin costs scale directly with usage volume — predictable for teams with consistent workflows, variable for teams with irregular demands.
+        </p>
+
+        <!-- Pricing Summary Table -->
+        <div class="pricing-summary">
+          <div class="ps-label">↳ Devin Pricing Tiers — 2026 Overview</div>
+
+          <div class="pricing-summary-row">
+            <div>
+              <div class="ps-tier">🔹 Starter</div>
+              <div class="ps-price">$500 / month</div>
+            </div>
+            <div class="ps-desc">
+              Includes <strong>250 ACUs per month</strong>. Full autonomous session capability, collaborative session UI, GitHub and GitLab integration, and standard support. Best for individual engineers or technical founders running Devin on a defined set of weekly tasks. Not suitable for teams running multiple concurrent sessions.
+            </div>
+          </div>
+
+          <div class="pricing-summary-row">
+            <div>
+              <div class="ps-tier">⭐ Teams</div>
+              <div class="ps-price">$1,500 / month</div>
+            </div>
+            <div class="ps-desc">
+              Includes <strong>1,000 ACUs per month</strong> across up to 5 seats, with parallel session execution — allowing multiple engineers to run concurrent Devin sessions simultaneously. Adds Slack and Jira integrations, team session sharing, and priority support with SLA commitments. The practical choice for engineering teams of 2–5 using Devin as a regular part of sprint workflows.
+            </div>
+          </div>
+
+          <div class="pricing-summary-row">
+            <div>
+              <div class="ps-tier">🏢 Enterprise</div>
+              <div class="ps-price">Custom / Annual</div>
+            </div>
+            <div class="ps-desc">
+              Volume ACU pricing negotiated annually. Adds private cloud deployment (for air-gapped or compliance-sensitive environments), unlimited seats, SSO and RBAC, custom model routing, full audit logging, and a dedicated customer success manager. Required for organizations with strict data residency or security requirements.
+            </div>
+          </div>
+        </div>
+
+        <p><strong>Key pricing facts to understand before purchasing:</strong></p>
+        <ul class="seo-list">
+          <li><strong>No free trial or free tier.</strong> Unlike most AI tools, Devin does not offer a freemium tier or a free trial period. Evaluation requires committing to the Starter plan at $500/month minimum.</li>
+          <li><strong>ACUs do not roll over.</strong> Unused ACUs at the end of a billing cycle are forfeited — making consistent utilization important for cost efficiency. Teams that use Devin sporadically may find the per-session cost high relative to alternatives.</li>
+          <li><strong>Additional ACU top-ups are available.</strong> Teams that exhaust their monthly ACU allocation can purchase top-up ACU blocks before the next billing cycle, though pricing is higher per-ACU than the base plan rate.</li>
+          <li><strong>ACU consumption varies by task complexity.</strong> A straightforward bug fix may consume 5–15 ACUs; a multi-file feature implementation with tests and deployment may consume 40–80 ACUs. Teams should benchmark their typical task ACU consumption before estimating monthly costs.</li>
+          <li><strong>Open-source alternative exists.</strong> OpenHands (formerly OpenDevin) is a free, MIT-licensed open-source alternative to Devin that supports 100+ LLM providers and can be self-hosted at zero licensing cost. Teams with the infrastructure to self-host and the willingness to trade polish for zero cost should evaluate OpenHands before committing to Devin's pricing.</li>
+          <li><strong>Enterprise ROI framing.</strong> Cognition AI positions Devin against the cost of engineering headcount — a junior-to-mid engineer in a major tech hub costs $150,000–$250,000 annually in salary and benefits. At $1,500/month ($18,000/year), even the Teams plan is a fraction of that cost for a defined workload of autonomous engineering tasks.</li>
+        </ul>
+
+        <p style="margin-top: 20px;">
+          For teams evaluating Devin purely on cost, the comparison that matters is not "Devin vs. Cursor at $20/month" — these tools serve different functions. The honest comparison is "Devin vs. an additional engineering hire for backlog reduction work." On that framing, Devin's pricing becomes considerably more defensible, provided your team has the workflow discipline to use it effectively.
+        </p>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ══════════════════════════════════════
+           SECTION 6 — FULL PRICING (ORIGINAL)
+      ══════════════════════════════════════ -->
       <article class="content-section" id="pricing">
-        <span class="section-eyebrow">✦ Pricing & Integration</span>
+        <span class="section-eyebrow">✦ Pricing &amp; Integration</span>
         <h2>Devin Pricing in 2026 — Premium Positioning for a Premium Capability</h2>
-        <p>Devin is priced as an engineering productivity platform, not a consumer AI tool. Its pricing reflects the value of autonomous engineering output — measured in ACUs (Agent Compute Units) that represent the compute and model cost of each engineering session — rather than a flat subscription fee.</p>
+        <p>
+          Devin is priced as an engineering productivity platform, not a consumer AI tool. The <strong>devin ai software engineer official 2026</strong> pricing structure reflects the value of autonomous engineering output — measured in ACUs (Agent Compute Units) that represent the compute and model cost of each engineering session — rather than a flat subscription fee. Below is the full tier breakdown with feature details:
+        </p>
 
         <div class="pricing-grid">
           <div class="pricing-card">
@@ -761,7 +923,7 @@
               <li>250 Agent Compute Units</li>
               <li>Full autonomous sessions</li>
               <li>Collaborative session UI</li>
-              <li>GitHub & GitLab integration</li>
+              <li>GitHub &amp; GitLab integration</li>
               <li>Standard support</li>
             </ul>
           </div>
@@ -774,8 +936,8 @@
               <li>1,000 ACUs / month</li>
               <li>Parallel session execution</li>
               <li>Team session sharing</li>
-              <li>Slack & Jira integrations</li>
-              <li>Priority support & SLA</li>
+              <li>Slack &amp; Jira integrations</li>
+              <li>Priority support &amp; SLA</li>
             </ul>
           </div>
 
@@ -784,9 +946,9 @@
             <div class="pricing-price">Custom</div>
             <div class="pricing-cycle">Annual · volume ACU pricing</div>
             <ul class="pricing-features">
-              <li>Unlimited seats & ACUs</li>
+              <li>Unlimited seats &amp; ACUs</li>
               <li>Private cloud deployment</li>
-              <li>SSO, RBAC & audit logs</li>
+              <li>SSO, RBAC &amp; audit logs</li>
               <li>Custom model routing</li>
               <li>Dedicated customer success</li>
             </ul>
@@ -816,8 +978,10 @@
           <div class="quick-fact"><span class="qf-label">Category</span><span class="qf-value">Autonomous Engineer</span></div>
           <div class="quick-fact"><span class="qf-label">Environment</span><span class="qf-value">Full Sandbox</span></div>
           <div class="quick-fact"><span class="qf-label">Benchmark</span><span class="qf-value">SWE-bench Leader</span></div>
+          <div class="quick-fact"><span class="qf-label">Free Tier</span><span class="pill-no">None</span></div>
+          <div class="quick-fact"><span class="qf-label">Starts At</span><span class="qf-value">$500 / month</span></div>
           <div class="quick-fact"><span class="qf-label">Collab Mode</span><span class="qf-badge">Available</span></div>
-          <div class="quick-fact"><span class="qf-label">Status</span><span class="qf-badge">Active</span></div>
+          <div class="quick-fact"><span class="qf-label">Status</span><span class="qf-badge">Active · 2026</span></div>
         </div>
       </div>
 
@@ -829,8 +993,10 @@
           <li><a href="#verdict">Six Engineering Phases</a></li>
           <li><a href="#verdict">Real-World Use Cases</a></li>
           <li><a href="#features">Technical Capabilities</a></li>
-          <li><a href="#comparison">vs. Cursor & OpenDevin</a></li>
-          <li><a href="#pricing">Pricing & Integrations</a></li>
+          <li><a href="#comparison">vs. Cursor &amp; OpenDevin</a></li>
+          <li><a href="#review">Is It Worth It?</a></li>
+          <li><a href="#free">Is It Free? (Pricing)</a></li>
+          <li><a href="#pricing">Full Pricing &amp; Integrations</a></li>
         </ul>
       </div>
 
