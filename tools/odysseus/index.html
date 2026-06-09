@@ -1,1 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- ════════════════════════════════════
+       SEO META — ODYSSEUS AI
+  ════════════════════════════════════ -->
+  <title>Odysseus AI Review 2026 | Free Self-Hosted AI Workspace</title>
+  <meta name="description" content="Odysseus AI 2026: PewDiePie's free, open-source AI workspace. Self-hosted chat, agents, research & email — no subscriptions, full privacy." />
+
+  <meta property="og:title" content="Odysseus AI Review 2026 — The Free, Private AI Workspace You Own | Agentstant" />
+  <meta property="og:description" content="23,000+ GitHub stars. MIT license. Zero cost. PewDiePie's Odysseus is the most ambitious open-source AI workspace of 2026 — chat, agents, deep research, email & calendar on your own hardware." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Agentstant" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "name": "Odysseus AI Review 2026",
+    "reviewBody": "Comprehensive expert review of Odysseus AI — the self-hosted, privacy-first AI workspace created by PewDiePie (Felix Kjellberg) in 2026.",
+    "author": { "@type": "Organization", "name": "Agentstant" },
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": "Odysseus",
+      "applicationCategory": "Self-Hosted AI Workspace",
+      "operatingSystem": "Linux, macOS, Windows (Docker)",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "creator": { "@type": "Person", "name": "Felix Kjellberg (PewDiePie)" }
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #020204;
+      --surface:      rgba(255,255,255,0.02);
+      --accent:       #6366f1;
+      --accent-soft:  rgba(99,102,241,0.10);
+
+      /* Odysseus identity — Fuchsia / Violet-Pink — bold, creator-driven, unconventional */
+      --fu:           #d946ef;
+      --fu-light:     #e879f9;
+      --fu-pale:      #fae8ff;
+      --fu-soft:      rgba(217,70,239,0.08);
+      --fu-mid:       rgba(217,70,239,0.20);
+      --fu-glow:      rgba(217,70,239,0.35);
+      --fu-dark:      #a21caf;
+
+      --text:         #e8e8f0;
+      --text-soft:    #b0b0c8;
+      --muted:        #6b6b80;
+      --border:       rgba(255,255,255,0.05);
+      --border-hover: rgba(217,70,239,0.32);
+      --radius:       16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── STARFIELD ─────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        radial-gradient(1px   1px   at  8%  13%, rgba(255,255,255,0.52) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 26%  64%, rgba(255,255,255,0.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 53%   9%, rgba(255,255,255,0.56) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 77%  43%, rgba(255,255,255,0.32) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 91%  78%, rgba(255,255,255,0.20) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 43%  87%, rgba(217,70,239,0.28)  0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 18%  52%, rgba(255,255,255,0.40) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 67%  28%, rgba(232,121,249,0.22) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 36%  46%, rgba(255,255,255,0.30) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 84%  19%, rgba(217,70,239,0.18)  0%, transparent 100%);
+    }
+
+    /* fuchsia nebula */
+    body::after {
+      content: '';
+      position: fixed; top: -18vh; left: 50%; transform: translateX(-50%);
+      width: 88vw; height: 62vh; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse at 36% 50%, rgba(217,70,239,0.07) 0%, transparent 58%),
+        radial-gradient(ellipse at 68% 50%, rgba(99,102,241,0.05) 0%, transparent 55%);
+    }
+
+    /* ── NAV ───────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 52px;
+      background: rgba(2,2,4,0.82);
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text); font-size: 0.95rem; font-weight: 700;
+    }
+    .nav-logo .orb {
+      width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+      background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5);
+      box-shadow: 0 0 14px rgba(99,102,241,0.7);
+    }
+    .nav-back {
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--muted);
+      text-decoration: none; transition: color 0.25s;
+    }
+    .nav-back:hover { color: var(--fu-light); }
+
+    /* ── HERO ──────────────────────────────── */
+    .hero {
+      position: relative; z-index: 1;
+      padding: 160px 52px 80px;
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 340px;
+      gap: 64px; align-items: center;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero-breadcrumb {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--fu-light); margin-bottom: 20px;
+    }
+    .hero-breadcrumb span { color: var(--muted); }
+
+    .identity-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--fu-soft); border: 1px solid var(--fu-mid);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--fu-pale); margin-bottom: 20px;
+    }
+
+    /* orbit animation for the badge icon */
+    .orbit-icon { display: inline-block; animation: orbit 4s linear infinite; }
+    @keyframes orbit {
+      0%   { transform: rotate(0deg)   scale(1);    }
+      25%  { transform: rotate(90deg)  scale(1.15); }
+      50%  { transform: rotate(180deg) scale(1);    }
+      75%  { transform: rotate(270deg) scale(1.15); }
+      100% { transform: rotate(360deg) scale(1);    }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      font-weight: 800; letter-spacing: -0.035em;
+      line-height: 1.08; margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #fae8ff 0%, #d946ef 45%, #a21caf 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 1.05rem; color: var(--text-soft);
+      max-width: 520px; line-height: 1.75; margin-bottom: 36px;
+    }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--fu-soft); border: 1px solid var(--fu-mid);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.72rem; font-weight: 600; color: var(--fu-pale); letter-spacing: 0.06em;
+    }
+    .tag.green  { background: rgba(34,197,94,0.07);  border-color: rgba(34,197,94,0.20);  color: #86efac; }
+    .tag.indigo { background: var(--accent-soft);     border-color: rgba(99,102,241,0.20); color: #a5b4fc; }
+
+    /* ── SCORE CARD ────────────────────────── */
+    .score-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 24px; padding: 36px 32px;
+      text-align: center; backdrop-filter: blur(12px);
+      position: relative; overflow: hidden;
+    }
+    .score-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(217,70,239,0.10), transparent 60%);
+      pointer-events: none;
+    }
+    .type-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--fu-soft); border: 1px solid var(--fu-mid);
+      border-radius: 100px; padding: 4px 12px;
+      font-size: 0.64rem; font-weight: 700; letter-spacing: 0.1em;
+      color: var(--fu-pale); text-transform: uppercase; margin-bottom: 18px;
+    }
+    .score-ring {
+      width: 110px; height: 110px; border-radius: 50%;
+      background: conic-gradient(#d946ef 0% 84%, rgba(255,255,255,0.05) 84% 100%);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; position: relative;
+    }
+    .score-ring::after {
+      content: ''; position: absolute; inset: 8px;
+      background: #0a0209; border-radius: 50%;
+    }
+    .score-number {
+      position: relative; z-index: 1; font-size: 1.8rem; font-weight: 800;
+      background: linear-gradient(135deg, #fae8ff, #d946ef);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .score-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
+    .score-rows { display: flex; flex-direction: column; gap: 12px; }
+    .score-row  { display: flex; align-items: center; gap: 12px; }
+    .score-row-label { font-size: 0.75rem; color: var(--muted); font-weight: 500; flex: 1; text-align: left; }
+    .score-bar-track { flex: 2; height: 4px; border-radius: 4px; background: rgba(255,255,255,0.06); overflow: hidden; }
+    .score-bar-fill  { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--fu-dark), var(--fu)); }
+    .score-val { font-size: 0.72rem; font-weight: 700; color: var(--fu-light); width: 28px; text-align: right; }
+
+    /* ── PAGE BODY ─────────────────────────── */
+    .page-body {
+      position: relative; z-index: 1; max-width: 1100px; margin: 0 auto;
+      padding: 0 52px 120px; display: grid; grid-template-columns: 1fr 300px;
+      gap: 64px; align-items: start;
+    }
+    .side-col { position: sticky; top: 100px; }
+
+    /* ── CONTENT ───────────────────────────── */
+    .content-section { margin-bottom: 64px; animation: fadeUp 0.6s ease both; }
+    .section-eyebrow { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--fu-light); margin-bottom: 14px; }
+    .content-section h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 20px; }
+    .content-section p { color: var(--text-soft); margin-bottom: 18px; font-size: 0.97rem; line-height: 1.8; }
+    .content-section p strong { color: var(--text); font-weight: 600; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 48px 0; }
+
+    /* ── VERDICT BOX ───────────────────────── */
+    .verdict-box {
+      background: var(--fu-soft);
+      border: 1px solid rgba(217,70,239,0.14);
+      border-left: 3px solid var(--fu);
+      border-radius: var(--radius);
+      padding: 32px 30px; margin-bottom: 32px;
+      position: relative; overflow: hidden;
+    }
+    .verdict-box::before {
+      content: '✦ EXPERT VERDICT'; position: absolute; top: 18px; right: 20px;
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em;
+      color: rgba(217,70,239,0.30);
+    }
+    .verdict-box p { font-size: 1.05rem; color: var(--text); font-style: italic; line-height: 1.75; margin: 0; }
+
+    /* ── CALLOUT BOX ───────────────────────── */
+    .callout-box {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: rgba(217,70,239,0.05);
+      border: 1px solid rgba(217,70,239,0.18);
+      border-left: 3px solid var(--fu);
+      border-radius: var(--radius); padding: 20px 22px; margin: 24px 0;
+    }
+    .callout-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .callout-text { font-size: 0.88rem; color: var(--text-soft); line-height: 1.7; }
+    .callout-text strong { color: var(--fu-pale); }
+
+    /* ── STAT STRIP ────────────────────────── */
+    .stat-strip {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 12px; margin: 28px 0;
+    }
+    .stat-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px 14px; text-align: center;
+      transition: border-color 0.3s;
+    }
+    .stat-card:hover { border-color: rgba(217,70,239,0.28); }
+    .stat-num {
+      font-size: 1.75rem; font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #fae8ff, #d946ef);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; line-height: 1.1;
+    }
+    .stat-label { font-size: 0.66rem; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+
+    /* ── FEATURE LIST ──────────────────────── */
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+    .feature-list li { display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; }
+    .feature-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--fu-soft); border: 1px solid var(--fu-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .feature-text strong { display: block; font-size: 0.88rem; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+    .feature-text span   { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── SEO BULLET LIST ───────────────────── */
+    .seo-list {
+      list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 16px 0;
+    }
+    .seo-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 0.94rem; color: var(--text-soft); line-height: 1.7;
+    }
+    .seo-list li::before {
+      content: '✦'; color: var(--fu); font-size: 0.6rem;
+      flex-shrink: 0; margin-top: 6px;
+    }
+    .seo-list li strong { color: var(--text); font-weight: 600; }
+
+    /* ── PRICING GRID ──────────────────────── */
+    .pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 20px; }
+    .pricing-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px 22px; text-align: center;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .pricing-card.featured {
+      border-color: rgba(217,70,239,0.30); background: var(--fu-soft);
+      box-shadow: 0 0 28px rgba(217,70,239,0.08);
+    }
+    .pricing-card:hover { border-color: rgba(217,70,239,0.28); transform: translateY(-3px); }
+    .pricing-tier { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    .pricing-card.featured .pricing-tier { color: var(--fu-light); }
+    .pricing-price {
+      font-size: 1.8rem; font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #fae8ff, #d946ef);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; margin-bottom: 4px;
+    }
+    .pricing-cycle { font-size: 0.72rem; color: var(--muted); margin-bottom: 16px; }
+    .pricing-features { list-style: none; text-align: left; }
+    .pricing-features li { font-size: 0.76rem; color: var(--text-soft); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; align-items: center; gap: 7px; }
+    .pricing-features li::before { content: '✦'; color: var(--fu); font-size: 0.5rem; }
+
+    /* ── ALTERNATIVES CARDS ────────────────── */
+    .alt-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 24px 0; }
+    .alt-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px 18px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .alt-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
+    .alt-icon  { font-size: 1.4rem; margin-bottom: 10px; }
+    .alt-name  { font-size: 0.88rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .alt-type  { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fu-light); margin-bottom: 10px; }
+    .alt-desc  { font-size: 0.76rem; color: var(--muted); line-height: 1.6; }
+    .alt-link  {
+      display: inline-block; margin-top: 12px;
+      font-size: 0.72rem; font-weight: 700; color: var(--fu-light);
+      text-decoration: none; border-bottom: 1px solid rgba(217,70,239,0.30);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .alt-link:hover { color: var(--fu-pale); border-color: var(--fu-mid); }
+
+    /* ── TECH STACK PILLS ──────────────────── */
+    .pill-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .pill {
+      padding: 4px 12px; background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border); border-radius: 100px;
+      font-size: 0.72rem; color: var(--muted);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .pill:hover { border-color: var(--fu-mid); color: var(--fu-light); }
+
+    /* ── SIDEBAR ───────────────────────────── */
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 24px; margin-bottom: 20px; }
+    .sidebar-card h3 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+    .quick-facts { display: flex; flex-direction: column; gap: 12px; }
+    .quick-fact { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+    .quick-fact:last-child { border-bottom: none; padding-bottom: 0; }
+    .qf-label { color: var(--muted); font-weight: 500; }
+    .qf-value { color: var(--text); font-weight: 600; }
+    .qf-badge      { display:inline-block; background:rgba(52,211,153,0.10); color:#34d399; border:1px solid rgba(52,211,153,0.20); border-radius:100px; padding:2px 10px; font-size:0.65rem; font-weight:700; }
+    .qf-badge-fu   { display:inline-block; background:var(--fu-soft); color:var(--fu-pale); border:1px solid var(--fu-mid); border-radius:100px; padding:2px 10px; font-size:0.65rem; font-weight:700; }
+    .pill-yes  { display:inline-block; background:rgba(52,211,153,0.10);  color:#34d399; border:1px solid rgba(52,211,153,0.25); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-part { display:inline-block; background:rgba(251,191,36,0.10);  color:#fbbf24; border:1px solid rgba(251,191,36,0.20); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+
+    .cta-block {
+      background: linear-gradient(135deg, rgba(217,70,239,0.10), rgba(99,102,241,0.05));
+      border: 1px solid rgba(217,70,239,0.26);
+      border-radius: var(--radius); padding: 26px 24px; text-align: center; margin-bottom: 20px;
+    }
+    .cta-block p { font-size: 0.82rem; color: var(--text-soft); margin-bottom: 16px; line-height: 1.6; }
+    .btn-cta {
+      display: inline-block;
+      background: linear-gradient(135deg, #a21caf, #d946ef);
+      color: #fff; font-weight: 800; font-size: 0.82rem;
+      padding: 12px 24px; border-radius: 100px; text-decoration: none;
+      box-shadow: 0 0 24px var(--fu-glow); transition: transform 0.25s, box-shadow 0.25s; width: 100%;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 0 42px rgba(217,70,239,0.55); }
+
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .toc-list a { font-size: 0.78rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+    .toc-list a::before { content: '—'; color: rgba(217,70,239,0.4); }
+    .toc-list a:hover { color: var(--fu-light); }
+
+    /* ── FOOTER ────────────────────────────── */
+    footer {
+      position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 48px 52px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-size: 0.9rem; font-weight: 700; }
+    .footer-logo .orb { width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5); box-shadow: 0 0 10px rgba(99,102,241,0.5); }
+    .footer-copy { font-size: 0.75rem; color: var(--muted); }
+    .footer-copy span { color: rgba(217,70,239,0.50); }
+
+    @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    .content-section:nth-child(1) { animation-delay: 0.05s; }
+    .content-section:nth-child(2) { animation-delay: 0.10s; }
+    .content-section:nth-child(3) { animation-delay: 0.15s; }
+    .content-section:nth-child(4) { animation-delay: 0.20s; }
+    .content-section:nth-child(5) { animation-delay: 0.25s; }
+    .content-section:nth-child(6) { animation-delay: 0.30s; }
+
+    @media (max-width: 960px) {
+      nav { padding: 16px 24px; }
+      .hero { grid-template-columns: 1fr; padding: 130px 24px 60px; gap: 40px; }
+      .page-body { grid-template-columns: 1fr; padding: 0 24px 80px; }
+      .side-col { position: static; }
+      .stat-strip { grid-template-columns: 1fr 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .alt-grid { grid-template-columns: 1fr; }
+      footer { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo"><div class="orb"></div>Agentstant</a>
+    <a href="/" class="nav-back">← Back to Directory</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-left">
+      <div class="hero-breadcrumb">
+        Agentstant <span>/</span> AI Tools <span>/</span> Odysseus AI
+      </div>
+
+      <div class="identity-badge">
+        <span class="orbit-icon">🌌</span> Self-Hosted AI Workspace · Open Source
+      </div>
+
+      <h1>
+        <em>Odysseus AI</em> —<br/>
+        Own Your AI.<br/>
+        No Cloud. No Bill.
+      </h1>
+
+      <p class="hero-sub">
+        The most-watched open-source AI launch of 2026. Odysseus is a free, self-hosted workspace that gives you ChatGPT-level power — chat, agents, research, email, documents — running entirely on your own hardware. No subscription. No surveillance. No compromise.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">🌌 Self-Hosted</span>
+        <span class="tag green">🔒 100% Private</span>
+        <span class="tag">⚡ Autonomous Agents</span>
+        <span class="tag indigo">🔬 Deep Research</span>
+        <span class="tag green">MIT License · Free</span>
+      </div>
+    </div>
+
+    <div class="score-card">
+      <div class="type-badge">🌌 Open-Source AI Workspace</div>
+      <div class="score-ring"><span class="score-number">8.4</span></div>
+      <div class="score-label">Agentstant Score / 10</div>
+      <div class="score-rows">
+        <div class="score-row">
+          <span class="score-row-label">Privacy &amp; Control</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:100%"></div></div>
+          <span class="score-val">10</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Feature Breadth</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:91%"></div></div>
+          <span class="score-val">9.1</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Cost Value</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:100%"></div></div>
+          <span class="score-val">10</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Ease of Setup</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:62%"></div></div>
+          <span class="score-val">6.2</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Polish &amp; Maturity</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:60%"></div></div>
+          <span class="score-val">6.0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE BODY -->
+  <div class="page-body">
+    <main class="main-col">
+
+      <!-- ══════════════════════════════════════
+            SECTION 1 — WHAT IS ODYSSEUS AI?
+      ══════════════════════════════════════ -->
+      <article class="content-section" id="what-is">
+        <span class="section-eyebrow">✦ Overview</span>
+        <h2>What Is Odysseus AI?</h2>
+
+        <div class="verdict-box">
+          <p>"Odysseus is the answer to a question millions of people are starting to ask: what if I could have everything ChatGPT and Claude offer — the chat, the agents, the research — but running on my own machine, with my own data, and a bill of exactly zero dollars per month? Released in May 2026, Odysseus is that answer."</p>
+        </div>
+
+        <p>
+          Odysseus AI is a <strong>free, open-source, self-hosted AI workspace</strong> created by Felix Kjellberg — better known as PewDiePie, the Swedish content creator with over 110 million YouTube subscribers. Released on May 31, 2026, under the MIT open-source license, Odysseus is designed for people who want the full power of a modern AI platform without handing their data, conversations, or workflows to a cloud provider.
+        </p>
+
+        <p>
+          The simplest way to understand Odysseus is this: <strong>imagine ChatGPT, Claude, Notion AI, and an AI agent platform merged into a single application that runs entirely on your own computer</strong>. There are no servers in a data center processing your queries. There is no company reading your prompts. There is no monthly subscription. You install Odysseus, connect it to a local model (via Ollama, llama.cpp, or vLLM) or a cloud API provider of your choosing, and you own the entire experience — permanently.
+        </p>
+
+        <p>
+          What makes Odysseus particularly notable in 2026 is how it got here. <strong>PewDiePie spent twelve months building it from scratch</strong>, documenting the journey publicly — migrating to Linux, assembling an $41,000 local AI rig with eight modded RTX 4090 GPUs, experimenting with multi-model AI councils, and learning to code using AI assistance. The result is an open-source project that, within days of launch, accumulated more than 23,000 GitHub stars from a community that had been watching that journey unfold. The technical substance behind the celebrity origin story is genuine.
+        </p>
+
+        <div class="callout-box">
+          <div class="callout-icon">💡</div>
+          <div class="callout-text">
+            <strong>Origin story:</strong> Odysseus's Compare feature — which lets users pit multiple AI models against each other in blind side-by-side tests — evolved directly from PewDiePie's "AI Council" experiment, where he ran eight AI models with distinct personalities on local GPUs and had them debate and vote on answers. When some models started colluding strategically, he replaced them. That experiment became a product feature.
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stat-strip">
+          <div class="stat-card">
+            <div class="stat-num">23K+</div>
+            <div class="stat-label">GitHub stars within days of launch</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">88</div>
+            <div class="stat-label">Open-source contributors at v1.0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">$0</div>
+            <div class="stat-label">Software licensing cost — MIT forever</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">12mo</div>
+            <div class="stat-label">Development time from zero to v1.0</div>
+          </div>
+        </div>
+
+        <p>
+          Odysseus is not a chatbot wrapper. It is described by its creator as a <strong>"self-hosted operating desk for AI work"</strong> — a complete workspace that handles chat, autonomous agents, deep research, document editing, email management, calendar sync, task management, persistent memory, and model comparison, all within a single unified interface accessible via browser, desktop, or a Progressive Web App on mobile.
+        </p>
+
+        <p>
+          The platform is <strong>model-agnostic</strong> by design. You can run it entirely on local hardware using Ollama, llama.cpp, or vLLM for GPU-accelerated serving, connect to cloud API providers like OpenAI or OpenRouter when local hardware isn't sufficient, or mix both approaches depending on the task. A Cookbook feature scans your available hardware, analyzes VRAM capacity, and recommends compatible models — significantly reducing the trial-and-error that has historically been a barrier to entry for local AI setups.
+        </p>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ══════════════════════════════════════
+            SECTION 2 — PRICING
+      ══════════════════════════════════════ -->
+      <article class="content-section" id="pricing">
+        <span class="section-eyebrow">✦ Pricing Model</span>
+        <h2>Odysseus AI Pricing: Is It Free or Paid?</h2>
+
+        <p>
+          Odysseus is <strong>completely free</strong> from a software licensing perspective. The entire codebase is released under the <strong>MIT open-source license</strong>, which means you can download, install, modify, and redistribute it with zero licensing fees — now and in the future. There is no freemium tier, no paid plan, and no "Pro" version of the software itself.
+        </p>
+
+        <p>
+          The real cost of running Odysseus is <strong>infrastructure</strong>. The platform is a workspace layer — it does not come with AI models bundled in. To use it, you need to provide either local hardware capable of running models, or paid API access to external providers. Here is how that breaks down in practice:
+        </p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card featured">
+            <div class="pricing-tier">⭐ Local Hardware Setup</div>
+            <div class="pricing-price">$0/mo</div>
+            <div class="pricing-cycle">After hardware investment</div>
+            <ul class="pricing-features">
+              <li>Odysseus software: free (MIT)</li>
+              <li>Models via Ollama or llama.cpp</li>
+              <li>Works on modern gaming GPU</li>
+              <li>No recurring model fees</li>
+              <li>Full offline capability</li>
+              <li>Complete data sovereignty</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-tier">Cloud API Backend</div>
+            <div class="pricing-price">Variable</div>
+            <div class="pricing-cycle">Pay-per-token to API provider</div>
+            <ul class="pricing-features">
+              <li>Odysseus software: free (MIT)</li>
+              <li>Connect OpenAI, Anthropic, OpenRouter</li>
+              <li>No dedicated GPU required</li>
+              <li>API costs vary by provider &amp; usage</li>
+              <li>Mix local + cloud as needed</li>
+              <li>Prompts go to external provider</li>
+            </ul>
+          </div>
+        </div>
+
+        <p style="margin-top: 20px;">
+          <strong>Practical cost guidance:</strong> If you already own a modern gaming PC with a discrete GPU (8GB+ VRAM), running smaller models like Llama 3.1 8B or Mistral 7B via Ollama costs nothing beyond electricity. For heavier workloads or larger models (70B+ parameters), either a high-VRAM GPU or cloud API access becomes necessary. The Cookbook feature in Odysseus will tell you exactly which models your hardware supports — no manual specification-checking required.
+        </p>
+
+        <ul class="seo-list">
+          <li><strong>No subscription fee</strong> — the software is MIT-licensed and free forever, regardless of how many features Odysseus adds in future versions.</li>
+          <li><strong>No vendor lock-in</strong> — you are never dependent on Odysseus as a company because you own and run the entire stack yourself.</li>
+          <li><strong>Optional cloud costs</strong> — if you use OpenAI or Anthropic APIs through Odysseus, you pay those providers directly at their standard rates. Odysseus takes no cut.</li>
+          <li><strong>Hardware is the real investment</strong> — a capable local AI setup (e.g., a workstation with two RTX 3090s at ~$1,200–$2,500 used) gives you unlimited local inference with zero recurring cost.</li>
+          <li><strong>Future monetisation is possible but not confirmed</strong> — as a newly released v1.0 project, Odysseus has not announced any commercial pricing plans. The open-source, MIT-licensed codebase means even if a commercial offering emerges, the free self-hosted path remains available.</li>
+        </ul>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ══════════════════════════════════════
+            SECTION 3 — KEY FEATURES
+      ══════════════════════════════════════ -->
+      <article class="content-section" id="features">
+        <span class="section-eyebrow">✦ Key Features</span>
+        <h2>Key Features of Odysseus AI</h2>
+
+        <p>
+          Odysseus ships with a broader feature set than virtually any other open-source AI workspace at v1.0. Its scope is closer to a complete productivity operating system than a single-purpose AI tool:
+        </p>
+
+        <ul class="feature-list">
+          <li>
+            <div class="feature-icon">🤖</div>
+            <div class="feature-text">
+              <strong>Autonomous Agent Mode with MCP, Web &amp; Shell Tools</strong>
+              <span>Odysseus's agent mode goes well beyond answering questions — it can execute multi-step workflows autonomously using real tools. Agents in Odysseus can browse the web, read and write files, execute shell commands, use skills (reusable task modules), and interact with external services via the Model Context Protocol (MCP). Persistent memory means agents remember prior context across sessions. For developers and power users, this turns Odysseus into a locally-hosted automation platform capable of the kind of autonomous task execution typically associated with hosted services like Lindy AI or Zapier Agents — but running on hardware you own, with data that never leaves your machine.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🔬</div>
+            <div class="feature-text">
+              <strong>Deep Research Module</strong>
+              <span>Odysseus includes a dedicated Deep Research feature inspired by the multi-source research workflows popularized by tools like Perplexity AI's Deep Research mode. Rather than generating a quick answer, the research agent runs a structured investigation: it searches the web, reads and synthesizes multiple sources, cross-references findings, and produces a structured report with cited evidence. This is particularly useful for market research, competitive analysis, technical investigations, academic literature reviews, and any task where a single-pass answer is insufficient. The module runs locally or via connected API providers depending on your setup.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">⚖️</div>
+            <div class="feature-text">
+              <strong>Multi-Model Comparison (Blind Testing)</strong>
+              <span>The Compare feature is one of Odysseus's most distinctive capabilities — and the one with the most interesting origin story. Users can submit a prompt to multiple AI models simultaneously and compare their responses side by side in a blind test, without knowing which model produced which answer until after evaluation. This removes brand bias from model evaluation, allowing genuinely objective assessment of which model performs better for your specific use case. It supports both local models and API-connected cloud models in the same comparison session, making it a uniquely powerful tool for anyone who wants to benchmark models across real-world tasks rather than benchmark leaderboards.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">📬</div>
+            <div class="feature-text">
+              <strong>Integrated Email, Calendar &amp; Task Management</strong>
+              <span>Odysseus is not just a chat and agent platform — it is designed to be a complete work environment. Native email integration brings your inbox into the workspace where AI can help draft, summarize, and respond to messages. Calendar sync gives your agents awareness of your schedule for context-aware planning. The task management system lets you create, track, and delegate work items that AI agents can act on autonomously. Notes and document editing complete the picture, making Odysseus a genuine all-in-one productivity workspace rather than a standalone AI chat tool you need to juggle alongside other applications.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🔧</div>
+            <div class="feature-text">
+              <strong>Cookbook: Hardware-Aware Model Setup</strong>
+              <span>One of the biggest practical barriers to local AI is figuring out which models will actually run on your hardware without crashing or running at unusable speeds. Odysseus's Cookbook feature solves this by scanning your available GPU and CPU resources, analyzing VRAM capacity, and generating a tailored list of compatible models with direct download links and serving instructions. For users new to local AI, this eliminates hours of specification-checking and failed installations. For experienced users, it provides a fast path from new hardware to running models without manual benchmarking.</span>
+            </div>
+          </li>
+        </ul>
+
+        <p style="margin-top: 24px;"><strong>Supported model backends and integrations:</strong></p>
+        <div class="pill-wrap">
+          <span class="pill">Ollama</span>
+          <span class="pill">llama.cpp</span>
+          <span class="pill">vLLM</span>
+          <span class="pill">OpenRouter</span>
+          <span class="pill">OpenAI API</span>
+          <span class="pill">Anthropic API</span>
+          <span class="pill">MCP (Model Context Protocol)</span>
+          <span class="pill">Web Search Tool</span>
+          <span class="pill">Shell Tool</span>
+          <span class="pill">File Tool</span>
+          <span class="pill">Email Integration</span>
+          <span class="pill">Calendar Sync</span>
+          <span class="pill">Docker Deploy</span>
+          <span class="pill">Mobile / PWA</span>
+          <span class="pill">MIT License</span>
+        </div>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ══════════════════════════════════════
+            SECTION 4 — ALTERNATIVES
+      ══════════════════════════════════════ -->
+      <article class="content-section" id="alternatives">
+        <span class="section-eyebrow">✦ Alternatives</span>
+        <h2>Odysseus AI Alternatives</h2>
+
+        <p>
+          Odysseus occupies a genuinely unusual position in the AI tool landscape — a self-hosted, privacy-first workspace with no recurring cost. Most direct alternatives either require cloud hosting, charge a monthly fee, or trade breadth for specialization. The best alternative for you depends on whether your priority is maximum autonomy (stick with Odysseus), agent-building power, or multi-agent orchestration for developer workflows.
+        </p>
+
+        <p>
+          For users who need <strong>multi-agent systems and developer-grade orchestration</strong>, two tools stand out as the strongest Odysseus alternatives. <strong><a href="/tools/crewai/" style="color: var(--fu-light); text-decoration: underline;">CrewAI</a></strong> is a leading multi-agent framework that lets developers define teams of AI agents with distinct roles, assign them tasks, and coordinate their collaboration on complex multi-step problems — ideal for engineers who want to build agent workflows programmatically rather than through a graphical workspace. <strong><a href="/tools/autogen/" style="color: var(--fu-light); text-decoration: underline;">AutoGen</a></strong>, developed by Microsoft Research, takes a similar direction with a conversational multi-agent framework designed for researchers and developers building complex agent pipelines in Python. Both CrewAI and AutoGen require more technical setup than Odysseus but offer deeper agent customization for power users willing to write code. You can explore both in our directory.
+        </p>
+
+        <div class="alt-grid">
+          <div class="alt-card">
+            <div class="alt-icon">🚣</div>
+            <div class="alt-name">CrewAI</div>
+            <div class="alt-type">Multi-Agent Framework</div>
+            <div class="alt-desc">Define teams of AI agents with distinct roles and coordinate them on complex multi-step tasks. Developer-focused, Python-based, and highly customizable for production agent pipelines.</div>
+            <a href="/tools/crewai/" class="alt-link">View CrewAI on Agentstant →</a>
+          </div>
+          <div class="alt-card">
+            <div class="alt-icon">🔬</div>
+            <div class="alt-name">AutoGen</div>
+            <div class="alt-type">Conversational Multi-Agent</div>
+            <div class="alt-desc">Microsoft Research's conversational multi-agent framework for building complex agent pipelines in Python. Widely used in research and enterprise AI experimentation.</div>
+            <a href="/tools/autogen/" class="alt-link">View AutoGen on Agentstant →</a>
+          </div>
+          <div class="alt-card">
+            <div class="alt-icon">🔍</div>
+            <div class="alt-name">Open WebUI</div>
+            <div class="alt-type">Self-Hosted Chat UI</div>
+            <div class="alt-desc">The most established open-source ChatGPT-style interface for local models. Less feature-complete than Odysseus (no native email/calendar/agents) but more mature and widely deployed.</div>
+            <a href="/tools/open-webui/" class="alt-link">View Open WebUI on Agentstant →</a>
+          </div>
+        </div>
+
+        <p>
+          The key decision point is this: if you want a <strong>complete, private, all-in-one workspace</strong> that handles both AI chat and real-world productivity tasks (email, tasks, calendar), Odysseus is in a category of one at zero cost. If you need <strong>programmatic multi-agent orchestration</strong> for software engineering or research workflows — and you are comfortable writing Python — CrewAI or AutoGen will give you more precise control over agent behavior than a graphical workspace can provide. And if setup complexity is your primary concern, Open WebUI offers the most battle-tested path to a local AI chat interface with the largest existing community of self-hosters.
+        </p>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ══════════════════════════════════════
+            SECTION 5 — IS IT WORTH IT?
+      ══════════════════════════════════════ -->
+      <article class="content-section" id="verdict">
+        <span class="section-eyebrow">✦ Final Verdict</span>
+        <h2>Should You Use Odysseus AI in 2026?</h2>
+
+        <p>
+          Odysseus is <strong>the most compelling free AI workspace released in 2026</strong> — not because of who made it, but because of what it is. At v1.0, it has rough edges: setup requires comfort with Docker or Git, local model performance depends entirely on your hardware, and some features carry the instability typical of young open-source projects. These are real limitations.
+        </p>
+
+        <p>
+          But the value proposition is genuinely unique. No other tool in this category gives you <strong>chat, autonomous agents with MCP and shell access, deep research, multi-model blind comparison, email integration, calendar sync, persistent memory, document editing, and mobile support — for zero dollars</strong>. The closest hosted equivalents (a combination of ChatGPT Pro, Notion AI, and a task automation tool) would cost $50–$100 per month with data leaving your control at every step.
+        </p>
+
+        <ul class="seo-list">
+          <li><strong>Use Odysseus if</strong> you are privacy-conscious, have suitable hardware, and want a permanent zero-cost AI workspace you fully own and control.</li>
+          <li><strong>Use Odysseus if</strong> you are already running local models via Ollama or llama.cpp and want a more complete workspace layer on top of your existing setup.</li>
+          <li><strong>Wait or use an alternative if</strong> you need a polished, immediately production-ready tool — Odysseus is young and its community is still growing.</li>
+          <li><strong>Consider a hosted alternative if</strong> you have no suitable GPU hardware and would be relying entirely on cloud APIs — at that point, the privacy advantage is reduced and a managed service may offer a simpler experience.</li>
+        </ul>
+
+        <p style="margin-top: 18px;">
+          The trajectory is clear: as local AI hardware becomes more accessible and the Odysseus community matures the codebase, this platform will become progressively harder to ignore for anyone serious about AI productivity without vendor dependency. Getting comfortable with it now, while it's young and rough, positions you ahead of the adoption curve.
+        </p>
+      </article>
+
+    </main>
+
+    <!-- ══════════ SIDEBAR ══════════ -->
+    <aside class="side-col">
+
+      <div class="cta-block">
+        <p>Free forever. MIT licensed. Your data, your hardware, your rules. Set up Odysseus in under 30 minutes with Docker — no account required.</p>
+        <a href="https://github.com/PewDiePie/odysseus" class="btn-cta" target="_blank" rel="noopener">Get Odysseus Free →</a>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Quick Facts</h3>
+        <div class="quick-facts">
+          <div class="quick-fact"><span class="qf-label">Creator</span><span class="qf-value">Felix Kjellberg</span></div>
+          <div class="quick-fact"><span class="qf-label">Known As</span><span class="qf-value">PewDiePie</span></div>
+          <div class="quick-fact"><span class="qf-label">Launched</span><span class="qf-badge-fu">May 31, 2026</span></div>
+          <div class="quick-fact"><span class="qf-label">License</span><span class="qf-badge">MIT · Free</span></div>
+          <div class="quick-fact"><span class="qf-label">GitHub Stars</span><span class="qf-value">23,000+</span></div>
+          <div class="quick-fact"><span class="qf-label">Contributors</span><span class="qf-value">88 at v1.0</span></div>
+          <div class="quick-fact"><span class="qf-label">Deploy Via</span><span class="qf-value">Docker / Git</span></div>
+          <div class="quick-fact"><span class="qf-label">Status</span><span class="qf-badge">Active · v1.0</span></div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>On This Page</h3>
+        <ul class="toc-list">
+          <li><a href="#what-is">What Is Odysseus AI?</a></li>
+          <li><a href="#what-is">Origin Story &amp; Stats</a></li>
+          <li><a href="#pricing">Pricing: Free or Paid?</a></li>
+          <li><a href="#features">Key Features (5 deep dives)</a></li>
+          <li><a href="#features">Supported Model Backends</a></li>
+          <li><a href="#alternatives">Alternatives (CrewAI, AutoGen)</a></li>
+          <li><a href="#verdict">Final Verdict</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Best For</h3>
+        <div class="quick-facts">
+          <div class="quick-fact"><span class="qf-label">🔒 Privacy-First Users</span><span class="pill-yes">Exceptional</span></div>
+          <div class="quick-fact"><span class="qf-label">💻 Local AI Builders</span><span class="pill-yes">Exceptional</span></div>
+          <div class="quick-fact"><span class="qf-label">💰 Budget-Conscious</span><span class="pill-yes">Exceptional</span></div>
+          <div class="quick-fact"><span class="qf-label">🏢 Enterprise Ops</span><span class="pill-part">Moderate</span></div>
+          <div class="quick-fact"><span class="qf-label">🔰 Non-Technical</span><span class="pill-part">Moderate</span></div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="/" class="footer-logo"><div class="orb"></div>Agentstant</a>
+    <p class="footer-copy">© 2026 Agentstant — <span>Mapping the Intelligence Galaxy</span></p>
+  </footer>
+
+</body>
+</html>
