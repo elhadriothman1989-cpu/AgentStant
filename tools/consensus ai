@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ════════════════════════════════════
+       SEO META — CONSENSUS AI
+  ════════════════════════════════════ -->
+  <title>Consensus AI Review 2026 | AI Search Engine for Science</title>
+  <meta name="description" content="Consensus AI 2026: search 200M+ peer-reviewed papers, get cited AI summaries & see scientific agreement instantly. Free plan. Pro from $10/mo." />
+
+  <meta property="og:title" content="Consensus AI Review 2026 — The Search Engine That Only Cites Science | Agentstant Galaxy" />
+  <meta property="og:description" content="8M+ researchers trust Consensus AI to answer questions with peer-reviewed evidence — not guesses. 200M papers. Consensus Meter. Deep Research. Zero hallucinated citations in testing. Full 2026 review." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Agentstant Galaxy" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "name": "Consensus AI Review 2026",
+    "reviewBody": "Comprehensive expert review of Consensus AI — the peer-reviewed academic search engine for evidence-based research in 2026.",
+    "author": { "@type": "Organization", "name": "Agentstant Galaxy" },
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": "Consensus",
+      "applicationCategory": "AI Academic Search Engine",
+      "offers": [
+        { "@type": "Offer", "price": "0", "priceCurrency": "USD", "name": "Free" },
+        { "@type": "Offer", "price": "10", "priceCurrency": "USD", "name": "Pro" }
+      ],
+      "creator": { "@type": "Organization", "name": "Consensus NLP, Inc." }
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #020204;
+      --surface:      rgba(255,255,255,0.02);
+      --accent:       #6366f1;
+      --accent-soft:  rgba(99,102,241,0.10);
+
+      /* Consensus identity — Lime Green: scientific rigour, verified evidence, precision */
+      --li:           #84cc16;
+      --li-light:     #a3e635;
+      --li-pale:      #ecfccb;
+      --li-soft:      rgba(132,204,22,0.08);
+      --li-mid:       rgba(132,204,22,0.20);
+      --li-glow:      rgba(132,204,22,0.35);
+      --li-dark:      #65a30d;
+
+      --text:         #e8e8f0;
+      --text-soft:    #b0b0c8;
+      --muted:        #6b6b80;
+      --border:       rgba(255,255,255,0.05);
+      --border-hover: rgba(132,204,22,0.32);
+      --radius:       16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── STARFIELD ─────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        radial-gradient(1px   1px   at  7%  14%, rgba(255,255,255,0.52) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 25%  63%, rgba(255,255,255,0.28) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 52%   8%, rgba(255,255,255,0.56) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 76%  42%, rgba(255,255,255,0.32) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 90%  77%, rgba(255,255,255,0.20) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 42%  87%, rgba(132,204,22,0.28)  0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 17%  50%, rgba(255,255,255,0.40) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 65%  26%, rgba(163,230,53,0.20)  0%, transparent 100%),
+        radial-gradient(1px   1px   at 34%  45%, rgba(255,255,255,0.30) 0%, transparent 100%),
+        radial-gradient(1px   1px   at 81%  17%, rgba(132,204,22,0.18)  0%, transparent 100%);
+    }
+
+    /* lime nebula */
+    body::after {
+      content: '';
+      position: fixed; top: -18vh; left: 50%; transform: translateX(-50%);
+      width: 88vw; height: 62vh; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse at 37% 50%, rgba(132,204,22,0.06) 0%, transparent 58%),
+        radial-gradient(ellipse at 67% 50%, rgba(99,102,241,0.05) 0%, transparent 55%);
+    }
+
+    /* ── NAV ───────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 52px;
+      background: rgba(2,2,4,0.82);
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text); font-size: 0.95rem; font-weight: 700;
+    }
+    .nav-logo .orb {
+      width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+      background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5);
+      box-shadow: 0 0 14px rgba(99,102,241,0.7);
+    }
+    .nav-back {
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--muted);
+      text-decoration: none; transition: color 0.25s;
+    }
+    .nav-back:hover { color: var(--li-light); }
+
+    /* ── HERO ──────────────────────────────── */
+    .hero {
+      position: relative; z-index: 1;
+      padding: 160px 52px 80px;
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 340px;
+      gap: 64px; align-items: center;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero-breadcrumb {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--li-light); margin-bottom: 20px;
+    }
+    .hero-breadcrumb span { color: var(--muted); }
+
+    .identity-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--li-soft); border: 1px solid var(--li-mid);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--li-pale); margin-bottom: 20px;
+    }
+
+    /* DNA double-helix pulse — science identity */
+    .dna-icon { display: inline-block; animation: dnaPulse 2.4s ease-in-out infinite; }
+    @keyframes dnaPulse {
+      0%,100% { transform: scaleY(1);    opacity: 1;    }
+      30%      { transform: scaleY(1.4); opacity: 0.85; }
+      60%      { transform: scaleY(0.8); opacity: 0.95; }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      font-weight: 800; letter-spacing: -0.035em;
+      line-height: 1.08; margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #ecfccb 0%, #84cc16 45%, #65a30d 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem; color: var(--text-soft);
+      max-width: 520px; line-height: 1.75; margin-bottom: 36px;
+    }
+
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--li-soft); border: 1px solid var(--li-mid);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.72rem; font-weight: 600; color: var(--li-pale); letter-spacing: 0.06em;
+    }
+    .tag.indigo { background: var(--accent-soft); border-color: rgba(99,102,241,0.2); color: #a5b4fc; }
+    .tag.amber  { background: rgba(245,158,11,0.07); border-color: rgba(245,158,11,0.18); color: #fcd34d; }
+
+    /* ── SCORE CARD ────────────────────────── */
+    .score-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 24px; padding: 36px 32px;
+      text-align: center; backdrop-filter: blur(12px);
+      position: relative; overflow: hidden;
+    }
+    .score-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(132,204,22,0.09), transparent 60%);
+      pointer-events: none;
+    }
+    .type-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--li-soft); border: 1px solid var(--li-mid);
+      border-radius: 100px; padding: 4px 12px;
+      font-size: 0.64rem; font-weight: 700; letter-spacing: 0.1em;
+      color: var(--li-pale); text-transform: uppercase; margin-bottom: 18px;
+    }
+    .score-ring {
+      width: 110px; height: 110px; border-radius: 50%;
+      background: conic-gradient(#84cc16 0% 91%, rgba(255,255,255,0.05) 91% 100%);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; position: relative;
+    }
+    .score-ring::after {
+      content: ''; position: absolute; inset: 8px;
+      background: #040901; border-radius: 50%;
+    }
+    .score-number {
+      position: relative; z-index: 1; font-size: 1.8rem; font-weight: 800;
+      background: linear-gradient(135deg, #ecfccb, #84cc16);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .score-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
+    .score-rows { display: flex; flex-direction: column; gap: 12px; }
+    .score-row  { display: flex; align-items: center; gap: 12px; }
+    .score-row-label { font-size: 0.75rem; color: var(--muted); font-weight: 500; flex: 1; text-align: left; }
+    .score-bar-track { flex: 2; height: 4px; border-radius: 4px; background: rgba(255,255,255,0.06); overflow: hidden; }
+    .score-bar-fill  { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--li-dark), var(--li)); }
+    .score-val { font-size: 0.72rem; font-weight: 700; color: var(--li-light); width: 28px; text-align: right; }
+
+    /* ── PAGE BODY ─────────────────────────── */
+    .page-body {
+      position: relative; z-index: 1; max-width: 1100px; margin: 0 auto;
+      padding: 0 52px 120px; display: grid; grid-template-columns: 1fr 300px;
+      gap: 64px; align-items: start;
+    }
+    .side-col { position: sticky; top: 100px; }
+
+    /* ── CONTENT ───────────────────────────── */
+    .content-section { margin-bottom: 64px; animation: fadeUp 0.6s ease both; }
+    .section-eyebrow { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--li-light); margin-bottom: 14px; }
+    .content-section h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 20px; }
+    .content-section p { color: var(--text-soft); margin-bottom: 18px; font-size: 0.97rem; line-height: 1.8; }
+    .content-section p strong { color: var(--text); font-weight: 600; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 48px 0; }
+
+    /* ── VERDICT BOX ───────────────────────── */
+    .verdict-box {
+      background: var(--li-soft);
+      border: 1px solid rgba(132,204,22,0.14);
+      border-left: 3px solid var(--li);
+      border-radius: var(--radius);
+      padding: 32px 30px; margin-bottom: 32px;
+      position: relative; overflow: hidden;
+    }
+    .verdict-box::before {
+      content: '✦ EXPERT VERDICT'; position: absolute; top: 18px; right: 20px;
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em;
+      color: rgba(132,204,22,0.30);
+    }
+    .verdict-box p { font-size: 1.05rem; color: var(--text); font-style: italic; line-height: 1.75; margin: 0; }
+
+    /* ── CONSENSUS METER VISUAL ────────────── */
+    .meter-demo {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px 26px; margin: 28px 0;
+      position: relative; overflow: hidden;
+    }
+    .meter-demo::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--li), transparent);
+    }
+    .meter-label {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 20px;
+    }
+    .meter-question {
+      font-size: 0.95rem; font-weight: 700; color: var(--text);
+      margin-bottom: 18px; font-style: italic;
+    }
+    .meter-bar-wrap { margin-bottom: 10px; }
+    .meter-bar-label {
+      display: flex; justify-content: space-between;
+      font-size: 0.72rem; color: var(--muted); margin-bottom: 6px;
+    }
+    .meter-track {
+      height: 10px; border-radius: 10px; background: rgba(255,255,255,0.05);
+      overflow: hidden; display: flex;
+    }
+    .meter-yes  { background: linear-gradient(90deg, #65a30d, #84cc16); border-radius: 10px 0 0 10px; }
+    .meter-no   { background: rgba(248,113,113,0.55); border-radius: 0 10px 10px 0; }
+    .meter-foot { font-size: 0.72rem; color: var(--muted); margin-top: 14px; line-height: 1.6; }
+    .meter-foot strong { color: var(--li-light); }
+
+    /* ── STAT STRIP ────────────────────────── */
+    .stat-strip {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 12px; margin: 28px 0;
+    }
+    .stat-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px 14px; text-align: center;
+      transition: border-color 0.3s;
+    }
+    .stat-card:hover { border-color: rgba(132,204,22,0.28); }
+    .stat-num {
+      font-size: 1.75rem; font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #ecfccb, #84cc16);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; line-height: 1.1;
+    }
+    .stat-label { font-size: 0.66rem; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+
+    /* ── HOW IT WORKS FLOW ─────────────────── */
+    .flow-strip {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px 24px; margin: 24px 0;
+    }
+    .flow-label {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 18px;
+    }
+    .flow-steps { display: flex; align-items: center; flex-wrap: nowrap; overflow-x: auto; }
+    .flow-step  { display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; min-width: 80px; text-align: center; }
+    .flow-node  {
+      width: 48px; height: 48px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; border: 1px solid;
+    }
+    .fn-q  { background: rgba(132,204,22,0.10); border-color: rgba(132,204,22,0.30); }
+    .fn-s  { background: rgba(99,102,241,0.10);  border-color: rgba(99,102,241,0.30);  }
+    .fn-a  { background: rgba(245,158,11,0.08);  border-color: rgba(245,158,11,0.25);  }
+    .fn-m  { background: rgba(52,211,153,0.08);  border-color: rgba(52,211,153,0.25);  }
+    .fn-r  { background: rgba(132,204,22,0.12);  border-color: rgba(132,204,22,0.30);  }
+    .flow-name  { font-size: 0.62rem; color: var(--muted); font-weight: 600; line-height: 1.3; }
+    .flow-arrow { color: rgba(132,204,22,0.50); font-size: 0.9rem; flex-shrink: 0; position: relative; top: -12px; padding: 0 2px; }
+
+    /* ── USE CASES ─────────────────────────── */
+    .use-cases { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+    .use-case-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px 20px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .use-case-card:hover { border-color: rgba(132,204,22,0.30); transform: translateY(-3px); }
+    .use-case-icon  { font-size: 1.4rem; margin-bottom: 10px; }
+    .use-case-title { font-size: 0.85rem; font-weight: 700; margin-bottom: 8px; }
+    .use-case-desc  { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── FEATURE LIST ──────────────────────── */
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+    .feature-list li { display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; }
+    .feature-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--li-soft); border: 1px solid var(--li-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .feature-text strong { display: block; font-size: 0.88rem; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+    .feature-text span   { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── SEO BULLET LIST ───────────────────── */
+    .seo-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 16px 0; }
+    .seo-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.94rem; color: var(--text-soft); line-height: 1.7; }
+    .seo-list li::before { content: '✦'; color: var(--li); font-size: 0.6rem; flex-shrink: 0; margin-top: 6px; }
+    .seo-list li strong { color: var(--text); font-weight: 600; }
+
+    /* ── COMPARE TABLE ─────────────────────── */
+    .compare-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.83rem; }
+    .compare-table thead tr { border-bottom: 1px solid var(--border); }
+    .compare-table th { text-align: left; padding: 14px 16px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .compare-table th:first-child { color: var(--text); }
+    .compare-table th.hi { color: var(--li-light); }
+    .compare-table tbody tr { border-bottom: 1px solid rgba(255,255,255,0.03); transition: background 0.2s; }
+    .compare-table tbody tr:hover { background: rgba(132,204,22,0.03); }
+    .compare-table tbody tr.hl { background: rgba(132,204,22,0.04); }
+    .compare-table td { padding: 14px 16px; color: var(--text-soft); vertical-align: middle; }
+    .compare-table td:first-child { font-weight: 600; color: var(--text); }
+
+    .pill-yes  { display:inline-block; background:rgba(52,211,153,0.10);  color:#34d399; border:1px solid rgba(52,211,153,0.25); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-part { display:inline-block; background:rgba(251,191,36,0.10);  color:#fbbf24; border:1px solid rgba(251,191,36,0.20); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-no   { display:inline-block; background:rgba(248,113,113,0.08); color:#f87171; border:1px solid rgba(248,113,113,0.20); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+    .pill-li   { display:inline-block; background:var(--li-soft); color:var(--li-pale); border:1px solid var(--li-mid); border-radius:100px; padding:2px 10px; font-size:0.68rem; font-weight:700; }
+
+    /* ── PRICING ───────────────────────────── */
+    .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 20px; }
+    .pricing-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 24px 18px; text-align: center;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .pricing-card.featured {
+      border-color: rgba(132,204,22,0.32); background: var(--li-soft);
+      box-shadow: 0 0 28px rgba(132,204,22,0.08);
+    }
+    .pricing-card:hover { border-color: rgba(132,204,22,0.28); transform: translateY(-3px); }
+    .pricing-tier { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    .pricing-card.featured .pricing-tier { color: var(--li-light); }
+    .pricing-price {
+      font-size: 1.55rem; font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #ecfccb, #84cc16);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; margin-bottom: 4px;
+    }
+    .pricing-cycle { font-size: 0.7rem; color: var(--muted); margin-bottom: 14px; }
+    .pricing-features { list-style: none; text-align: left; }
+    .pricing-features li { font-size: 0.74rem; color: var(--text-soft); padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; align-items: center; gap: 7px; }
+    .pricing-features li::before { content: '✦'; color: var(--li); font-size: 0.5rem; }
+
+    /* ── SIDEBAR ───────────────────────────── */
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 24px; margin-bottom: 20px; }
+    .sidebar-card h3 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+    .quick-facts { display: flex; flex-direction: column; gap: 12px; }
+    .quick-fact { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+    .quick-fact:last-child { border-bottom: none; padding-bottom: 0; }
+    .qf-label { color: var(--muted); font-weight: 500; }
+    .qf-value { color: var(--text); font-weight: 600; }
+    .qf-badge    { display:inline-block; background:rgba(52,211,153,0.10); color:#34d399; border:1px solid rgba(52,211,153,0.20); border-radius:100px; padding:2px 10px; font-size:0.65rem; font-weight:700; }
+    .qf-badge-li { display:inline-block; background:var(--li-soft); color:var(--li-pale); border:1px solid var(--li-mid); border-radius:100px; padding:2px 10px; font-size:0.65rem; font-weight:700; }
+
+    .cta-block {
+      background: linear-gradient(135deg, rgba(132,204,22,0.10), rgba(99,102,241,0.05));
+      border: 1px solid rgba(132,204,22,0.26);
+      border-radius: var(--radius); padding: 26px 24px; text-align: center; margin-bottom: 20px;
+    }
+    .cta-block p { font-size: 0.82rem; color: var(--text-soft); margin-bottom: 16px; line-height: 1.6; }
+    .btn-cta {
+      display: inline-block;
+      background: linear-gradient(135deg, #65a30d, #84cc16);
+      color: #020204; font-weight: 800; font-size: 0.82rem;
+      padding: 12px 24px; border-radius: 100px; text-decoration: none;
+      box-shadow: 0 0 24px var(--li-glow); transition: transform 0.25s, box-shadow 0.25s; width: 100%;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 0 42px rgba(132,204,22,0.50); }
+
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .toc-list a { font-size: 0.78rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+    .toc-list a::before { content: '—'; color: rgba(132,204,22,0.4); }
+    .toc-list a:hover { color: var(--li-light); }
+
+    /* ── FOOTER ────────────────────────────── */
+    footer {
+      position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 48px 52px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-size: 0.9rem; font-weight: 700; }
+    .footer-logo .orb { width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #818cf8, #4f46e5); box-shadow: 0 0 10px rgba(99,102,241,0.5); }
+    .footer-copy { font-size: 0.75rem; color: var(--muted); }
+    .footer-copy span { color: rgba(132,204,22,0.55); }
+
+    @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    .content-section:nth-child(1) { animation-delay: 0.05s; }
+    .content-section:nth-child(2) { animation-delay: 0.10s; }
+    .content-section:nth-child(3) { animation-delay: 0.15s; }
+    .content-section:nth-child(4) { animation-delay: 0.20s; }
+    .content-section:nth-child(5) { animation-delay: 0.25s; }
+
+    @media (max-width: 960px) {
+      nav { padding: 16px 24px; }
+      .hero { grid-template-columns: 1fr; padding: 130px 24px 60px; gap: 40px; }
+      .page-body { grid-template-columns: 1fr; padding: 0 24px 80px; }
+      .side-col { position: static; }
+      .use-cases { grid-template-columns: 1fr 1fr; }
+      .pricing-grid { grid-template-columns: 1fr 1fr; }
+      .stat-strip { grid-template-columns: 1fr 1fr; }
+      footer { padding: 36px 24px; }
+    }
+    @media (max-width: 520px) {
+      .use-cases { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo"><div class="orb"></div>Agentstant Galaxy</a>
+    <a href="/" class="nav-back">← Back to Galaxy</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-left">
+      <div class="hero-breadcrumb">
+        Agentstant Galaxy <span>/</span> AI Research <span>/</span> Consensus AI
+      </div>
+
+      <div class="identity-badge">
+        <span class="dna-icon">🧬</span> AI Academic Search Engine · Evidence-Based
+      </div>
+
+      <h1>
+        <em>Consensus AI</em> —<br/>
+        Ask Science a Question.<br/>
+        Get a Cited Answer.
+      </h1>
+
+      <p class="hero-sub">
+        Consensus searches 200 million peer-reviewed papers and tells you what the science actually says — with numbered citations, zero hallucinated references, and a unique Consensus Meter showing exactly how much researchers agree. The search engine that replaces a library with a question.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">🧬 200M+ Papers</span>
+        <span class="tag">📊 Consensus Meter</span>
+        <span class="tag amber">🔬 Deep Research</span>
+        <span class="tag indigo">📚 LibKey Integration</span>
+        <span class="tag">✅ Zero Hallucinated Citations</span>
+      </div>
+    </div>
+
+    <div class="score-card">
+      <div class="type-badge">🧬 AI Academic Search Engine</div>
+      <div class="score-ring"><span class="score-number">9.1</span></div>
+      <div class="score-label">Galaxy Score / 10</div>
+      <div class="score-rows">
+        <div class="score-row">
+          <span class="score-row-label">Citation Accuracy</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:100%"></div></div>
+          <span class="score-val">10</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Research Depth</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:94%"></div></div>
+          <span class="score-val">9.4</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Ease of Use</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:96%"></div></div>
+          <span class="score-val">9.6</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Value for Cost</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:95%"></div></div>
+          <span class="score-val">9.5</span>
+        </div>
+        <div class="score-row">
+          <span class="score-row-label">Creative / General Use</span>
+          <div class="score-bar-track"><div class="score-bar-fill" style="width:30%"></div></div>
+          <span class="score-val">3.0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE BODY -->
+  <div class="page-body">
+    <main class="main-col">
+
+      <!-- ══════════════════════════════════════
+           SECTION 1 — EXPERT VERDICT
+      ══════════════════════════════════════ -->
+      <article class="content-section" id="verdict">
+        <span class="section-eyebrow">✦ Expert Verdict</span>
+        <h2>What Is Consensus AI — And Why Does It Matter in 2026?</h2>
+
+        <div class="verdict-box">
+          <p>"Consensus solved the problem that made AI tools unusable for serious research: hallucinated citations. By building its answers entirely from a curated database of 200 million peer-reviewed papers — and refusing to go anywhere else — it became the only AI tool where a researcher, clinician, or journalist can trust every source link to be real. In a world flooded with AI-generated content of uncertain provenance, that guarantee is worth more than any feature list."</p>
+        </div>
+
+        <p>
+          <strong>Consensus AI</strong> is an AI-powered academic search engine built by Consensus NLP, Inc. that searches a database of over <strong>200 million peer-reviewed scientific papers</strong> to answer research questions with cited, evidence-backed findings. Unlike general-purpose AI tools such as ChatGPT or Gemini — which synthesize answers from training data and can produce plausible-sounding but fictional citations — Consensus operates exclusively within a verified corpus of academic literature drawn from Semantic Scholar, OpenAlex, PubMed, and its own scholarly web crawl.
+        </p>
+
+        <p>
+          The platform's operating principle is straightforward: you ask a research question in plain English, Consensus searches the scientific literature for papers that address it, extracts the key findings from the most relevant studies, synthesizes a clear summary with numbered inline citations, and presents the result alongside its signature <strong>Consensus Meter</strong> — a visual indicator showing what percentage of retrieved studies support versus contradict the claim. Every citation links to the actual paper. You can verify any sentence in the response against its source within seconds.
+        </p>
+
+        <p>
+          This architecture produces a specific and valuable outcome: <strong>zero hallucinated citations</strong>. In a controlled test by TheAISelect across 30 research questions spanning medicine, psychology, nutrition, and climate science, Consensus delivered accurate syntheses with verified real papers — a result that no general-purpose AI tool consistently achieves. The cost is scope: Consensus will not help you write a marketing email, generate an image, or debug code. It does one thing — evidence-based research from peer-reviewed literature — and it does that one thing better than any other AI tool available in 2026.
+        </p>
+
+        <p>
+          By 2026, <strong>8 million researchers, clinicians, students, and knowledge workers</strong> use Consensus regularly. Following a <strong>$30 million Series A</strong> funding round, the platform expanded its database to 220 million papers, launched Deep Search for comprehensive multi-paper literature reviews, introduced LibKey integration for university library access to paywalled articles, and restructured its pricing into a cleaner Free / Pro / Deep tier model that positions it as the most cost-effective specialized research tool in the category — <strong>92% below the average price of comparable AI research tools</strong> according to independent category analysis.
+        </p>
+
+        <!-- Stats -->
+        <div class="stat-strip">
+          <div class="stat-card">
+            <div class="stat-num">200M+</div>
+            <div class="stat-label">Peer-reviewed papers indexed across all scientific disciplines</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">8M+</div>
+            <div class="stat-label">Researchers, clinicians & students using Consensus in 2026</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">$30M</div>
+            <div class="stat-label">Series A funding raised for database &amp; feature expansion</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">0</div>
+            <div class="stat-label">Hallucinated citations in controlled 30-question accuracy test</div>
+          </div>
+        </div>
+
+        <!-- How it works -->
+        <h2>How Consensus Works — From Question to Cited Answer</h2>
+        <p>
+          The five-step pipeline that turns a plain English question into a verified, synthesis-backed research answer:
+        </p>
+
+        <div class="flow-strip">
+          <div class="flow-label">↳ Consensus AI Research Pipeline — Question to Verified Evidence</div>
+          <div class="flow-steps">
+            <div class="flow-step">
+              <div class="flow-node fn-q">❓</div>
+              <div class="flow-name">Research<br/>Question</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-node fn-s">🔍</div>
+              <div class="flow-name">Search<br/>200M Papers</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-node fn-a">🧠</div>
+              <div class="flow-name">AI Extracts<br/>Key Findings</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-node fn-m">📊</div>
+              <div class="flow-name">Consensus<br/>Meter</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+              <div class="flow-node fn-r">📎</div>
+              <div class="flow-name">Cited<br/>Summary</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Consensus Meter Demo -->
+        <h2>The Consensus Meter — Science's Answer at a Glance</h2>
+        <p>
+          Consensus's most distinctive feature is the <strong>Consensus Meter</strong> — a visual agreement indicator that appears on yes/no and relationship-type research questions, showing what percentage of retrieved peer-reviewed studies support versus contradict a given claim. It is the clearest expression of the platform's core value: not just "here are papers on this topic" but "here is what the collective weight of scientific research actually concludes."
+        </p>
+
+        <div class="meter-demo">
+          <div class="meter-label">↳ Consensus Meter — Live Example</div>
+          <div class="meter-question">"Does exercise improve cognitive function in older adults?"</div>
+
+          <div class="meter-bar-wrap">
+            <div class="meter-bar-label">
+              <span style="color: var(--li-light); font-weight:700;">✓ Yes / Supports (78%)</span>
+              <span style="color: #f87171; font-weight:700;">✗ No / Contradicts (22%)</span>
+            </div>
+            <div class="meter-track">
+              <div class="meter-yes" style="width:78%"></div>
+              <div class="meter-no"  style="width:22%"></div>
+            </div>
+          </div>
+
+          <div class="meter-foot">
+            Based on analysis of <strong>43 peer-reviewed studies</strong> from PubMed, Semantic Scholar &amp; OpenAlex. Each bar segment links to the supporting or contradicting papers. Click any citation to view the original study. <strong>All sources verified real published papers</strong> — no hallucinated references.
+          </div>
+        </div>
+
+        <p>
+          The Consensus Meter works best for <strong>yes/no, relationship, and benefit-of questions</strong> — "Does X cause Y?", "Is X beneficial for Z?", "What is the relationship between A and B?" Open-ended, quantitative, or highly complex questions ("How much climate change can European forests tolerate?") are better served by the Deep Search feature, which expands key terms and synthesizes a full multi-paper research report rather than a single consensus verdict.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Real-World Use Cases — Who Uses Consensus AI in 2026?</h2>
+        <div class="use-cases">
+          <div class="use-case-card">
+            <div class="use-case-icon">🎓</div>
+            <div class="use-case-title">Academic Researchers &amp; PhD Students</div>
+            <div class="use-case-desc">Survey a research literature in minutes rather than days. Identify the dominant findings in a field, surface conflicting studies, and build a bibliography of real, citable papers for a literature review — before committing hours to reading every abstract manually. Consensus replaces the initial "what does the literature say?" phase of research with a reliable, citable AI synthesis.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">🏥</div>
+            <div class="use-case-title">Clinicians &amp; Evidence-Based Medicine</div>
+            <div class="use-case-desc">Quickly check what peer-reviewed medical literature says about a treatment approach, drug interaction, diagnostic criterion, or clinical outcome — in seconds, with citations that can be traced back to the original study. Consensus is widely used by clinicians for evidence-based medicine decision support, particularly for rare conditions or emerging treatment protocols where the evidence landscape is rapidly evolving.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">📰</div>
+            <div class="use-case-title">Science Journalists &amp; Fact-Checkers</div>
+            <div class="use-case-desc">Verify scientific claims in news articles, press releases, and public statements against the actual peer-reviewed literature. The Consensus Meter provides an instant, citable summary of what science says about a topic — essential for journalists covering health, climate, nutrition, or psychology, where public misinformation is common and credible sourcing is the professional standard.</div>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-icon">💼</div>
+            <div class="use-case-title">Knowledge Workers &amp; Content Creators</div>
+            <div class="use-case-desc">Writers, consultants, and content creators who need science-backed claims in articles, reports, or presentations without a PhD in the field use Consensus to ground their work in real evidence. Unlike using ChatGPT and hoping the citations are real, Consensus guarantees every reference is a verified published paper — making it safe to cite in professional or published contexts.</div>
+          </div>
+        </div>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ══════════════════════════════════════
+           SECTION 2 — TECHNICAL CAPABILITIES
+      ══════════════════════════════════════ -->
+      <article class="content-section" id="features">
+        <span class="section-eyebrow">✦ Technical Capabilities</span>
+        <h2>Key Features of Consensus AI in 2026</h2>
+
+        <ul class="feature-list">
+          <li>
+            <div class="feature-icon">📊</div>
+            <div class="feature-text">
+              <strong>Consensus Meter — Quantified Scientific Agreement</strong>
+              <span>The Consensus Meter is the feature that makes Consensus genuinely unique among AI research tools. For yes/no and relationship-type research questions, it analyzes all retrieved studies and produces a visual percentage breakdown showing what proportion of the scientific literature supports versus contradicts a claim. Rather than returning a list of papers and leaving synthesis to the reader, the Meter provides an immediate, quantified signal of scientific consensus — useful for quickly establishing whether a claim is well-supported, contested, or genuinely unsettled in the literature. Each segment of the meter bar links to the underlying studies, so the percentage is always traceable to individual papers rather than a black-box inference.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🔬</div>
+            <div class="feature-text">
+              <strong>Deep Search — Automated Multi-Paper Literature Reviews</strong>
+              <span>Deep Search is Consensus's most powerful and computationally intensive feature, available on paid plans. Rather than synthesizing a single answer from a search query, Deep Search runs a structured, multi-stage research workflow: it expands your query into related terms, identifies conflicting arguments in the literature, maps citation graph relationships between key papers, analyzes methodological patterns across studies, and generates a comprehensive report that includes a results timeline, top contributing authors, evidence patterns, and methodology context — formatted as a research document rather than a chat response. Pro subscribers get 15 Deep Searches per month; Deep plan subscribers get 200. For PhD candidates, systematic review authors, and consultants building evidence-based deliverables, Deep Search replaces days of manual literature work.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">📄</div>
+            <div class="feature-text">
+              <strong>Study Snapshots — Instant Paper Intelligence</strong>
+              <span>Study Snapshots provide at-a-glance structured summaries of individual papers — extracting the methodology, sample size, study duration, population, key findings, and limitations from any paper in the database in a standardized, scannable format. Rather than reading an abstract and hoping it contains the methodological details you need, a single click on the Snapshot table icon reveals all the decision-relevant information about a study. This is particularly valuable for researchers evaluating paper quality and relevance before committing to a full read, and for clinicians assessing whether a study's patient population is comparable to their own cases.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">📚</div>
+            <div class="feature-text">
+              <strong>LibKey Integration &amp; Reference Manager Compatibility</strong>
+              <span>Starting in the 2025–26 academic year, Consensus integrates with LibKey — a service that connects users to their university library's electronic resource subscriptions. When a paper is behind a paywall, LibKey checks in real time whether the user's institution has licensed access and provides a direct link to the full text if available. This integration means university researchers can move seamlessly from a Consensus AI summary to the full text of every cited paper without manually searching their library database. Additionally, Consensus supports export to all major reference management tools — Zotero, Mendeley, and EndNote — with citations formatted correctly for direct import, removing the manual bibliography work from the research workflow.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🌍</div>
+            <div class="feature-text">
+              <strong>Scholar Agent &amp; Multi-Language Support</strong>
+              <span>The Scholar Agent feature — available on Pro and Deep plans — goes beyond static search by autonomously planning a research strategy for complex questions, running multiple sequential searches, cross-referencing findings, and compiling structured research briefs with synthesis commentary. It functions as a junior research assistant that knows how to navigate academic literature, not just search it. Consensus also supports queries in multiple languages, with the AI synthesizing findings from relevant papers regardless of their original publication language — important for research topics where significant scientific output comes from non-English journals in fields such as materials science, traditional medicine, and regional ecology.</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ══════════════════════════════════════
+           SECTION 3 — COMPARISON
+      ══════════════════════════════════════ -->
+      <article class="content-section" id="comparison">
+        <span class="section-eyebrow">✦ Competitor Comparison</span>
+        <h2>Consensus AI vs. Elicit vs. Perplexity vs. Semantic Scholar — 2026</h2>
+        <p>
+          The AI research tool market splits into two categories: <strong>general-purpose AI assistants with some web search capability</strong> (Perplexity, ChatGPT with search) and <strong>specialized academic research tools</strong> that work exclusively within peer-reviewed literature (Consensus, Elicit, Scite). Here is how the specialists compare:
+        </p>
+
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th class="hi">Consensus AI</th>
+              <th>Elicit</th>
+              <th>Perplexity Pro</th>
+              <th>Semantic Scholar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hl">
+              <td>Paper Database</td>
+              <td><span class="pill-li">200M+ papers</span></td>
+              <td><span class="pill-yes">125M+ papers</span></td>
+              <td><span class="pill-part">Live web + some academic</span></td>
+              <td><span class="pill-yes">220M+ papers</span></td>
+            </tr>
+            <tr>
+              <td>Hallucination Risk</td>
+              <td><span class="pill-li">Zero (verified)</span></td>
+              <td><span class="pill-yes">Very low</span></td>
+              <td><span class="pill-part">Low but possible</span></td>
+              <td><span class="pill-yes">Zero (no AI synthesis)</span></td>
+            </tr>
+            <tr class="hl">
+              <td>Consensus Meter</td>
+              <td><span class="pill-li">✓ Unique feature</span></td>
+              <td><span class="pill-no">✗</span></td>
+              <td><span class="pill-no">✗</span></td>
+              <td><span class="pill-no">✗</span></td>
+            </tr>
+            <tr>
+              <td>Deep Literature Review</td>
+              <td><span class="pill-li">✓ Deep Search</span></td>
+              <td><span class="pill-yes">✓ Strong feature</span></td>
+              <td><span class="pill-part">Deep Research (general)</span></td>
+              <td><span class="pill-no">Manual only</span></td>
+            </tr>
+            <tr class="hl">
+              <td>AI Synthesis</td>
+              <td><span class="pill-li">✓ Full AI summaries</span></td>
+              <td><span class="pill-yes">✓ Structured extraction</span></td>
+              <td><span class="pill-yes">✓ General AI synthesis</span></td>
+              <td><span class="pill-no">No AI synthesis</span></td>
+            </tr>
+            <tr>
+              <td>Ease of Use</td>
+              <td><span class="pill-li">Excellent — Google-like</span></td>
+              <td><span class="pill-part">Moderate — structured UI</span></td>
+              <td><span class="pill-yes">Very easy</span></td>
+              <td><span class="pill-yes">Easy</span></td>
+            </tr>
+            <tr class="hl">
+              <td>General Web Research</td>
+              <td><span class="pill-no">✗ Academic only</span></td>
+              <td><span class="pill-no">✗ Academic only</span></td>
+              <td><span class="pill-yes">✓ Full web</span></td>
+              <td><span class="pill-no">✗ Academic only</span></td>
+            </tr>
+            <tr>
+              <td>Free Tier</td>
+              <td><span class="pill-li">✓ 15 searches/mo</span></td>
+              <td><span class="pill-yes">✓ Limited</span></td>
+              <td><span class="pill-yes">✓ Basic search</span></td>
+              <td><span class="pill-yes">✓ Fully free</span></td>
+            </tr>
+            <tr class="hl">
+              <td>Pro Pricing</td>
+              <td><span class="pill-li">$10/month</span></td>
+              <td><span class="pill-yes">$12/month</span></td>
+              <td><span class="pill-part">$20/month</span></td>
+              <td><span class="pill-yes">Free</span></td>
+            </tr>
+            <tr>
+              <td>Best For</td>
+              <td><span class="pill-li">Quick cited answers</span></td>
+              <td><span class="pill-yes">Systematic reviews</span></td>
+              <td><span class="pill-yes">General research</span></td>
+              <td><span class="pill-yes">Paper discovery</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top:18px; font-size:0.82rem;">
+          <strong>Bottom line:</strong> Consensus wins for anyone who needs a fast, reliable, cited answer to an evidence-based question — particularly for clinical, nutrition, psychology, and general science topics where the Consensus Meter adds immediate value. Elicit wins for users who need systematic review-level rigor with detailed methodological extraction across many papers. Perplexity wins for research that spans both academic and non-academic sources, or for current events and news. Semantic Scholar wins for pure paper discovery at no cost, without the need for AI synthesis. For most researchers in 2026, Consensus and Elicit serve complementary rather than competing purposes: Consensus for quick evidence checks, Elicit for deep systematic work.
+        </p>
+      </article>
+
+      <div class="divider"></div>
+
+      <!-- ══════════════════════════════════════
+           SECTION 4 — PRICING
+      ══════════════════════════════════════ -->
+      <article class="content-section" id="pricing">
+        <span class="section-eyebrow">✦ Pricing</span>
+        <h2>Consensus AI Pricing 2026 — Free to $45/Month</h2>
+
+        <p>
+          Consensus operates on a freemium model with four tiers. The free plan is genuinely useful for occasional research needs, and the Pro plan at <strong>$10/month</strong> — or $120 billed annually — is the most cost-effective specialized academic research tool in the category. Students and faculty with a valid .edu or .ac email address receive a <strong>40% discount</strong>, bringing Pro to effectively $6/month billed annually.
+        </p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-tier">Free</div>
+            <div class="pricing-price">$0</div>
+            <div class="pricing-cycle">Forever · No card needed</div>
+            <ul class="pricing-features">
+              <li>15 Pro searches / month</li>
+              <li>3 Deep Searches / month</li>
+              <li>Basic AI summaries</li>
+              <li>Consensus Meter</li>
+              <li>Abstract-level snippets</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="pricing-tier">⭐ Pro</div>
+            <div class="pricing-price">$10</div>
+            <div class="pricing-cycle">/ month · $120/year</div>
+            <ul class="pricing-features">
+              <li>Unlimited Pro searches</li>
+              <li>15 Deep Searches / month</li>
+              <li>Unlimited Study Snapshots</li>
+              <li>Full AI summaries (20 papers)</li>
+              <li>Advanced filters &amp; export</li>
+              <li>LibKey library integration</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-tier">Deep</div>
+            <div class="pricing-price">$45</div>
+            <div class="pricing-cycle">/ month · power researchers</div>
+            <ul class="pricing-features">
+              <li>All Pro features</li>
+              <li>200 Deep Searches / month</li>
+              <li>Scholar Agent (Deep mode)</li>
+              <li>Priority processing</li>
+              <li>Best for systematic reviews</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-tier">Teams / Enterprise</div>
+            <div class="pricing-price">Custom</div>
+            <div class="pricing-cycle">Per seat · annual contract</div>
+            <ul class="pricing-features">
+              <li>All Pro/Deep features</li>
+              <li>Shared team libraries</li>
+              <li>Centralized billing &amp; admin</li>
+              <li>SAML / Shibboleth SSO</li>
+              <li>API access for institutions</li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="seo-list" style="margin-top: 24px;">
+          <li><strong>Student discount (40% off):</strong> Available with verified .edu or .ac email. Reduces Pro to ~$6/month on an annual plan — the most affordable credible academic research tool available.</li>
+          <li><strong>Annual billing saves 33%:</strong> The Pro plan at $120/year vs $10/month billing gives one month free for committed users.</li>
+          <li><strong>University site licensing:</strong> Available for institutions wanting to provide all students and faculty with Consensus access under a single institutional agreement, with SAML/Shibboleth authentication and API access for internal projects.</li>
+          <li><strong>No hidden costs:</strong> Unlike tools that charge for each AI query or bill by token, Consensus pricing is flat — unlimited Pro searches means unlimited use, with only Deep Searches metered by plan tier.</li>
+        </ul>
+      </article>
+
+    </main>
+
+    <!-- ══════════ SIDEBAR ══════════ -->
+    <aside class="side-col">
+
+      <div class="cta-block">
+        <p>Search 200M+ peer-reviewed papers. Get cited answers with zero hallucinated references. Free to start — Pro from $10/month with a 40% student discount.</p>
+        <a href="https://consensus.app" class="btn-cta" target="_blank" rel="noopener">Try Consensus Free →</a>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Quick Facts</h3>
+        <div class="quick-facts">
+          <div class="quick-fact"><span class="qf-label">Creator</span><span class="qf-value">Consensus NLP, Inc.</span></div>
+          <div class="quick-fact"><span class="qf-label">Papers</span><span class="qf-badge-li">200M+</span></div>
+          <div class="quick-fact"><span class="qf-label">Active Users</span><span class="qf-value">8M+ researchers</span></div>
+          <div class="quick-fact"><span class="qf-label">Funding</span><span class="qf-value">$30M Series A</span></div>
+          <div class="quick-fact"><span class="qf-label">Free Tier</span><span class="qf-value">15 searches/mo</span></div>
+          <div class="quick-fact"><span class="qf-label">Pro From</span><span class="qf-value">$10 / month</span></div>
+          <div class="quick-fact"><span class="qf-label">Student Rate</span><span class="qf-value">40% off</span></div>
+          <div class="quick-fact"><span class="qf-label">Status</span><span class="qf-badge">Active · 2026</span></div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>On This Page</h3>
+        <ul class="toc-list">
+          <li><a href="#verdict">Expert Verdict</a></li>
+          <li><a href="#verdict">Platform Stats</a></li>
+          <li><a href="#verdict">How It Works (Pipeline)</a></li>
+          <li><a href="#verdict">Consensus Meter Demo</a></li>
+          <li><a href="#verdict">Real-World Use Cases</a></li>
+          <li><a href="#features">Key Features (5 deep dives)</a></li>
+          <li><a href="#comparison">vs. Elicit, Perplexity &amp; Scholar</a></li>
+          <li><a href="#pricing">Pricing &amp; Plans</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Best For</h3>
+        <div class="quick-facts">
+          <div class="quick-fact"><span class="qf-label">🎓 Researchers</span>      <span class="pill-li">Exceptional</span></div>
+          <div class="quick-fact"><span class="qf-label">🏥 Clinicians</span>       <span class="pill-li">Exceptional</span></div>
+          <div class="quick-fact"><span class="qf-label">📰 Journalists</span>      <span class="pill-li">Exceptional</span></div>
+          <div class="quick-fact"><span class="qf-label">💼 Knowledge Workers</span><span class="pill-yes">Very Good</span></div>
+          <div class="quick-fact"><span class="qf-label">✍️ General Writing</span> <span class="pill-part">Moderate</span></div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="/" class="footer-logo"><div class="orb"></div>Agentstant Galaxy</a>
+    <p class="footer-copy">© 2026 Agentstant — <span>Mapping the Intelligence Galaxy</span></p>
+  </footer>
+
+</body>
+</html>
